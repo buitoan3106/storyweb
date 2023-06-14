@@ -1,0 +1,27 @@
+.container {
+    border: 1px solid grey;
+    margin-bottom: 5px;
+}
+
+.Menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Menu ul li {
+    display: inline-block;
+}
+
+.Menu .left li {
+    padding-right: 10px;
+}
+
+.Menu .right li {
+    padding-right: 10px;
+}
+
+.Menu .row {
+    line-height: 40px;
+    vertical-align: middle;
+    padding: 0;
+}
