@@ -1,0 +1,554 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "anhhung1",
+      "password": "123",
+      "name": "Nam",
+      "Age": "18",
+      "email": "anhhung1@gmail.com",
+      "isAdmin": 1
+    },
+
+    {
+      "id": 2,
+      "username": "anhhung2",
+      "password": "123",
+      "name": "Hung",
+      "Age": "18",
+      "email": "anhhung2@gmail.com",
+      "isAdmin": 0
+    },
+
+    {
+      "id": 3,
+      "username": "anhhung3",
+      "password": "123",
+      "name": "Tuan",
+      "Age": "18",
+      "email": "anhhung3@gmail.com",
+      "isAdmin": 0
+    },
+
+    {
+      "id": 4,
+      "username": "anhhung4",
+      "password": "123",
+      "name": "Linh",
+      "Age": "18",
+      "email": "anhhung5@gmail.com",
+      "isAdmin": 0
+    }
+  ],
+
+  "category": [
+    {
+      "id": 1,
+      "categoryName": "Hành động"
+    
+    },
+
+    {
+      "id": 2,
+      "categoryName": "Hài hước"
+    
+    },
+
+    {
+      "id": 3,
+      "categoryName": "Ngôn tình"
+    
+    },
+
+    {
+      "id": 4,
+      "categoryName": "Kinh dị"
+    
+    },
+
+    {
+      "id": 5,
+      "categoryName": "Viễn tưởng"
+    
+    }
+  ],
+
+  "story": [
+    {
+      "id": 1,
+      "image": "1.jpg",
+      "storyName": "Kẻ Phản Bội",
+      "author": "Dạ Ngọc Minh Anh",
+      "categoryName": "Hành động",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "1/6/2022"
+    },
+
+    {
+      "id": 2,
+      "image": "1.jpg",
+      "storyName": "Ta Làm Tham Quan Các Nàng Lại Nói Ta là Trung Thần",
+      "author": "Thanh Chưng",
+      "categoryName": "Hành động",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "4/5/2022"
+    
+    },
+
+    {
+      "id": 3,
+      "image": "1.jpg",
+      "storyName": "Mịch Tiên Kiếm Đạo",
+      "author": "Thu Ninh Quân",
+      "categoryName": "Hành động",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "3/2/2022"
+    
+    },
+
+    {
+      "id": 4,
+      "image": "1.jpg",
+      "storyName": "Thiên Hạ Đệ Nhất Thần",
+      "author": "Ss Tần",
+      "categoryName": "Hành động",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "23/6/2022"
+    
+    },
+
+    {
+      "id": 5,
+      "image": "1.jpg",
+      "storyName": "Giang Hồ Khắp Nơi Là Áo Choàng",
+      "author": "Phương Khối Đích Lục Chí Miêu",
+      "categoryName": "Hành động",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "11/4/2022"
+    
+    },
+
+    {
+      "id": 6,
+      "image": "1.jpg",
+      "storyName": "Kiếm Vực Vô Địch",
+      "author": "Thanh Loan Phong Thượng",
+      "categoryName": "Hài hước",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "13/4/2022"
+    
+    },
+
+    {
+      "id": 7,
+      "image": "1.jpg",
+      "storyName": "Vạn Cổ Ma Tôn",
+      "author": "Lâm Nhất",
+      "categoryName": "Hài hước",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "10/4/2022"
+    
+    },   
+
+    {
+      "id": 8,
+      "image": "1.jpg",
+      "storyName": "Đệ Nhất Tần Tranh",
+      "author": "Hồ Thanh",
+      "categoryName": "Hài hước",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "11/4/2022"
+    
+    },
+
+    {
+      "id": 9,
+      "image": "1.jpg",
+      "storyName": "Hậu Duệ Kiếm Thần",
+      "author": "Thanh Phong",
+      "categoryName": "Hài hước",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "11/7/2022"
+    
+    },
+
+    {
+      "id": 10,
+      "image": "1.jpg",
+      "storyName": "Thần Điêu Hiệp Nữ",
+      "author": "Não Tử Không Sát",
+      "categoryName": "Hài hước",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "11/4/2022"
+    
+    },
+
+    {
+      "id": 11,
+      "image": "1.jpg",
+      "storyName": "Em Nói Anh Nghe Chuyện Yêu Đương",
+      "author": "Mễ Vy",
+      "categoryName": "Ngôn tình",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "11/2/2022"
+    
+    },
+
+    {
+      "id": 12,
+      "image": "1.jpg",
+      "storyName": "Thì Ra Cậu Ấy Thích Tôi",
+      "author": "Sưu Tầm Nhỏ",
+      "categoryName": "Ngôn tình",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "11/4/2022"
+    
+    },
+
+    {
+      "id": 13,
+      "image": "1.jpg",
+      "storyName": "Võ Thành Ti",
+      "author": "Youngs",
+      "categoryName": "Ngôn tình",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "3/4/2022"
+    
+    },
+
+    {
+      "id": 14,
+      "image": "1.jpg",
+      "storyName": "Ước Hẹn Một Đời Vì Nhau",
+      "author": "Chu Tử Nhuệ",
+      "categoryName": "Ngôn tình",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "11/9/2022"
+    
+    },
+
+    {
+      "id": 15,
+      "image": "1.jpg",
+      "storyName": "Hạnh Phúc Là Khi Gặp Được Em",
+      "author": "Hoàng Kim",
+      "categoryName": "Ngôn tình",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "11/4/2022"
+    
+    },
+
+    {
+      "id": 16,
+      "image": "1.jpg",
+      "storyName": "Sau Khi Ra Khỏi Viện Tâm Thần",
+      "author": "Vãn An",
+      "categoryName": "Viễn tưởng",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "2/4/2022"
+    
+    },
+
+    {
+      "id": 17,
+      "image": "1.jpg",
+      "storyName": "Ta Nuôi Một Ma Quân",
+      "author": "Zhihu",
+      "categoryName": "Viễn tưởng",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "4/12/2018"
+    
+    },
+
+    {
+      "id": 18,
+      "image": "1.jpg",
+      "storyName": "Gương Kia Ngự Ở Trên Tường",
+      "author": "Tòng Hạ",
+      "categoryName": "Viễn tưởng",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "11/4/2019"
+    
+    },
+
+    {
+      "id": 19,
+      "image": "1.jpg",
+      "storyName": "Tôi Nghe Thấy Tiếng LÒng Của Sếp",
+      "author": "Hoàng Lân",
+      "categoryName": "Viễn tưởng",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "3/2/2022"
+    
+    },
+
+    {
+      "id": 20,
+      "image": "1.jpg",
+      "storyName": "Ông Xã Là Giáo Sư! Mau Chạy",
+      "author": "Tiểu Phỉ Thúy",
+      "categoryName": "Viễn tưởng",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "10/5/2022"
+    
+    },
+
+    {
+      "id": 21,
+      "image": "1.jpg",
+      "storyName": "TRọng Sinh 80 Chi Ngọt Thê Liêu Nhân",
+      "author": "Bắc Phong Đường",
+      "categoryName": "Kinh dị",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "9/4/2020"
+    
+    },
+
+    {
+      "id": 22,
+      "image": "1.jpg",
+      "storyName": "Nhan Tổng Chúng Ta Kí Hợp Đồng Đi",
+      "author": "Phạm Tuyết TRinh",
+      "categoryName": "Kinh dị",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "21/4/2019"
+    
+    },
+
+    {
+      "id": 23,
+      "image": "1.jpg",
+      "storyName": "BẢo Mẫu Ma Thú",
+      "author": "Giấc Mơ Nhỏ Nhoi",
+      "categoryName": "Kinh dị",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "22/6/2020"
+    
+    },
+
+    {
+      "id": 24,
+      "image": "1.jpg",
+      "storyName": "Tỉnh Mộng",
+      "author": "Quỷ Bút Hoàng Thái",
+      "categoryName": "Kinh dị",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "23/6/2022"
+    
+    },
+
+    {
+      "id": 25,
+      "image": "1.jpg",
+      "storyName": "Âm Nương",
+      "author": "Mộng Linh Kinh Hỷ",
+      "categoryName": "Kinh dị",
+      "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+      "postDate": "1/2/2021"
+    
+    }
+  ],
+
+  "author": [
+    {
+      "id": 1,
+      "featuredWorks": "Kẻ Phản Bội",
+      "name": "Dạ Ngọc Minh Anh",
+      "DOB": "1/6/1999",
+      "country": "Việt Nam"
+      
+    },
+
+    {
+      "id": 2,
+      "featuredWorks": "Ta Làm Tham Quan Các Nàng Lại Nói Ta là Trung Thần",
+      "name": "Thanh Chưng",
+      "DOB": "4/5/1998",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 3,
+      "featuredWorks": "Mịch Tiên Kiếm Đạo",
+      "name": "Thu Ninh Quân",
+      "DOB": "3/2/1988",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 4,
+      "featuredWorks": "Thiên Hạ Đệ Nhất Thần",
+      "name": "Ss Tần",
+      "DOB": "23/6/1987",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 5,
+      "featuredWorks": "Giang Hồ Khắp Nơi Là Áo Choàng",
+      "name": "Phương Khối Đích Lục Chí Miêu",
+      "DOB": "11/4/1989",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 6,
+      "featuredWorks": "Kiếm Vực Vô Địch",
+      "name": "Thanh Loan Phong Thượng",
+      "DOB": "13/4/1988",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 7,
+      "featuredWorks": "Vạn Cổ Ma Tôn",
+      "name": "Lâm Nhất",
+      "postDate": "10/4/1899",
+      "country": "Việt Nam"
+    },   
+
+    {
+      "id": 8,
+      "storyName": "Đệ Nhất Tần Tranh",
+      "name": "Hồ Thanh",
+      "DOB": "11/4/1999",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 9,
+      "featuredWorks": "Hậu Duệ Kiếm Thần",
+      "name": "Thanh Phong",
+      "DOB": "11/7/2002",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 10,
+      "featuredWorks": "Thần Điêu Hiệp Nữ",
+      "name": "Não Tử Không Sát",
+      "DOB": "11/4/1899",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 11,
+      "featuredWorks": "Em Nói Anh Nghe Chuyện Yêu Đương",
+      "name": "Mễ Vy",
+      "postDate": "11/2/1989",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 12,
+      "featuredWorks": "Thì Ra Cậu Ấy Thích Tôi",
+      "name": "Sưu Tầm Nhỏ",
+      "DOB": "11/4/1999",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 13,
+      "featuredWorks": "Võ Thành Ti",
+      "name": "Youngs",
+      "DOB": "3/4/2000",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 14,
+      "featuredWorks": "Ước Hẹn Một Đời Vì Nhau",
+      "name": "Chu Tử Nhuệ",
+      "DOB": "11/9/2001",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 15,
+      "featuredWorks": "Hạnh Phúc Là Khi Gặp Được Em",
+      "name": "Hoàng Kim",
+      "DOB": "11/4/2000",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 16,
+      "featuredWorks": "Sau Khi Ra Khỏi Viện Tâm Thần",
+      "name": "Vãn An",
+      "DOB": "2/4/2000",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 17,
+      "featuredWorks": "Ta Nuôi Một Ma Quân",
+      "name": "Zhihu",
+      "DOB": "4/12/2001",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 18,
+      "featuredWorks": "Gương Kia Ngự Ở Trên Tường",
+      "name": "Tòng Hạ",
+      "DOB": "11/4/1999",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 19,
+      "featuredWorks": "Tôi Nghe Thấy Tiếng LÒng Của Sếp",
+      "name": "Hoàng Lân",
+      "DOB": "3/2/1998",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 20,
+      "featuredWorks": "Ông Xã Là Giáo Sư! Mau Chạy",
+      "name": "Tiểu Phỉ Thúy",
+      "DOB": "10/5/1987",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 21,
+      "featuredWorks": "TRọng Sinh 80 Chi Ngọt Thê Liêu Nhân",
+      "name": "Bắc Phong Đường",
+      "DOB": "9/4/1987",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 22,
+      "featuredWorks": "Nhan Tổng Chúng Ta Kí Hợp Đồng Đi",
+      "name": "Phạm Tuyết TRinh",
+      "DOB": "21/4/1999",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 23,
+      "featuredWorks": "BẢo Mẫu Ma Thú",
+      "name": "Giấc Mơ Nhỏ Nhoi",
+      "DOB": "22/6/2000",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 24,
+      "featuredWorks": "Tỉnh Mộng",
+      "name": "Quỷ Bút Hoàng Thái",
+      "DOB": "23/6/1999",
+      "country": "Việt Nam"
+    },
+
+    {
+      "id": 25,
+      "featuredWorks": "Âm Nương",
+      "name": "Mộng Linh Kinh Hỷ",
+      "DOB": "1/2/2021",
+      "country": "Việt Nam"
+    }
+  ]
+}
