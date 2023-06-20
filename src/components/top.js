@@ -19,7 +19,11 @@ export default function Top() {
                     </div>
                     <div className="col-lg-2">
                         <ul className="right">
-                            <li><Link to='/login'>Log In</Link></li>
+                            <li>
+                                <button type="button" class="btn btn-primary">
+                                    <Link to='/login'>Log In</Link>
+                                </button>
+                            </li>
                             <li><Link to='/register'>Sign Up</Link></li>
                         </ul>
                     </div>
