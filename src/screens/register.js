@@ -1,6 +1,6 @@
 import DefaultLayout from "../layouts/defaultlayout";
 
-expect default function Register() {
+export default function Register() {
     return (
         <DefaultLayout>
 
