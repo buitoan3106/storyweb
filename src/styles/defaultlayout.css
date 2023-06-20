@@ -261,6 +261,7 @@ ol {
 .header {
     background: #070720;
     max-height: fit-content;
+    margin-bottom: 50px;
 }
 
 .header__logo {
