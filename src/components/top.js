@@ -6,7 +6,7 @@ export default function Top() {
                 <div className="row">
                     <div className="col-lg-2">
                         <div className="header__logo">
-                            <a href="./home">
+                            <a href="./">
                                 <img src={require("./image/logo.png")} alt="" />
                             </a>
                         </div>
@@ -14,6 +14,15 @@ export default function Top() {
                     <div className="col-lg-8 header__menu mobile-menu">
                         <ul className="left">
                             <li><NavLink to={'/'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>Home</NavLink></li>
+                            <li><Link to='/'>Categories  <span class="arrow_carrot-down"></span></Link>
+                                <ul class="dropdown">
+                                    <li><Link to='/'>Hành động</Link></li>
+                                    <li><Link to='/'>Hài hước</Link></li>
+                                    <li><Link to='/'>Ngôn tình</Link></li>
+                                    <li><Link to='/'>Kinh dị</Link></li>
+                                    <li><Link to='/'>Viễn tưởng</Link></li>
+                                </ul>
+                            </li>
                             <li><NavLink to={'/about'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>About Us</NavLink></li>
                         </ul>
                     </div>
@@ -29,6 +38,6 @@ export default function Top() {
                     </div>
                 </div>
             </div>
-        </header>
+        </header >
     )
 }

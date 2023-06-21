@@ -100,7 +100,7 @@ export default function Home() {
                             <div class="row">
                                 <div class="col-lg-8 col-md-8 col-sm-8">
                                     <div class="section-title">
-                                        <h4>Popular Shows</h4>
+                                        <h4>Popular</h4>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-4">
@@ -269,6 +269,15 @@ export default function Home() {
                                             <h5><a href="#">Gương kia ngự ở trên tường</a></h5>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="product__sidebar">
+                            <div class="product__sidebar__view">
+                                <div class="section-title">
+                                    <h5>Top Likes Of Week</h5>
                                 </div>
                             </div>
                         </div>
