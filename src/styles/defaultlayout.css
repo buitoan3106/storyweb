@@ -46,13 +46,13 @@ ol {
 
 .section-title h4,
 .section-title h5 {
-    color: #ffffff;
-    font-weight: 600;
-    line-height: 21px;
-    text-transform: uppercase;
-    padding-left: 20px;
-    position: relative;
-    font-family: "Oswald", sans-serif;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    line-height: 21px !important;
+    text-transform: uppercase !important;
+    padding-left: 20px !important;
+    position: relative !important;
+    font-family: "Oswald", sans-serif !important;
 }
 
 .section-title h4:after,
@@ -348,7 +348,10 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="text"], input[type="password"], input[type="email"], input[type="number"] {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -371,4 +374,90 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #3e8e41;
+}
+
+/*---------------------
+  Product
+-----------------------*/
+
+.product {
+    padding-bottom: 60px;
+    padding-top: 80px;
+}
+
+.product a {
+    text-decoration: none;
+}
+
+.product-page {
+    padding-top: 60px;
+}
+
+.btn__all {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.trending__product {
+    margin-bottom: 50px;
+}
+
+.popular__product {
+    margin-bottom: 50px;
+}
+
+.product__item {
+    margin-bottom: 30px;
+}
+
+.product__item__pic {
+    height: 325px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.product__item__pic .ep {
+    font-size: 13px;
+    color: #ffffff;
+    background: #e53637;
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 4px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.product__item__pic .comment {
+    font-size: 13px;
+    color: #ffffff;
+    background: #3d3d3d;
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 4px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.product__item__pic .view {
+    font-size: 13px;
+    color: #ffffff;
+    background: #3d3d3d;
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 4px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.product__item__text {
+    padding-top: 20px;
+}
+
+.product__item__text h5 a {
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 26px;
 }
