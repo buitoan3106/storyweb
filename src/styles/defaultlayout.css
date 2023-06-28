@@ -87,7 +87,7 @@ ol {
 .text-white span,
 .text-white li,
 .text-white a {
-    color: #fff;
+    color: #fff !important;
 }
 
 /* buttons */
@@ -142,8 +142,8 @@ ol {
     margin-top: -13px;
     margin-left: -13px;
     border-radius: 60px;
-    animation: loader 0.8s linear infinite;
     -webkit-animation: loader 0.8s linear infinite;
+    animation: loader 0.8s linear infinite;
 }
 
 @keyframes loader {
@@ -512,4 +512,48 @@ button[type="submit"]:hover {
     color: #ffffff;
     font-weight: 700;
     line-height: 26px;
+}
+
+/* register */
+.login h3 {
+    color: white !important;
+}
+
+.login form {
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.login input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+    padding: 10px;
+    border: none;
+    margin-left: 5px;
+    font-size: 16px;
+    width: 200%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 12px;
+}
+
+.login button[type="submit"] {
+    background-color: red;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.login button[type="submit"]:hover {
+    background-color: #3e8e41;
 }
