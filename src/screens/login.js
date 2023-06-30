@@ -1,9 +1,9 @@
-import DefaultLayout from "../layouts/defaultlayout"
-import React, { useState } from 'react';
+import DefaultLayout from "../layouts/defaultlayout";
+import React, { useState } from "react";
 
 export default function Login() {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
