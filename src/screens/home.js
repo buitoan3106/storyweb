@@ -1,6 +1,5 @@
 import Content from "../components/content";
 import DefaultLayout from "../layouts/defaultlayout";
-
 export default function Home() {
     return (
         <DefaultLayout>
@@ -24,10 +23,10 @@ export default function Home() {
                             <div class="row">
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="product__item">
-                                        <div class="product__item__pic set-bg" style={{ backgroundImage: 'url(../components/image/10.jpg)' }}>
+                                        <div class="product__item__pic" style={{ backgroundImage: `url(${require("../components/image/10.jpg")})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
                                             <div class="ep">18 / 18</div>
-                                            <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                            <div class="comment"><i class="bi bi-hand-thumbs-up-fill"></i> 11</div>
+                                            <div class="view"><i class="bi bi-eye-fill"></i> 9141</div>
                                         </div>
                                         <div class="product__item__text">
                                             <h5><a href="#">Kẻ Phản Bội</a></h5>

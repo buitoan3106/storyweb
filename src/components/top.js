@@ -14,7 +14,7 @@ export default function Top() {
                     <div className="col-lg-8 header__menu mobile-menu">
                         <ul className="left">
                             <li><NavLink to={'/'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>Home</NavLink></li>
-                            <li><Link to='/'>Categories  <span class="arrow_carrot-down"></span></Link>
+                            <li><Link to='/'>Categories  <span><i className="bi bi-chevron-down" /></span></Link>
                                 <ul class="dropdown">
                                     <li><Link to='/'>Hành động</Link></li>
                                     <li><Link to='/'>Hài hước</Link></li>

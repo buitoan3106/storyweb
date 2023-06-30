@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="page-up">
         <a href="#" id="scrollToTopButton">
-          <span className="arrow_carrot-up"></span>
+          <i class="bi bi-chevron-bar-up"></i>
         </a>
       </div>
       <div className="container">

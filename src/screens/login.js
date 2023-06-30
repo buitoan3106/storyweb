@@ -2,8 +2,8 @@ import DefaultLayout from "../layouts/defaultlayout";
 import React, { useState } from "react";
 
 export default function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,7 +14,7 @@ export default function Login() {
 
             <div className="row login">
                 <div className="col-lg-6">
-                    <div className="row">
+                    <div className="row form-login">
                         <h3>Login</h3>
                         <br />
                         <br />
