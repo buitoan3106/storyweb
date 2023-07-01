@@ -8,7 +8,7 @@ const StoryReading = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12" style={{ height: "70vh" }}>
-              <div className="content-story h-75">
+              <div className="content-story h-75 mb-3">
                 <div className="section-title">
                   <h5>List Name</h5>
                 </div>
@@ -32,9 +32,12 @@ const StoryReading = () => {
                 </div>
                 {/* </div> */}
               </div>
-              <div className="anime__details__episodes h-25 mt-5">
-                <div className="story-name">
+              <div className="anime__details__episodes h-25">
+                {/* <div className="story-name">
                   <h3 className="text-center">Story Name</h3>
+                </div> */}
+                <div className="section-title">
+                  <h5>List Name</h5>
                 </div>
                 <a href="#">Chapter</a>
                 <a href="#">Chapter</a>
