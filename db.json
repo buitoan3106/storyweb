@@ -61,229 +61,429 @@
   ],
   "story": [
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f49"
+      },
       "id": 1,
       "image": "1.jpg",
       "storyName": "Kẻ Phản Bội",
       "author": "Dạ Ngọc Minh Anh",
       "categoryName": "Hành động",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "1/6/2022"
+      "postDate": "1/6/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f4a"
+      },
       "id": 2,
-      "image": "1.jpg",
+      "image": "2.jpg",
       "storyName": "Ta Làm Tham Quan Các Nàng Lại Nói Ta là Trung Thần",
       "author": "Thanh Chưng",
       "categoryName": "Hành động",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "4/5/2022"
+      "postDate": "4/5/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f4b"
+      },
       "id": 3,
-      "image": "1.jpg",
+      "image": "3.jpg",
       "storyName": "Mịch Tiên Kiếm Đạo",
       "author": "Thu Ninh Quân",
       "categoryName": "Hành động",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "3/2/2022"
+      "postDate": "3/2/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f4c"
+      },
       "id": 4,
-      "image": "1.jpg",
+      "image": "4.jpg",
       "storyName": "Thiên Hạ Đệ Nhất Thần",
       "author": "Ss Tần",
       "categoryName": "Hành động",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "23/6/2022"
+      "postDate": "23/6/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f4d"
+      },
       "id": 5,
-      "image": "1.jpg",
+      "image": "5.jpg",
       "storyName": "Giang Hồ Khắp Nơi Là Áo Choàng",
       "author": "Phương Khối Đích Lục Chí Miêu",
       "categoryName": "Hành động",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "11/4/2022"
+      "postDate": "11/4/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f4e"
+      },
       "id": 6,
-      "image": "1.jpg",
+      "image": "6.jpg",
       "storyName": "Kiếm Vực Vô Địch",
       "author": "Thanh Loan Phong Thượng",
       "categoryName": "Hài hước",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "13/4/2022"
+      "postDate": "13/4/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f4f"
+      },
       "id": 7,
-      "image": "1.jpg",
+      "image": "7.jpg",
       "storyName": "Vạn Cổ Ma Tôn",
       "author": "Lâm Nhất",
       "categoryName": "Hài hước",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "10/4/2022"
+      "postDate": "10/4/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f50"
+      },
       "id": 8,
-      "image": "1.jpg",
+      "image": "8.jpg",
       "storyName": "Đệ Nhất Tần Tranh",
       "author": "Hồ Thanh",
       "categoryName": "Hài hước",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "11/4/2022"
+      "postDate": "11/4/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f51"
+      },
       "id": 9,
-      "image": "1.jpg",
+      "image": "9.jpg",
       "storyName": "Hậu Duệ Kiếm Thần",
       "author": "Thanh Phong",
       "categoryName": "Hài hước",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "11/7/2022"
+      "postDate": "11/7/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f52"
+      },
       "id": 10,
-      "image": "1.jpg",
+      "image": "10.jpg",
       "storyName": "Thần Điêu Hiệp Nữ",
       "author": "Não Tử Không Sát",
       "categoryName": "Hài hước",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "11/4/2022"
+      "postDate": "11/4/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f53"
+      },
       "id": 11,
-      "image": "1.jpg",
+      "image": "11.jpg",
       "storyName": "Em Nói Anh Nghe Chuyện Yêu Đương",
       "author": "Mễ Vy",
       "categoryName": "Ngôn tình",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "11/2/2022"
+      "postDate": "11/2/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f54"
+      },
       "id": 12,
-      "image": "1.jpg",
+      "image": "12.jpg",
       "storyName": "Thì Ra Cậu Ấy Thích Tôi",
       "author": "Sưu Tầm Nhỏ",
       "categoryName": "Ngôn tình",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "11/4/2022"
+      "postDate": "11/4/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f55"
+      },
       "id": 13,
-      "image": "1.jpg",
+      "image": "13.jpg",
       "storyName": "Võ Thành Ti",
       "author": "Youngs",
       "categoryName": "Ngôn tình",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "3/4/2022"
+      "postDate": "3/4/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f56"
+      },
       "id": 14,
-      "image": "1.jpg",
+      "image": "14.jpg",
       "storyName": "Ước Hẹn Một Đời Vì Nhau",
       "author": "Chu Tử Nhuệ",
       "categoryName": "Ngôn tình",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "11/9/2022"
+      "postDate": "11/9/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f57"
+      },
       "id": 15,
-      "image": "1.jpg",
+      "image": "15.jpg",
       "storyName": "Hạnh Phúc Là Khi Gặp Được Em",
       "author": "Hoàng Kim",
       "categoryName": "Ngôn tình",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "11/4/2022"
+      "postDate": "11/4/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f58"
+      },
       "id": 16,
-      "image": "1.jpg",
+      "image": "16.jpg",
       "storyName": "Sau Khi Ra Khỏi Viện Tâm Thần",
       "author": "Vãn An",
       "categoryName": "Viễn tưởng",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "2/4/2022"
+      "postDate": "2/4/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f59"
+      },
       "id": 17,
-      "image": "1.jpg",
+      "image": "17.jpg",
       "storyName": "Ta Nuôi Một Ma Quân",
       "author": "Zhihu",
       "categoryName": "Viễn tưởng",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "4/12/2018"
+      "postDate": "4/12/2018",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f5a"
+      },
       "id": 18,
-      "image": "1.jpg",
+      "image": "18.jpg",
       "storyName": "Gương Kia Ngự Ở Trên Tường",
       "author": "Tòng Hạ",
       "categoryName": "Viễn tưởng",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "11/4/2019"
+      "postDate": "11/4/2019",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f5b"
+      },
       "id": 19,
-      "image": "1.jpg",
+      "image": "19.jpg",
       "storyName": "Tôi Nghe Thấy Tiếng LÒng Của Sếp",
       "author": "Hoàng Lân",
       "categoryName": "Viễn tưởng",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "3/2/2022"
+      "postDate": "3/2/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f5c"
+      },
       "id": 20,
-      "image": "1.jpg",
+      "image": "20.jpg",
       "storyName": "Ông Xã Là Giáo Sư! Mau Chạy",
       "author": "Tiểu Phỉ Thúy",
       "categoryName": "Viễn tưởng",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "10/5/2022"
+      "postDate": "10/5/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f5d"
+      },
       "id": 21,
-      "image": "1.jpg",
+      "image": "21.jpg",
       "storyName": "TRọng Sinh 80 Chi Ngọt Thê Liêu Nhân",
       "author": "Bắc Phong Đường",
       "categoryName": "Kinh dị",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "9/4/2020"
+      "postDate": "9/4/2020",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f5e"
+      },
       "id": 22,
-      "image": "1.jpg",
+      "image": "22.jpg",
       "storyName": "Nhan Tổng Chúng Ta Kí Hợp Đồng Đi",
       "author": "Phạm Tuyết TRinh",
       "categoryName": "Kinh dị",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "21/4/2019"
+      "postDate": "21/4/2019",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f5f"
+      },
       "id": 23,
-      "image": "1.jpg",
+      "image": "23.jpg",
       "storyName": "BẢo Mẫu Ma Thú",
       "author": "Giấc Mơ Nhỏ Nhoi",
       "categoryName": "Kinh dị",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "22/6/2020"
+      "postDate": "22/6/2020",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f60"
+      },
       "id": 24,
-      "image": "1.jpg",
+      "image": "24.jpg",
       "storyName": "Tỉnh Mộng",
       "author": "Quỷ Bút Hoàng Thái",
       "categoryName": "Kinh dị",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "23/6/2022"
+      "postDate": "23/6/2022",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     },
     {
+      "_id": {
+        "$oid": "64932eb7e60e47f2ea629f61"
+      },
       "id": 25,
-      "image": "1.jpg",
+      "image": "25.jpg",
       "storyName": "Âm Nương",
       "author": "Mộng Linh Kinh Hỷ",
       "categoryName": "Kinh dị",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-      "postDate": "1/2/2021"
+      "postDate": "1/2/2021",
+      "currentChap": 3,
+      "dislikes": 5,
+      "likes": 69,
+      "totalChap": 5,
+      "views": 365
     }
   ],
   "author": [
