@@ -1,5 +1,6 @@
 import DefaultLayout from "../layouts/defaultlayout";
 import { useState, useEffect } from "react";
+import "../styles/storydetails.css";
 
 export default function Category() {
   const [story, setStory] = useState([]);
@@ -22,16 +23,16 @@ export default function Category() {
             <div class="col-lg-8">
               {
                 category.map(cate => {
-                  <div class="product__page__content">
-                    <div class="product__page__title">
-                      <div class="row">
-                        <div class="col-lg-8 col-md-8 col-sm-6">
-                          <div class="section-title">
+                  <div className="product__page__content">
+                    <div className="product__page__title">
+                      <div className="row">
+                        <div className="col-lg-8 col-md-8 col-sm-6">
+                          <div className="section-title">
                             <h4>{cate.categoryName}</h4>
                           </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                          <div class="product__page__filter">
+                        <div className="col-lg-4 col-md-4 col-sm-6">
+                          <div className="product__page__filter">
                             <p>Order by:</p>
                             <select>
                               <option value="">A-Z</option>
@@ -42,19 +43,19 @@ export default function Category() {
                         </div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div className="row">
                       {
                         story.map(s => {
                           if (s.categoryName === cate.categoryName) {
                             return (
-                              <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                  <div class="product__item__pic" style={{ backgroundImage: `url(${require("../components/image/" + s.image)})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
-                                    <div class="ep">{s.currentChap} / {s.totalChap}</div>
-                                    <div class="like"><i class="bi bi-hand-thumbs-up-fill"></i> {s.likes}</div>
-                                    <div class="view"><i class="bi bi-eye-fill"></i> {s.views}</div>
+                              <div className="col-lg-4 col-md-6 col-sm-6">
+                                <div className="product__item">
+                                  <div className="product__item__pic" style={{ backgroundImage: `url(${require("../components/image/" + s.image)})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+                                    <div className="ep">{s.currentChap} / {s.totalChap}</div>
+                                    <div className="like"><i class="bi bi-hand-thumbs-up-fill"></i> {s.likes}</div>
+                                    <div className="view"><i class="bi bi-eye-fill"></i> {s.views}</div>
                                   </div>
-                                  <div class="product__item__text">
+                                  <div className="product__item__text">
                                     <h5><a href="#">{s.storyName}</a></h5>
                                   </div>
                                 </div>
