@@ -1,7 +1,32 @@
 import DefaultLayout from "../layouts/defaultlayout";
 import img1 from "../assets/images/1.jpg";
+import img2 from "../components/image/1.jpg";
 import "./../styles/storydetails.css";
+import { useState, useEffect } from "react";
+import StoryItem2 from "./../components/storyitem2";
+import { useParams, Link } from "react-router-dom";
+import Comment from "./../components/comment";
+
 const StoryDetails = () => {
+  const [top5Liked, setTop5Liked] = useState([]);
+  const [story, setStory] = useState({});
+  const { id } = useParams();
+
+  //get top 5 likes
+  useEffect(() => {
+    fetch("http://localhost:9999/story")
+      .then((response) => response.json())
+      .then((json) =>
+        setTop5Liked(json.sort((a, b) => b.likes - a.likes).slice(0, 4))
+      );
+  }, []);
+
+  useEffect(() => {
+    fetch(`http://localhost:9999/story/${id}`)
+      .then((response) => response.json())
+      .then((json) => setStory(json));
+    // console.log(story);
+  }, []);
   return (
     <DefaultLayout>
       <section className="anime-details spad">
@@ -9,24 +34,24 @@ const StoryDetails = () => {
           <div className="anime__details__content">
             <div className="row">
               <div className="col-lg-3">
-                {/* <div className="anime__details__pic set-bg" data-setbg={img1}> */}
                 <div className="anime__details__pic set-bg">
                   <div className="wrapper_img">
-                    <img src={img1} alt="" />
+                    <img src={img2} alt="" />
                   </div>
                   <div className="comment">
                     <i className="fa fa-comments"></i> 11
                   </div>
                   <div className="view">
-                    <i className="fa fa-eye"></i> 9141
+                    <i className="bi bi-eye-fill"></i>
+                    {story.views}
                   </div>
                 </div>
               </div>
               <div className="col-lg-9">
                 <div className="anime__details__text">
                   <div className="anime__details__title">
-                    <h3>Fate Stay Night: Unlimited Blade</h3>
-                    <span>フェイト／ステイナイト</span>
+                    <h3 className="text-light">{story.storyName}</h3>
+                    <span>{story.author}</span>
                   </div>
                   <div className="anime__details__rating">
                     <div className="rating">
@@ -48,33 +73,16 @@ const StoryDetails = () => {
                     </div>
                     <span>1.029 Votes</span>
                   </div>
-                  <p>
-                    Every human inhabiting the world of Alcia is branded by a
-                    “Count” or a number written on their body. For Hina’s
-                    mother, her total drops to 0 and she’s pulled into the
-                    Abyss, never to be seen again. But her mother’s last words
-                    send Hina on a quest to find a legendary hero from the Waste
-                    War - the fabled Ace!
-                  </p>
+                  <p>{story.discription}</p>
                   <div className="anime__details__widget">
                     <div className="row">
                       <div className="col-lg-6 col-md-6">
                         <ul>
                           <li>
-                            <span>Type:</span> TV Series
+                            <span>Category:</span> {story.categoryName}
                           </li>
                           <li>
-                            <span>Studios:</span> Lerche
-                          </li>
-                          <li>
-                            <span>Date aired:</span> Oct 02, 2019 to ?
-                          </li>
-                          <li>
-                            <span>Status:</span> Airing
-                          </li>
-                          <li>
-                            <span>Genre:</span> Action, Adventure, Fantasy,
-                            Magic
+                            <span>Total Chapter:</span> {story.totalChap}
                           </li>
                         </ul>
                       </div>
@@ -86,15 +94,6 @@ const StoryDetails = () => {
                           <li>
                             <span>Rating:</span> 8.5 / 161 times
                           </li>
-                          <li>
-                            <span>Duration:</span> 24 min/ep
-                          </li>
-                          <li>
-                            <span>Quality:</span> HD
-                          </li>
-                          <li>
-                            <span>Views:</span> 131,541
-                          </li>
                         </ul>
                       </div>
                     </div>
@@ -103,9 +102,12 @@ const StoryDetails = () => {
                     <a href="/" className="follow-btn">
                       <i className="fa fa-heart-o"></i> Follow
                     </a>
-                    <a href="/" className="watch-btn">
+                    <Link
+                      to={`/story/reading/${story.id}`}
+                      className="watch-btn"
+                    >
                       <span>Watch Now</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -117,6 +119,7 @@ const StoryDetails = () => {
                 <div className="section-title">
                   <h5>Reviews</h5>
                 </div>
+                <Comment />
                 <div className="anime__review__item">
                   <div className="anime__review__item__pic">
                     <img src={img1} alt="" />
@@ -129,64 +132,6 @@ const StoryDetails = () => {
                       whachikan Just noticed that someone categorized this as
                       belonging to the genre "demons" LOL
                     </p>
-                  </div>
-                </div>
-                <div className="anime__review__item">
-                  <div className="anime__review__item__pic">
-                    <img src={img1} alt="" />
-                  </div>
-                  <div className="anime__review__item__text">
-                    <h6>
-                      Lewis Mann - <span>5 Hour ago</span>
-                    </h6>
-                    <p>Finally it came out ages ago</p>
-                  </div>
-                </div>
-                <div className="anime__review__item">
-                  <div className="anime__review__item__pic">
-                    {/* <img src="img/anime/review-3.jpg" alt=""> */}
-                  </div>
-                  <div className="anime__review__item__text">
-                    <h6>
-                      Louis Tyler - <span>20 Hour ago</span>
-                    </h6>
-                    <p>Where is the episode 15 ? Slow update! Tch</p>
-                  </div>
-                </div>
-                <div className="anime__review__item">
-                  <div className="anime__review__item__pic">
-                    {/* <img src="img/anime/review-4.jpg" alt=""> */}
-                  </div>
-                  <div className="anime__review__item__text">
-                    <h6>
-                      Chris Curry - <span>1 Hour ago</span>
-                    </h6>
-                    <p>
-                      whachikan Just noticed that someone categorized this as
-                      belonging to the genre "demons" LOL
-                    </p>
-                  </div>
-                </div>
-                <div className="anime__review__item">
-                  <div className="anime__review__item__pic">
-                    {/* <img src="img/anime/review-5.jpg" alt=""> */}
-                  </div>
-                  <div className="anime__review__item__text">
-                    <h6>
-                      Lewis Mann - <span>5 Hour ago</span>
-                    </h6>
-                    <p>Finally it came out ages ago</p>
-                  </div>
-                </div>
-                <div className="anime__review__item">
-                  <div className="anime__review__item__pic">
-                    {/* <img src="img/anime/review-6.jpg" alt=""> */}
-                  </div>
-                  <div className="anime__review__item__text">
-                    <h6>
-                      Louis Tyler - <span>20 Hour ago</span>
-                    </h6>
-                    <p>Where is the episode 15 ? Slow update! Tch</p>
                   </div>
                 </div>
               </div>
@@ -207,61 +152,9 @@ const StoryDetails = () => {
                 <div className="section-title">
                   <h5>you might like...</h5>
                 </div>
-                <div
-                  className="product__sidebar__view__item set-bg"
-                  data-setbg="img/sidebar/tv-1.jpg"
-                >
-                  <div className="wrapper_img">
-                    <img src={img1} alt="" />
-                  </div>
-                  <div className="ep">18 / ?</div>
-                  <div className="view">
-                    <i className="fa fa-eye"></i> 9141
-                  </div>
-                  <h5>
-                    <a href="/">Boruto: Naruto next generations</a>
-                  </h5>
-                </div>
-                <div
-                  className="product__sidebar__view__item set-bg"
-                  data-setbg={img1}
-                >
-                  <div className="ep">18 / ?</div>
-                  <div className="view">
-                    <i className="fa fa-eye"></i> 9141
-                  </div>
-                  <h5>
-                    <a href="#">The Seven Deadly Sins: Wrath of the Gods</a>
-                  </h5>
-                </div>
-                <div
-                  className="product__sidebar__view__item set-bg"
-                  data-setbg="img/sidebar/tv-3.jpg"
-                >
-                  <div className="ep">18 / ?</div>
-                  <div className="view">
-                    <i className="fa fa-eye"></i> 9141
-                  </div>
-                  <h5>
-                    <a href="#">
-                      Sword art online alicization war of underworld
-                    </a>
-                  </h5>
-                </div>
-                <div
-                  className="product__sidebar__view__item set-bg"
-                  data-setbg="img/sidebar/tv-4.jpg"
-                >
-                  <div className="ep">18 / ?</div>
-                  <div className="view">
-                    <i className="fa fa-eye"></i> 9141
-                  </div>
-                  <h5>
-                    <a href="/">
-                      Fate/stay night: Heaven's Feel I. presage flower
-                    </a>
-                  </h5>
-                </div>
+                {top5Liked.map((story) => (
+                  <StoryItem2 story={story} key={story.id} />
+                ))}
               </div>
             </div>
           </div>

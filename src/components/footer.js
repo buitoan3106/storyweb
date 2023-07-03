@@ -10,7 +10,7 @@ export default function Footer() {
 
     <footer className="footer">
       <div className="page-up">
-        <a href="#" id="scrollToTopButton">
+        <a href="/" id="scrollToTopButton">
           <i class="bi bi-chevron-bar-up"></i>
         </a>
       </div>
@@ -18,13 +18,13 @@ export default function Footer() {
         <div className="row">
           <div className="col-lg-3">
             <div className="footer__logo">
-              <a href="./index.html">
+              <a href="/">
                 <img src={require("./image/logo.png")} alt="" />
               </a>
             </div>
           </div>
-          <div className="col-lg-6">
-            <div className="footer__nav">
+          <div className="col-lg-6 text-center">
+            {/* <div className="footer__nav">
               <ul>
                 <li className="active">
                   <a href="./index.html">Homepage</a>
@@ -39,6 +39,23 @@ export default function Footer() {
                   <a href="#">Contacts</a>
                 </li>
               </ul>
+            </div> */}
+            <div>
+              <i className="fa fa-map-marker"></i>
+              <p className="text-light">
+                <span className="text-light"> Street name and number</span>{" "}
+                City, Country
+              </p>
+            </div>
+            <div>
+              <i className="fa fa-phone" aria-hidden="true"></i>
+              <p className="text-light"> (+00) 0000 000 000</p>
+            </div>
+            <div>
+              <i className="fa fa-envelope"></i>
+              <p className="text-light">
+                <a href="#"> office@company.com</a>
+              </p>
             </div>
           </div>
           <div className="col-lg-3">
