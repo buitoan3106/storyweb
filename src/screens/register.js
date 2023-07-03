@@ -3,18 +3,20 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const [id, setId] = useState(0);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
+  const [isAdmin, setisAdmin] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const navigate = useNavigate();
-
-    const user = [username, password, email, name, age];
+    const user = { id, username, password, email, name, age, isAdmin };
     if (user != null) {
       fetch("http://localhost:9999/users", {
         method: "POST",
@@ -39,6 +41,9 @@ export default function Register() {
           <br />
           <br />
           <form onSubmit={handleSubmit}>
+            <label value={id} disabled>
+              ID:
+            </label>
             <label>
               Username:<br></br>
               <input

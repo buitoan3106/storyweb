@@ -36,13 +36,15 @@
       "email": "anhhung5@gmail.com",
       "isAdmin": 0
     },
-    [
-      "anhde",
-      "12345",
-      "anhde0985@gmail.com",
-      "anh de",
-      "22"
-    ]
+    {
+      "id": 5,
+      "username": "anhde",
+      "password": "1234",
+      "email": "anh@gmail.com",
+      "name": "anh",
+      "age": "23",
+      "isAdmin": 0
+    }
   ],
   "category": [
     {
