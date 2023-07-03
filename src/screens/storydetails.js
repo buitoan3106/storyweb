@@ -1,8 +1,9 @@
 import DefaultLayout from "../layouts/defaultlayout";
-import "./../styles/storydetails.css";
+import "../styles/storydetails.css";
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import Comment from "./../components/comment";
+import Comment from "../components/comment";
+import StoryItem2 from "../components/storyitem2";
 
 const StoryDetails = () => {
   const [top5Liked, setTop5Liked] = useState([]);
@@ -21,9 +22,9 @@ const StoryDetails = () => {
   useEffect(() => {
     fetch(`http://localhost:9999/story/${id}`)
       .then((response) => response.json())
-      .then((json) => setStory(json));
+      .then((json) => { if (json) setStory(json) });
     // console.log(story);
-  }, []);
+  }, [id]);
   return (
     <DefaultLayout>
       <section className="anime-details spad">
@@ -144,16 +145,18 @@ const StoryDetails = () => {
                 </form>
               </div>
             </div>
-            {/* <div className="col-lg-4 col-md-4">
+            <div className="col-lg-4 col-md-4">
               <div className="anime__details__sidebar">
                 <div className="section-title">
                   <h5>you might like...</h5>
                 </div>
-                {top5Liked.map((story) => (
-                  <StoryItem2 story={story} key={story.id} />
-                ))}
+                {
+                  top5Liked.map((story) => (
+                    <StoryItem2 story={story} key={story.id} />
+                  ))
+                }
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>

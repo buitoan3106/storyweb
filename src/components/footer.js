@@ -43,18 +43,18 @@ export default function Footer() {
             <div>
               <i className="fa fa-map-marker"></i>
               <p className="text-light">
-                <span className="text-light"> Street name and number</span>{" "}
-                City, Country
+                <span className="text-light">BE301 Đại học FPT</span>{" "}
               </p>
+              <p><span className="text-light">Km 29, Đại Lộ Thăng Long, Hà Nội</span></p>
             </div>
             <div>
               <i className="fa fa-phone" aria-hidden="true"></i>
-              <p className="text-light"> (+00) 0000 000 000</p>
+              <p className="text-light"> (+84) 1000 100 100</p>
             </div>
             <div>
               <i className="fa fa-envelope"></i>
               <p className="text-light">
-                <a href="#"> office@company.com</a>
+                <a href="#"> office@Team2ClassSE1718.com</a>
               </p>
             </div>
           </div>

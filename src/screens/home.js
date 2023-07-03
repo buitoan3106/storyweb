@@ -2,12 +2,23 @@ import { useEffect, useState } from "react";
 import Content from "../components/content";
 import DefaultLayout from "../layouts/defaultlayout";
 import { Link } from "react-router-dom";
+
 export default function Home() {
     const [story, setStory] = useState([]);
     useEffect(() => {
         fetch('http://localhost:9999/story')
             .then(response => response.json())
             .then(json => setStory(json));
+    }, []);
+
+    //get top 5 likes
+    const [top5Liked, setTop5Liked] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:9999/story")
+            .then((response) => response.json())
+            .then((json) =>
+                setTop5Liked(json.sort((a, b) => b.likes - a.likes).slice(0, 4))
+            );
     }, []);
     return (
         <DefaultLayout>

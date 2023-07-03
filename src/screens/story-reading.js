@@ -15,7 +15,7 @@ const StoryReading = () => {
     fetch(`http://localhost:9999/story/${id}`)
       .then((response) => response.json())
       .then((json) => setStory(json));
-  }, []);
+  }, [id]);
   console.log(story);
 
   return (

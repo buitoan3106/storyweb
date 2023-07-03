@@ -17,7 +17,7 @@ export default function Register() {
         <DefaultLayout>
             <form onSubmit={handleSubmit}>
                 <div className="row">
-                    <div className="col-lg-6" style={{borderRight:'1px solid white'}}>
+                    <div className="col-lg-6" style={{ borderRight: '1px solid white' }}>
                         <h3>Sign Up</h3>
                         <br />
                         <br />
@@ -42,18 +42,18 @@ export default function Register() {
                             <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your Email" />
                         </label><br></br>
                         <button type="submit">Register Now</button>
-                        <br/>
-                        <br/>
-                        <p>Already have an account? <a href="/login" style={{color: 'red'}}>Log In!</a></p>
+                        <br />
+                        <br />
+                        <p>Already have an account? <a href="/login" style={{ color: 'red' }}>Log In!</a></p>
                     </div>
 
                     <div className="col-lg-6">
-                    <img src={require("../components/image/11.jpg")} style={{width:'80%'}}/>
+                        <img src={require("../components/image/11.jpg")} style={{ width: '80%' }} alt="" />
                     </div>
 
                 </div>
 
-                
+
             </form>
         </DefaultLayout>
     );
