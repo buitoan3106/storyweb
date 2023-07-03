@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Content from "../components/content";
 import DefaultLayout from "../layouts/defaultlayout";
+import { Link } from "react-router-dom";
 export default function Home() {
     const [story, setStory] = useState([]);
     useEffect(() => {
@@ -40,7 +41,7 @@ export default function Home() {
                                                             <div class="view"><i class="bi bi-eye-fill"></i> {s.views}</div>
                                                         </div>
                                                         <div class="product__item__text">
-                                                            <h5><a href="#">{s.storyName}</a></h5>
+                                                            <h5><Link to={`/story/${s.id}`}>{s.storyName}</Link></h5>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -76,7 +77,7 @@ export default function Home() {
                                                             <div class="view"><i class="bi bi-eye-fill"></i> {s.views}</div>
                                                         </div>
                                                         <div class="product__item__text">
-                                                            <h5><a href="#">{s.storyName}</a></h5>
+                                                            <h5><Link to={`/story/${s.id}`}>{s.storyName}</Link></h5>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -112,7 +113,7 @@ export default function Home() {
                                                             <div class="view"><i class="bi bi-eye-fill"></i> {s.views}</div>
                                                         </div>
                                                         <div class="product__item__text">
-                                                            <h5><a href="#">{s.storyName}</a></h5>
+                                                            <h5><Link to={`/story/${s.id}`}>{s.storyName}</Link></h5>
                                                         </div>
                                                     </div>
                                                 </div>
