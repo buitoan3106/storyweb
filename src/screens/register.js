@@ -35,82 +35,85 @@ export default function Register() {
 
   return (
     <DefaultLayout>
-      <div className="row">
-        <div className="col-lg-6" style={{ borderRight: "1px solid white" }}>
-          <h3>Sign Up</h3>
-          <br />
-          <br />
-          <form onSubmit={handleSubmit}>
-            <label value={id} disabled>
-              ID:
-            </label>
-            <label>
-              Username:<br></br>
-              <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                placeholder="Enter your username"
-              />
-            </label>
-            <br></br>
-            <label>
-              Password:<br></br>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter your password"
-              />
-            </label>
-            <br></br>
-            <label>
-              Name:<br></br>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Enter your name"
-              />
-            </label>
-            <br></br>
-            <label>
-              Age:<br></br>
-              <input
-                type="number"
-                value={age}
-                onChange={(e) => setAge(e.target.value)}
-                placeholder="Enter your age"
-              />
-            </label>
-            <br></br>
-            <label>
-              Email:<br></br>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your Email"
-              />
-            </label>
-            <br></br>
-            <button type="submit">Register Now</button>
-          </form>
-          <br />
-          <br />
-          <p>
-            Already have an account?{" "}
-            <a href="/login" style={{ color: "red" }}>
-              Log In!
-            </a>
-          </p>
-        </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6 border-right-white">
+            <h3>Sign Up</h3>
+            <br />
+            <br />
+            <form onSubmit={handleSubmit}>
+              <label value={id} disabled></label>
+              <div className="form-group">
+                <label>Username:</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="Enter your username"
+                />
+              </div>
+              <div className="form-group">
+                <label>Password:</label>
+                <input
+                  type="password"
+                  className="form-control"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Enter your password"
+                />
+              </div>
+              <div className="form-group">
+                <label>Name:</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div className="form-group">
+                <label>Age:</label>
+                <input
+                  type="number"
+                  className="form-control"
+                  value={age}
+                  onChange={(e) => setAge(e.target.value)}
+                  placeholder="Enter your age"
+                />
+              </div>
+              <div className="form-group">
+                <label>Email:</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your Email"
+                />
+              </div>
+              <button type="submit" className="btn btn-primary">
+                Register Now
+              </button>
+            </form>
+            <br />
+            <br />
+            <p>
+              Already have an account?{" "}
+              <a href="/login" style={{ color: "red" }}>
+                Log In!
+              </a>
+            </p>
+          </div>
 
-        <div className="col-lg-6">
-          <img
-            src={require("../components/image/11.jpg")}
-            style={{ width: "70%" }}
-          />
+          <div className="col-lg-6">
+            <img
+              src={require("../components/image/11.jpg")}
+              style={{ width: "70%" }}
+              alt="Image"
+            />
+          </div>
         </div>
       </div>
     </DefaultLayout>

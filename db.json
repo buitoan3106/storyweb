@@ -44,6 +44,15 @@
       "name": "anh",
       "age": "23",
       "isAdmin": 0
+    },
+    {
+      "id": 6,
+      "username": "anhde",
+      "password": "anhde",
+      "email": "anhde@gmail.com",
+      "name": "anhde",
+      "age": "20",
+      "isAdmin": false
     }
   ],
   "category": [
