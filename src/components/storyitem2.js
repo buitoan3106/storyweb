@@ -1,5 +1,3 @@
-import img1 from "../assets/images/1.jpg";
-
 const StoryItem2 = ({ story }) => {
   return (
     <div

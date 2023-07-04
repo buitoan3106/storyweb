@@ -1,6 +1,5 @@
 import DefaultLayout from "../layouts/defaultlayout";
 import img1 from "../assets/images/1.jpg";
-import img2 from "../components/image/1.jpg";
 import "./../styles/storydetails.css";
 import { useState, useEffect } from "react";
 import StoryItem2 from "./../components/storyitem2";
@@ -26,7 +25,6 @@ const StoryDetails = () => {
     fetch(`http://localhost:9999/story/${id}`)
       .then((response) => response.json())
       .then((json) => setStory(json));
-    // console.log(story);
   }, [id]);
 
   return (
@@ -38,7 +36,7 @@ const StoryDetails = () => {
               <div className="col-lg-3">
                 <div className="anime__details__pic set-bg">
                   <div className="wrapper_img">
-                    <img src={img2} alt="" />
+                    <img src={(require("../components/image/" + story.image))} alt="" />
 
                   </div>
                   <div className="comment">
@@ -160,7 +158,6 @@ const StoryDetails = () => {
                 {top5Liked.map((story) => (
                   <StoryItem2 story={story} key={story.id} />
                 ))}
-
               </div>
             </div>
           </div>
