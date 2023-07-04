@@ -20,7 +20,6 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/story/:id" element={<StoryDetails />} />
         <Route path="/story/reading/:id" element={<StoryReading />} />
-        <Route path="/category" element={<Category />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/category/:cateName" element={<Category />} />
       </Routes>

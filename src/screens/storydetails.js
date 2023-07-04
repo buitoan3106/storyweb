@@ -7,6 +7,7 @@ import StoryItem2 from "./../components/storyitem2";
 import { useParams, Link } from "react-router-dom";
 import Comment from "./../components/comment";
 
+
 const StoryDetails = () => {
   const [top5Liked, setTop5Liked] = useState([]);
   const [story, setStory] = useState({});
@@ -26,7 +27,8 @@ const StoryDetails = () => {
       .then((response) => response.json())
       .then((json) => setStory(json));
     // console.log(story);
-  }, []);
+  }, [id]);
+
   return (
     <DefaultLayout>
       <section className="anime-details spad">
@@ -37,6 +39,7 @@ const StoryDetails = () => {
                 <div className="anime__details__pic set-bg">
                   <div className="wrapper_img">
                     <img src={img2} alt="" />
+
                   </div>
                   <div className="comment">
                     <i className="fa fa-comments"></i> 11
@@ -122,7 +125,9 @@ const StoryDetails = () => {
                 <Comment />
                 <div className="anime__review__item">
                   <div className="anime__review__item__pic">
+
                     <img src={img1} alt="" />
+
                   </div>
                   <div className="anime__review__item__text">
                     <h6>
@@ -155,6 +160,7 @@ const StoryDetails = () => {
                 {top5Liked.map((story) => (
                   <StoryItem2 story={story} key={story.id} />
                 ))}
+
               </div>
             </div>
           </div>
@@ -163,4 +169,6 @@ const StoryDetails = () => {
     </DefaultLayout>
   );
 };
+
 export default StoryDetails;
+

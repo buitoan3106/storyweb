@@ -1,17 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 export default function Top() {
-<<<<<<< HEAD
-  return (
-    <header className="header">
-      <div className="container fluid Menu">
-        <div className="row">
-          <div className="col-lg-2">
-            <div className="header__logo">
-              <a href="/">
-                <img src={require("./image/logo.png")} alt="" />
-              </a>
-=======
     const [cate, setCate] = useState([]);
     useEffect(() => {
         fetch('http://localhost:9999/category')
@@ -55,7 +44,6 @@ export default function Top() {
                         </ul>
                     </div>
                 </div>
->>>>>>> 1fa57f696b9323e2bd074205178aa429e0d41aea
             </div>
           </div>
           <div className="col-lg-8 header__menu mobile-menu">
