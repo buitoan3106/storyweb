@@ -86,5 +86,4 @@ const StoryReading = () => {
     </DefaultLayout>
   );
 };
-
 export default StoryReading;

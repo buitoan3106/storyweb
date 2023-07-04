@@ -7,6 +7,7 @@ import Register from "./screens/register";
 import Login from "./screens/login";
 import StoryDetails from "./screens/storydetails";
 import StoryReading from "./screens/story-reading";
+import Categories from "./screens/categories";
 import Category from "./screens/category";
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
         <Route path="/story/:id" element={<StoryDetails />} />
         <Route path="/story/reading/:id" element={<StoryReading />} />
         <Route path="/category" element={<Category />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/category/:cateName" element={<Category />} />
       </Routes>
     </BrowserRouter>
   );

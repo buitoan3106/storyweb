@@ -30,5 +30,4 @@ const StoryItem2 = ({ story }) => {
     </div>
   );
 };
-
 export default StoryItem2;

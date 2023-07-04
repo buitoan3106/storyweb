@@ -163,5 +163,4 @@ const StoryDetails = () => {
     </DefaultLayout>
   );
 };
-
 export default StoryDetails;
