@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import DefaultLayout from "../layouts/defaultlayout";
 import { useEffect, useState } from "react";
 
@@ -48,7 +48,7 @@ export default function Category() {
                                                         <div className="view"><i class="bi bi-eye-fill"></i> {s.views}</div>
                                                     </div>
                                                     <div className="product__item__text">
-                                                        <h5><a href="#">{s.storyName}</a></h5>
+                                                        <h5><Link to={`/story/${s.id}`}>{s.storyName}</Link></h5>
                                                     </div>
                                                 </div>
                                             </div>
