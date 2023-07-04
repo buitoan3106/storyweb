@@ -1,9 +1,12 @@
 import DefaultLayout from "../layouts/defaultlayout";
-import "../styles/storydetails.css";
+import img1 from "../assets/images/1.jpg";
+import img2 from "../components/image/1.jpg";
+import "./../styles/storydetails.css";
 import { useState, useEffect } from "react";
+import StoryItem2 from "./../components/storyitem2";
 import { useParams, Link } from "react-router-dom";
-import Comment from "../components/comment";
-import StoryItem2 from "../components/storyitem2";
+import Comment from "./../components/comment";
+
 
 const StoryDetails = () => {
   const [top5Liked, setTop5Liked] = useState([]);
@@ -22,9 +25,10 @@ const StoryDetails = () => {
   useEffect(() => {
     fetch(`http://localhost:9999/story/${id}`)
       .then((response) => response.json())
-      .then((json) => { if (json) setStory(json) });
+      .then((json) => setStory(json));
     // console.log(story);
   }, [id]);
+
   return (
     <DefaultLayout>
       <section className="anime-details spad">
@@ -34,7 +38,8 @@ const StoryDetails = () => {
               <div className="col-lg-3">
                 <div className="anime__details__pic set-bg">
                   <div className="wrapper_img">
-                    <img src={require("../components/image/" + story.image)} alt="" />
+                    <img src={img2} alt="" />
+
                   </div>
                   <div className="comment">
                     <i className="fa fa-comments"></i> 11
@@ -120,7 +125,9 @@ const StoryDetails = () => {
                 <Comment />
                 <div className="anime__review__item">
                   <div className="anime__review__item__pic">
-                    <img src={require("../components/image/" + story.image)} alt="" />
+
+                    <img src={img1} alt="" />
+
                   </div>
                   <div className="anime__review__item__text">
                     <h6>
@@ -150,11 +157,10 @@ const StoryDetails = () => {
                 <div className="section-title">
                   <h5>you might like...</h5>
                 </div>
-                {
-                  top5Liked.map((story) => (
-                    <StoryItem2 story={story} key={story.id} />
-                  ))
-                }
+                {top5Liked.map((story) => (
+                  <StoryItem2 story={story} key={story.id} />
+                ))}
+
               </div>
             </div>
           </div>
@@ -163,4 +169,6 @@ const StoryDetails = () => {
     </DefaultLayout>
   );
 };
+
 export default StoryDetails;
+
