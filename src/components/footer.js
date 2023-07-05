@@ -1,4 +1,4 @@
-import "./../styles/storydetails.css";
+import "../styles/defaultlayout.css";
 
 export default function Footer() {
   return (
@@ -10,7 +10,7 @@ export default function Footer() {
 
     <footer className="footer">
       <div className="page-up">
-        <a href="/" id="scrollToTopButton">
+        <a href="#" id="scrollToTopButton">
           <i class="bi bi-chevron-bar-up"></i>
         </a>
       </div>

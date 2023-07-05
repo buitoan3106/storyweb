@@ -1,5 +1,4 @@
 import DefaultLayout from "../layouts/defaultlayout";
-import img1 from "../assets/images/1.jpg";
 import "./../styles/storydetails.css";
 import { useState, useEffect } from "react";
 import StoryItem2 from "./../components/storyitem2";
@@ -36,11 +35,11 @@ const StoryDetails = () => {
               <div className="col-lg-3">
                 <div className="anime__details__pic set-bg">
                   <div className="wrapper_img">
-                    <img src={(require("../components/image/" + story.image))} alt="" />
+                    {/* <img src={(require("../components/image/" + story.image))} alt="" /> */}
 
                   </div>
                   <div className="comment">
-                    <i className="fa fa-comments"></i> 11
+                    <i class="bi bi-chat-quote-fill"></i> {story.likes}
                   </div>
                   <div className="view">
                     <i className="bi bi-eye-fill"></i>
@@ -56,23 +55,10 @@ const StoryDetails = () => {
                   </div>
                   <div className="anime__details__rating">
                     <div className="rating">
-                      <a href="/">
-                        <i className="fa fa-star"></i>
-                      </a>
-                      <a href="/">
-                        <i className="fa fa-star"></i>
-                      </a>
-                      <a href="/">
-                        <i className="fa fa-star"></i>
-                      </a>
-                      <a href="/">
-                        <i className="fa fa-star"></i>
-                      </a>
-                      <a href="/">
-                        <i className="fa fa-star-half-o"></i>
-                      </a>
+                      <a href="#"><i class="bi bi-hand-thumbs-up-fill"></i></a>
+                      <a href="#"><i class="bi bi-hand-thumbs-down-fill"></i></a>
                     </div>
-                    <span>1.029 Votes</span>
+                    <span>69 Likes</span>
                   </div>
                   <p>{story.discription}</p>
                   <div className="anime__details__widget">
@@ -103,11 +89,9 @@ const StoryDetails = () => {
                     <a href="/" className="follow-btn">
                       <i className="fa fa-heart-o"></i> Follow
                     </a>
-                    <Link
-                      to={`/story/reading/${story.id}`}
-                      className="watch-btn"
-                    >
-                      <span>Watch Now</span>
+                    <Link to={`/story/reading/${story.id}`} className="watch-btn">
+                      <span>Read Now</span>
+                      <i class="bi bi-chevron-right"></i>
                     </Link>
                   </div>
                 </div>
@@ -121,22 +105,6 @@ const StoryDetails = () => {
                   <h5>Reviews</h5>
                 </div>
                 <Comment />
-                <div className="anime__review__item">
-                  <div className="anime__review__item__pic">
-
-                    <img src={img1} alt="" />
-
-                  </div>
-                  <div className="anime__review__item__text">
-                    <h6>
-                      Chris Curry - <span>1 Hour ago</span>
-                    </h6>
-                    <p>
-                      whachikan Just noticed that someone categorized this as
-                      belonging to the genre "demons" LOL
-                    </p>
-                  </div>
-                </div>
               </div>
               <div className="anime__details__form">
                 <div className="section-title">
