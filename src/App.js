@@ -9,6 +9,8 @@ import StoryDetails from "./screens/storydetails";
 import StoryReading from "./screens/story-reading";
 import Categories from "./screens/categories";
 import Category from "./screens/category";
+import ViewListStory from './screens/managestory';
+import ViewListUser from './screens/manageuser';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="/story/reading/:id" element={<StoryReading />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/category/:cateName" element={<Category />} />
+        <Route path="/admin/story" element={<ViewListStory />} />
+        <Route path="/admin/user" element={<ViewListUser />} />
       </Routes>
     </BrowserRouter>
   );

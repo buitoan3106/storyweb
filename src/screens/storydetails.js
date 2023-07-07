@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import StoryItem2 from "./../components/storyitem2";
 import { useParams, Link } from "react-router-dom";
 import Comment from "./../components/comment";
-
+import img1 from "../components/image/1.jpg";
 
 const StoryDetails = () => {
   const [top5Liked, setTop5Liked] = useState([]);
@@ -35,8 +35,7 @@ const StoryDetails = () => {
               <div className="col-lg-3">
                 <div className="anime__details__pic set-bg">
                   <div className="wrapper_img">
-                    {/* <img src={(require("../components/image/" + story.image))} alt="" /> */}
-
+                    <img src={img1} alt="" />
                   </div>
                   <div className="comment">
                     <i class="bi bi-chat-quote-fill"></i> {story.likes}
@@ -55,8 +54,12 @@ const StoryDetails = () => {
                   </div>
                   <div className="anime__details__rating">
                     <div className="rating">
-                      <a href="#"><i class="bi bi-hand-thumbs-up-fill"></i></a>
-                      <a href="#"><i class="bi bi-hand-thumbs-down-fill"></i></a>
+                      <a href="#">
+                        <i class="bi bi-hand-thumbs-up-fill"></i>
+                      </a>
+                      <a href="#">
+                        <i class="bi bi-hand-thumbs-down-fill"></i>
+                      </a>
                     </div>
                     <span>69 Likes</span>
                   </div>
@@ -89,7 +92,10 @@ const StoryDetails = () => {
                     <a href="/" className="follow-btn">
                       <i className="fa fa-heart-o"></i> Follow
                     </a>
-                    <Link to={`/story/reading/${story.id}`} className="watch-btn">
+                    <Link
+                      to={`/story/reading/${story.id}`}
+                      className="watch-btn"
+                    >
                       <span>Read Now</span>
                       <i class="bi bi-chevron-right"></i>
                     </Link>
@@ -136,4 +142,3 @@ const StoryDetails = () => {
 };
 
 export default StoryDetails;
-

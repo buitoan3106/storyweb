@@ -1,7 +1,8 @@
+import "./../styles/storyitem2.css";
 const StoryItem2 = ({ story }) => {
   return (
     <div
-      className="product__sidebar__view__item set-bg mix day years"
+      className="product__sidebar__view__item view set-bg mix day years anime__details__pic mb-2"
       // data-setbg="img/sidebar/tv-1.jpg"
       style={{
         backgroundImage: `url(${require("../components/image/" +
@@ -17,7 +18,7 @@ const StoryItem2 = ({ story }) => {
       </div> */}
       <div className="ep"> {story.likes}</div>
       <div className="view">
-        <i className="fa fa-eye"></i>
+      <i class="bi bi-eye-fill"></i>
         {story.views}
       </div>
       <h5>
