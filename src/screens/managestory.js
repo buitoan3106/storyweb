@@ -55,13 +55,13 @@ const ViewListStory = () => {
   };
 
   editStoryRef.current = (story) => {
-      //
-      let cloneStories = [...stories];
-      let index = stories.findIndex(s => s.id === story.id)
-      cloneStories[index] = story;
-      console.log(typeof cloneStories[index]); 
-      console.log(stories,cloneStories);
-      console.log(index);
+    //
+    let cloneStories = [...stories];
+    let index = stories.findIndex(s => s.id === story.id)
+    cloneStories[index] = story;
+    console.log(typeof cloneStories[index]);
+    console.log(stories, cloneStories);
+    console.log(index);
   };
 
   useEffect(() => {
@@ -190,7 +190,7 @@ const ViewListStory = () => {
                   </Col>
                   <Col md={6}>2</Col>
                 </Row>
-                <Table className="table-story p-2" style={{marginTop: "2rem"}}>
+                <Table className="table-story p-2" style={{ marginTop: "2rem" }}>
                   <thead>
                     <tr>
                       <th>ID</th>
