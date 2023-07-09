@@ -12,10 +12,8 @@ export default function Register() {
   const [isAdmin, setisAdmin] = useState(0);
 
   const navigate = useNavigate();
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const user = { id, username, password, email, name, age, isAdmin };
     if (user != null) {
       fetch("http://localhost:9999/users", {
@@ -32,7 +30,6 @@ export default function Register() {
         });
     }
   };
-
   return (
     <DefaultLayout>
       <div className="container">
