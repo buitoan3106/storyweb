@@ -35,6 +35,24 @@
       "Age": "18",
       "email": "anhhung5@gmail.com",
       "isAdmin": 0
+    },
+    {
+      "id": 5,
+      "username": "anhde",
+      "password": "1234",
+      "email": "anh@gmail.com",
+      "name": "anh",
+      "age": "23",
+      "isAdmin": 0
+    },
+    {
+      "id": 6,
+      "username": "anhde",
+      "password": "anhde",
+      "email": "anhde@gmail.com",
+      "name": "anhde",
+      "age": "20",
+      "isAdmin": false
     }
   ],
   "category": [
@@ -461,6 +479,8 @@
       "author": "Quỷ Bút Hoàng Thái",
       "categoryName": "Kinh dị",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
+
+      "postDate": "23/6/2022"
       "postDate": "23/6/2022",
       "currentChap": 3,
       "dislikes": 5,
