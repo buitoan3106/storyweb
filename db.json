@@ -90,9 +90,9 @@
       "postDate": "4/5/2022",
       "currentChap": 3,
       "dislikes": 5,
-      "likes": 69,
+      "likes": 100,
       "totalChap": 5,
-      "views": 365
+      "views": 1000
     },
     {
       "_id": {
@@ -303,7 +303,7 @@
         "$oid": "64932eb7e60e47f2ea629f57"
       },
       "id": 15,
-      "image": "15.jpg",
+      "image": "8.jpg",
       "storyName": "Hạnh Phúc Là Khi Gặp Được Em",
       "author": "Hoàng Kim",
       "categoryName": "Ngôn tình",
@@ -473,9 +473,9 @@
         "$oid": "64932eb7e60e47f2ea629f61"
       },
       "id": 25,
-      "image": "25.jpg",
+      "image": "1.jpg",
       "storyName": "Âm Nương",
-      "author": "Mộng Linh Kinh Hỷ",
+      "author": "Mộng Linh Kinh",
       "categoryName": "Kinh dị",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
       "postDate": "1/2/2021",
@@ -484,6 +484,48 @@
       "likes": 69,
       "totalChap": 5,
       "views": 365
+    },
+    {
+      "image": "10.jpg",
+      "storyName": "sad",
+      "author": "sads",
+      "categoryName": "Ngôn tình",
+      "discription": "sadsa",
+      "postDate": "07-07-2023",
+      "currentChap": 1,
+      "dislikes": 0,
+      "likes": 0,
+      "totalChap": 2,
+      "views": 0,
+      "id": 26
+    },
+    {
+      "image": "5.jpg",
+      "storyName": "212",
+      "author": "ssads",
+      "categoryName": "Hài hước",
+      "discription": "adsa",
+      "postDate": "07-07-2023",
+      "currentChap": 1,
+      "dislikes": 0,
+      "likes": 0,
+      "totalChap": 2,
+      "views": 0,
+      "id": 27
+    },
+    {
+      "image": "6.jpg",
+      "storyName": "dd",
+      "author": "dd",
+      "categoryName": "Ngôn tình",
+      "discription": "afsdfsfdsf",
+      "postDate": "07-07-2023",
+      "currentChap": 1,
+      "dislikes": 0,
+      "likes": 0,
+      "totalChap": 2,
+      "views": 0,
+      "id": 28
     }
   ],
   "author": [
