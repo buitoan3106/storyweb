@@ -2,6 +2,14 @@
     border: 1px solid white;
 }
 
+.content-story p {
+    color: rgb(164, 157, 157) !important;
+}
+
 .story-name {
     margin-bottom: 20px;
+}
+
+.content-story .chapter_name {
+    text-align: center;
 }

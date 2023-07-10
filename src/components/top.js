@@ -13,9 +13,9 @@ export default function Top() {
         <div className="row">
           <div className="col-lg-2">
             <div className="header__logo">
-              <a href="./">
+              <Link to="/">
                 <img src={require("./image/logo.png")} alt="" />
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-8 header__menu mobile-menu">

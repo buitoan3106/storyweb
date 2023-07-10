@@ -61,7 +61,7 @@ const StoryDetails = () => {
                         <i class="bi bi-hand-thumbs-down-fill"></i>
                       </a>
                     </div>
-                    <span>69 Likes</span>
+                    <span>{story.likes} Likes - {story.dislikes} Dislikes</span>
                   </div>
                   <p>{story.discription}</p>
                   <div className="anime__details__widget">
@@ -110,7 +110,7 @@ const StoryDetails = () => {
                 <div className="section-title">
                   <h5>Reviews</h5>
                 </div>
-                <Comment />
+                <Comment storyId={id} />
               </div>
               <div className="anime__details__form">
                 <div className="section-title">

@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 const StoryReading = () => {
   const { id } = useParams();
   const [story, setStory] = useState({});
+  const [content, setContent] = useState([]);
   console.log(id);
   console.log(typeof id);
 
@@ -17,6 +18,13 @@ const StoryReading = () => {
       .then((json) => setStory(json));
 
   }, [id]);
+
+  useEffect(() => {
+    fetch('http://localhost:9999/chapter')
+      .then(response => response.json())
+      .then(json => setContent(json))
+  }, [])
+
 
   console.log(story);
 
@@ -31,8 +39,15 @@ const StoryReading = () => {
                   <h5>{story.storyName}</h5>
                 </div>
                 {/* <div className="row"> */}
+                <div className="chapter_name">
+                  <h6>Chapter 1</h6>
+                </div>
                 <div className="" style={{ fontSize: "20px" }}>
-                  {story.discription}
+                  <p>{content.map(c => {
+                    if (c.storyId == id && c.chapterName === 'chapter 1') {
+                      return c.content;
+                    }
+                  })}</p>
                 </div>
                 {/* </div> */}
               </div>
