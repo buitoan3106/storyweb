@@ -10,7 +10,7 @@ const StoryDetails = () => {
   const [top5Liked, setTop5Liked] = useState([]);
   const [story, setStory] = useState({});
   const { id } = useParams();
-
+  const [likes, setLikes] = useState(0);
   //get top 5 likes
   useEffect(() => {
     fetch("http://localhost:9999/story")

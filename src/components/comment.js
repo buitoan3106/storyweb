@@ -15,10 +15,9 @@ const Comment = (storyId) => {
       .then(json => setUser(json))
   }, [])
 
-  function reply(e) {
+  function reply(e, id) {
     e.preventDefault();
-    const form = document.getElementById("reply_form");
-    const a = document.getElementById("reply_a");
+    const form = document.getElementById("reply_form_" + id);
     if (form.style.display === "block") {
       form.style.display = "none";
     } else {
@@ -45,9 +44,9 @@ const Comment = (storyId) => {
                     {cmt.content}
                   </p>
                   <div>
-                    <a href="#"><i class="bi bi-hand-thumbs-up-fill"></i></a>
-                    <a href="#"><i class="bi bi-hand-thumbs-down"></i></a>
-                    <a href="#" onClick={(e) => reply(e)} id="reply_a">Reply</a>
+                    <a href="#"><i class="bi bi-hand-thumbs-up-fill"></i>{cmt.likes.length}</a>
+                    <a href="#"><i class="bi bi-hand-thumbs-down"></i>{cmt.dislikes.length}</a>
+                    <a href="#" onClick={(e) => reply(e, cmt.id)} id="reply_a">Reply</a>
                   </div>
                 </div>
                 {
@@ -70,22 +69,19 @@ const Comment = (storyId) => {
                               <a href="#"><i class="bi bi-hand-thumbs-down"></i>1</a>
                             </div>
                           </div>
-                          <div className="anime__review__item reply__form" id="reply_form">
-                            <form>
-                              <div className="anime__review__item reply__input">
-                                <textarea placeholder="Reply here" id="reply"></textarea>
-                                <button type="submit"><i class="bi bi-send-fill"></i></button>
-                              </div>
-                            </form>
-                          </div>
                         </div>
                       )
                     }
                   })
-
                 }
-
-
+                <div className="anime__review__item reply__form" id={"reply_form_" + cmt.id}>
+                  <form>
+                    <div className="anime__review__item reply__input">
+                      <textarea placeholder="Reply here" id="reply"></textarea>
+                      <button type="submit"><i class="bi bi-send-fill"></i></button>
+                    </div>
+                  </form>
+                </div>
               </div>
             )
           }
