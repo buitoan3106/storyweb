@@ -31,6 +31,7 @@ export default function Top() {
                 </ul>
               </li>
               <li><NavLink to={'/about'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>About Us</NavLink></li>
+              <li><NavLink to={'/findingresult'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>Search</NavLink></li>
             </ul>
           </div>
           <div className="col-lg-2">

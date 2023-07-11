@@ -406,7 +406,6 @@ input[type="email"],
 input[type="number"] {
     padding: 10px;
     border: none;
-    border-radius: 5px;
     margin-left: 5px;
     font-size: 16px;
     width: 200%;
@@ -414,14 +413,11 @@ input[type="number"] {
 }
 
 button[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #c20b0b;
     color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
     margin-top: 20px;
-    font-size: 16px;
 }
 
 button[type="submit"]:hover {
