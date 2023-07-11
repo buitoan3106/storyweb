@@ -7,7 +7,8 @@
       "name": "Nam",
       "Age": "18",
       "email": "anhhung1@gmail.com",
-      "isAdmin": 1
+      "isAdmin": 1,
+      "image": "7.jpg"
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "name": "Hung",
       "Age": "18",
       "email": "anhhung2@gmail.com",
-      "isAdmin": 0
+      "isAdmin": 0,
+      "image": "9.jpg"
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "name": "Tuan",
       "Age": "18",
       "email": "anhhung3@gmail.com",
-      "isAdmin": 0
+      "isAdmin": 0,
+      "image": "10.jpg"
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "name": "Linh",
       "Age": "18",
       "email": "anhhung5@gmail.com",
-      "isAdmin": 0
+      "isAdmin": 0,
+      "image": "11.jpg"
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "email": "anh@gmail.com",
       "name": "anh",
       "age": "23",
-      "isAdmin": 0
+      "isAdmin": 0,
+      "image": "12.jpg"
     },
     {
       "id": 6,
@@ -52,7 +57,8 @@
       "email": "anhde@gmail.com",
       "name": "anhde",
       "age": "20",
-      "isAdmin": false
+      "isAdmin": false,
+      "image": "14.jpg"
     }
   ],
   "category": [
@@ -864,7 +870,7 @@
       "id": 1,
       "content": "Đọc chương đầu thôi đã thấy cuốn rồi",
       "storyId": 1,
-      "userId": 1,
+      "username": "anhhung1",
       "likes": [
         1,
         2,
@@ -883,7 +889,7 @@
       "id": 2,
       "content": "Có ai mê nữ chính như tôi không ??!!",
       "storyId": 1,
-      "userId": 2,
+      "username": "anhhung2",
       "likes": [
         1,
         2,
@@ -902,7 +908,7 @@
       "id": 3,
       "content": "Chuẩn luôn đấy bác ơi !!",
       "replyFor": 1,
-      "userId": 3,
+      "username": "anhhung3",
       "likes": [
         1,
         2,
@@ -913,6 +919,48 @@
         5
       ],
       "timeCreated": "2023/07/10"
+    },
+    {
+      "content": "Truyện này đọc cuốn dã man\n",
+      "storyId": "2",
+      "id": 4,
+      "username": "anhhung2"
+    },
+    {
+      "content": "Truyện hay thế mà ít like thật",
+      "storyId": "2",
+      "id": 5,
+      "username": "anhhung2"
+    },
+    {
+      "content": "Đọc chương đầu thấy không hay lắm",
+      "storyId": "3",
+      "id": 6,
+      "username": "anhhung2"
+    },
+    {
+      "content": "hay quá các bác ơi !!!",
+      "storyId": "3",
+      "username": "anhhung2",
+      "id": 7
+    },
+    {
+      "content": "Có tui bác ơi",
+      "replyFor": 2,
+      "username": "anhhung4",
+      "id": 8
+    },
+    {
+      "content": "Uk, chuẩn đấy bác",
+      "replyFor": 5,
+      "username": "anhhung3",
+      "id": 9
+    },
+    {
+      "content": "Hay mà bác",
+      "replyFor": 6,
+      "username": "anhhung4",
+      "id": 10
     }
   ],
   "chapter": [

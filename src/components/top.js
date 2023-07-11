@@ -17,7 +17,7 @@ export default function Top() {
 
   function handleLogout() {
     sessionStorage.removeItem('username');
-    window.location.reload();
+    window.location.replace("/")
   }
   return (
     <header className="header">

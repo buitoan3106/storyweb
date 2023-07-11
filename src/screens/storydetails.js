@@ -11,6 +11,17 @@ const StoryDetails = () => {
   const [story, setStory] = useState({});
   const { id } = useParams();
   const [likes, setLikes] = useState(0);
+  const [user, setUser] = useState({});
+  const username = sessionStorage.getItem("username");
+
+
+  //get user information
+  useEffect(() => {
+    fetch('http://localhost:9999/users?username=' + username)
+      .then(response => response.json())
+      .then(json => setUser(json[0]))
+  }, [])
+
   //get top 5 likes
   useEffect(() => {
     fetch("http://localhost:9999/story")
@@ -25,6 +36,24 @@ const StoryDetails = () => {
       .then((response) => response.json())
       .then((json) => setStory(json));
   }, [id]);
+
+  const [userId, setUserId] = useState(user.id);
+  const [storyId, setStoryId] = useState(id);
+  const [content, setContent] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const comment = { content, storyId, username };
+    if (comment != null) {
+      fetch("http://localhost:9999/comment", {
+        method: 'POST',
+        headers: { 'Content-Type': 'Application/Json' },
+        body: JSON.stringify(comment)
+      })
+        .then(() => window.location.reload())
+        .catch(err => { console.log(err.message); })
+    }
+  }
 
   return (
     <DefaultLayout>
@@ -90,7 +119,7 @@ const StoryDetails = () => {
                   </div>
                   <div className="anime__details__btn">
                     <a href="/" className="follow-btn">
-                      <i className="fa fa-heart-o"></i> Follow
+                      <i class="bi bi-heart"></i> Follow
                     </a>
                     <Link
                       to={`/story/reading/${story.id}`}
@@ -116,8 +145,8 @@ const StoryDetails = () => {
                 <div className="section-title">
                   <h5>Your Comment</h5>
                 </div>
-                <form action="#">
-                  <textarea placeholder="Your Comment"></textarea>
+                <form onSubmit={(e) => handleSubmit(e)}>
+                  <textarea placeholder="Your Comment" onChange={e => setContent(e.target.value)}></textarea>
                   <button type="submit">
                     <i className="fa fa-location-arrow"></i> Review
                   </button>
