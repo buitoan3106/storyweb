@@ -10,7 +10,6 @@ const StoryDetails = () => {
   const [top5Liked, setTop5Liked] = useState([]);
   const [story, setStory] = useState({});
   const { id } = useParams();
-  const [likes, setLikes] = useState(0);
   const [user, setUser] = useState({});
   const username = sessionStorage.getItem("username");
 
@@ -31,13 +30,17 @@ const StoryDetails = () => {
       );
   }, []);
 
+
+  // lay cac thuoc tinh cua story
+  const [follower, setFollower] = useState([]);
+  const [likes, setLikes] = useState([]);
+  const [dislikes, setDislikes] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:9999/story/${id}`)
       .then((response) => response.json())
-      .then((json) => setStory(json));
+      .then((json) => { setStory(json); setFollower(json.follower); setLikes(json.likes); setDislikes(json.dislikes) });
   }, [id]);
 
-  const [userId, setUserId] = useState(user.id);
   const [storyId, setStoryId] = useState(id);
   const [content, setContent] = useState("");
 
@@ -64,10 +67,10 @@ const StoryDetails = () => {
               <div className="col-lg-3">
                 <div className="anime__details__pic set-bg">
                   <div className="wrapper_img">
-                    <img src={img1} alt="" />
+                    <img src={`../components/image/${story.image}`} alt="" />
                   </div>
                   <div className="comment">
-                    <i class="bi bi-chat-quote-fill"></i> {story.likes}
+                    <i class="bi bi-chat-quote-fill"></i> {likes.length}
                   </div>
                   <div className="view">
                     <i className="bi bi-eye-fill"></i>
@@ -90,7 +93,7 @@ const StoryDetails = () => {
                         <i class="bi bi-hand-thumbs-down-fill"></i>
                       </a>
                     </div>
-                    <span>{story.likes} Likes - {story.dislikes} Dislikes</span>
+                    <span>{likes.length} Likes - {dislikes.length} Dislikes</span>
                   </div>
                   <p>{story.discription}</p>
                   <div className="anime__details__widget">
@@ -118,9 +121,9 @@ const StoryDetails = () => {
                     </div>
                   </div>
                   <div className="anime__details__btn">
-                    <a href="/" className="follow-btn">
-                      <i class="bi bi-heart"></i> Follow
-                    </a>
+                    {
+                      follower.includes(username) ? (<a href="/" className="follow-btn"><i class="bi bi-heart-fill"></i> Unfollow</a>) : (<a href="/" className="follow-btn"><i class="bi bi-heart"></i> Follow</a>)
+                    }
                     <Link
                       to={`/story/reading/${story.id}`}
                       className="watch-btn"

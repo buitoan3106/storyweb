@@ -32,8 +32,8 @@ export default function Top() {
           </div>
           <div className="col-lg-7 header__menu mobile-menu">
             <ul className="left">
-              <li><NavLink to={'/'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>Home</NavLink></li>
-              <li><Link to='/categories'>Categories  <span><i className="bi bi-chevron-down" /></span></Link>
+              <li><NavLink to={'/'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>Trang chủ</NavLink></li>
+              <li><Link to='/categories'>Thể loại  <span><i className="bi bi-chevron-down" /></span></Link>
                 <ul class="dropdown">
                   {
                     cate.map(c => (
@@ -42,9 +42,9 @@ export default function Top() {
                   }
                 </ul>
               </li>
-              <li><NavLink to={'/about'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>About Us</NavLink></li>
+              <li><NavLink to={'/about'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>Về chúng tôi</NavLink></li>
               {
-                (user && isAdmin == 1) ? (<li><NavLink to={'/admin/story'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>Management</NavLink></li>) : ''
+                (user && isAdmin == 1) ? (<li><NavLink to={'/admin/story'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>Quản lý truyện</NavLink></li>) : ''
               }
             </ul>
           </div>
@@ -55,17 +55,17 @@ export default function Top() {
                 <li><i class="bi bi-bell-fill"></i></li>
                 <li>
                   <button type="button" class="btn btn-primary" onClick={() => handleLogout()}>
-                    Log out
+                    Đăng xuất
                   </button>
                 </li>
               </ul>) : (
               <ul className="right">
                 <li>
                   <button type="button" class="btn btn-primary">
-                    <Link to='/login'>Log In</Link>
+                    <Link to='/login'>Đăng nhập</Link>
                   </button>
                 </li>
-                <li><Link to='/register'>Sign Up</Link></li>
+                <li><Link to='/register'>Đăng ký</Link></li>
               </ul>)}
           </div>
         </div>
