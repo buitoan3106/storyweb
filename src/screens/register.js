@@ -107,10 +107,10 @@ export default function Register() {
             </p>
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-md-6">
             <img
               src={require("../components/image/11.jpg")}
-              style={{ width: "70%" }}
+              style={{ width: "70%" , marginTop:"15%", marginLeft:"30%"}}
               alt="Image"
             />
           </div>
