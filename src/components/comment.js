@@ -3,13 +3,14 @@ import "../styles/storydetails.css"
 const Comment = (storyId) => {
   const [comment, setComment] = useState([]);
   const [user, setUser] = useState([]);
+  const [justChanged, setChanged] = useState(0);
   let countComment = 0;
 
   useEffect(() => {
     fetch('http://localhost:9999/comment')
       .then(response => response.json())
       .then(json => setComment(json))
-  }, [])
+  }, [justChanged])
 
   useEffect(() => {
     fetch('http://localhost:9999/users')
@@ -33,14 +34,92 @@ const Comment = (storyId) => {
   function handleSubmit(e, replyFor) {
     e.preventDefault();
     const replyComment = { content, replyFor, username };
+    const form = document.getElementById("reply_form_" + replyFor);
+    let changed = justChanged
     if (replyComment != null) {
       fetch('http://localhost:9999/comment', {
         method: "POST",
         headers: { "Content-Type": "Application/Json" },
         body: JSON.stringify(replyComment)
       })
-        .then(() => window.location.reload())
+        .then(() => { changed++; setChanged(changed) })
         .catch(err => console.log(err.message))
+    }
+    form.style.display = "none";
+    e.target.reset();
+  }
+
+  // Handle like
+  function handleLike(e, username, comment) {
+    e.preventDefault();
+    comment.likes.splice(0, 0, username);
+    const index = comment.dislikes.indexOf(username);
+    if (index > -1)
+      comment.dislikes.splice(index, 1);
+    let changed = justChanged
+    if (comment != null) {
+      fetch("http://localhost:9999/comment/" + comment.id, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'Application/Json' },
+        body: JSON.stringify(comment)
+      })
+        .then(() => { changed++; setChanged(changed) })
+        .catch(err => { console.log(err.message); })
+    }
+  }
+
+  // Handle Unlike
+  function handleUnlike(e, username, comment) {
+    e.preventDefault();
+    const index = comment.likes.indexOf(username);
+    if (index > -1)
+      comment.likes.splice(index, 1);
+    let changed = justChanged
+    if (comment != null) {
+      fetch("http://localhost:9999/comment/" + comment.id, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'Application/Json' },
+        body: JSON.stringify(comment)
+      })
+        .then(() => { changed++; setChanged(changed) })
+        .catch(err => { console.log(err.message); })
+    }
+  }
+
+  // Handle Dislike
+  function handleDislike(e, username, comment) {
+    e.preventDefault();
+    comment.dislikes.splice(0, 0, username);
+    const index = comment.likes.indexOf(username);
+    if (index > -1)
+      comment.likes.splice(index, 1);
+    let changed = justChanged
+    if (comment != null) {
+      fetch("http://localhost:9999/comment/" + comment.id, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'Application/Json' },
+        body: JSON.stringify(comment)
+      })
+        .then(() => { changed++; setChanged(changed) })
+        .catch(err => { console.log(err.message); })
+    }
+  }
+
+  // Handle UnDislike
+  function handleUndislike(e, username, comment) {
+    e.preventDefault();
+    const index = comment.dislikes.indexOf(username);
+    if (index > -1)
+      comment.dislikes.splice(index, 1);
+    let changed = justChanged
+    if (comment != null) {
+      fetch("http://localhost:9999/comment/" + comment.id, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'Application/Json' },
+        body: JSON.stringify(comment)
+      })
+        .then(() => { changed++; setChanged(changed) })
+        .catch(err => { console.log(err.message); })
     }
   }
 
@@ -63,8 +142,12 @@ const Comment = (storyId) => {
                     {cmt.content}
                   </p>
                   <div>
-                    <a href="#"><i class="bi bi-hand-thumbs-up-fill"></i>{cmt.likes}</a>
-                    <a href="#"><i class="bi bi-hand-thumbs-down"></i>{cmt.dislikes}</a>
+                    {
+                      cmt.likes.includes(username) ? (<a href="#"><i class="bi bi-hand-thumbs-up-fill" onClick={e => handleUnlike(e, username, cmt)}></i>{cmt.likes.length}</a>) : (<a href="#"><i class="bi bi-hand-thumbs-up" onClick={e => handleLike(e, username, cmt)}></i>{cmt.likes.length}</a>)
+                    }
+                    {
+                      cmt.dislikes.includes(username) ? (<a href="#"><i class="bi bi-hand-thumbs-down-fill" onClick={e => handleUndislike(e, username, cmt)}></i>{cmt.dislikes.length}</a>) : (<a href="#"><i class="bi bi-hand-thumbs-down" onClick={e => handleDislike(e, username, cmt)}></i>{cmt.dislikes.length}</a>)
+                    }
                     <a href="#" onClick={(e) => reply(e, cmt.id)} id="reply_a">Reply</a>
                   </div>
                 </div>
@@ -84,8 +167,12 @@ const Comment = (storyId) => {
                               {cmt2.content}
                             </p>
                             <div>
-                              <a href="#"><i class="bi bi-hand-thumbs-up-fill"></i>5</a>
-                              <a href="#"><i class="bi bi-hand-thumbs-down"></i>1</a>
+                              {
+                                cmt2.likes.includes(username) ? (<a href="#"><i class="bi bi-hand-thumbs-up-fill" onClick={e => handleUnlike(e, username, cmt2)}></i>{cmt2.likes.length}</a>) : (<a href="#"><i class="bi bi-hand-thumbs-up" onClick={e => handleLike(e, username, cmt2)}></i>{cmt2.likes.length}</a>)
+                              }
+                              {
+                                cmt2.dislikes.includes(username) ? (<a href="#"><i class="bi bi-hand-thumbs-down-fill" onClick={e => handleUndislike(e, username, cmt2)}></i>{cmt2.dislikes.length}</a>) : (<a href="#"><i class="bi bi-hand-thumbs-down" onClick={e => handleDislike(e, username, cmt2)}></i>{cmt2.dislikes.length}</a>)
+                              }
                             </div>
                           </div>
                         </div>
@@ -94,10 +181,10 @@ const Comment = (storyId) => {
                   })
                 }
                 <div className="anime__review__item reply__form" id={"reply_form_" + cmt.id}>
-                  <form>
+                  <form onSubmit={e => handleSubmit(e, cmt.id)}>
                     <div className="anime__review__item reply__input">
                       <textarea placeholder="Reply here" id="reply" onChange={e => setContent(e.target.value)}></textarea>
-                      <button type="submit" onClick={e => handleSubmit(e, cmt.id)}><i class="bi bi-send-fill"></i></button>
+                      <button type="submit"><i class="bi bi-send-fill"></i></button>
                     </div>
                   </form>
                 </div>

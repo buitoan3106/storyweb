@@ -8,8 +8,7 @@ const StoryReading = () => {
   const { id } = useParams();
   const [story, setStory] = useState({});
   const [content, setContent] = useState([]);
-  console.log(id);
-  console.log(typeof id);
+
 
   //get story by id
   useEffect(() => {
@@ -25,8 +24,6 @@ const StoryReading = () => {
       .then(json => setContent(json))
   }, [])
 
-
-  console.log(story);
 
   return (
     <DefaultLayout>

@@ -42,7 +42,7 @@
     },
     {
       "id": 5,
-      "username": "anhde",
+      "username": "anhhung5",
       "password": "1234",
       "email": "anh@gmail.com",
       "name": "anh",
@@ -97,13 +97,13 @@
       "postDate": "1/6/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
       "views": 365,
@@ -124,17 +124,18 @@
       "postDate": "4/5/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung3",
+        "anhhung1",
+        "anhhhung2"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 504,
       "follower": [
+        "anhhung3",
         "anhhung1"
       ]
     },
@@ -151,16 +152,16 @@
       "postDate": "3/2/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 367,
       "follower": [
         "anhhung1"
       ]
@@ -178,16 +179,16 @@
       "postDate": "23/6/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 200,
       "follower": [
         "anhhung1"
       ]
@@ -205,17 +206,19 @@
       "postDate": "11/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung4",
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 464,
       "follower": [
+        "anhhung5",
+        "anhhung4",
         "anhhung1"
       ]
     },
@@ -232,16 +235,16 @@
       "postDate": "13/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 366,
       "follower": [
         "anhhung1"
       ]
@@ -259,16 +262,16 @@
       "postDate": "10/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 110,
       "follower": [
         "anhhung1"
       ]
@@ -286,16 +289,16 @@
       "postDate": "11/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 52,
       "follower": [
         "anhhung1"
       ]
@@ -313,16 +316,16 @@
       "postDate": "11/7/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 43,
       "follower": [
         "anhhung1"
       ]
@@ -340,16 +343,16 @@
       "postDate": "11/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 345,
       "follower": [
         "anhhung1"
       ]
@@ -367,16 +370,16 @@
       "postDate": "11/2/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 78,
       "follower": [
         "anhhung1"
       ]
@@ -394,16 +397,16 @@
       "postDate": "11/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 36,
       "follower": [
         "anhhung1"
       ]
@@ -421,16 +424,16 @@
       "postDate": "3/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 170,
       "follower": [
         "anhhung1"
       ]
@@ -448,16 +451,16 @@
       "postDate": "11/9/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 425,
       "follower": [
         "anhhung1"
       ]
@@ -475,16 +478,16 @@
       "postDate": "11/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 145,
       "follower": [
         "anhhung1"
       ]
@@ -502,16 +505,16 @@
       "postDate": "2/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 215,
       "follower": [
         "anhhung1"
       ]
@@ -529,16 +532,16 @@
       "postDate": "4/12/2018",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 335,
       "follower": [
         "anhhung1"
       ]
@@ -554,18 +557,18 @@
       "categoryName": "Viễn tưởng",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
       "postDate": "11/4/2019",
-      "currentChap": 3,
+      "currentChap": 173,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 34,
       "follower": [
         "anhhung1"
       ]
@@ -583,16 +586,16 @@
       "postDate": "3/2/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 35,
       "follower": [
         "anhhung1"
       ]
@@ -610,16 +613,16 @@
       "postDate": "10/5/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 135,
       "follower": [
         "anhhung1"
       ]
@@ -637,16 +640,16 @@
       "postDate": "9/4/2020",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 215,
       "follower": [
         "anhhung1"
       ]
@@ -664,16 +667,16 @@
       "postDate": "21/4/2019",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 315,
       "follower": [
         "anhhung1"
       ]
@@ -691,16 +694,16 @@
       "postDate": "22/6/2020",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 417,
       "follower": [
         "anhhung1"
       ]
@@ -718,16 +721,16 @@
       "postDate": "23/6/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 285,
       "follower": [
         "anhhung1"
       ]
@@ -745,16 +748,16 @@
       "postDate": "1/2/2021",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 65,
       "follower": [
         "anhhung1"
       ]
@@ -947,13 +950,13 @@
       "storyId": 1,
       "username": "anhhung1",
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "timeCreated": "2023/07/10"
     },
@@ -966,13 +969,13 @@
       "storyId": 1,
       "username": "anhhung2",
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "timeCreated": "2023/07/10"
     },
@@ -985,57 +988,655 @@
       "replyFor": 1,
       "username": "anhhung3",
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "timeCreated": "2023/07/10"
     },
     {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c6c"
+      },
       "content": "Truyện này đọc cuốn dã man\n",
       "storyId": "2",
       "id": 4,
-      "username": "anhhung2"
+      "username": "anhhung2",
+      "dislikes": [
+        "anhhung5"
+      ],
+      "likes": [
+        null,
+        "anhhung1",
+        "anhhhung2"
+      ]
     },
     {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c6d"
+      },
       "content": "Truyện hay thế mà ít like thật",
       "storyId": "2",
       "id": 5,
-      "username": "anhhung2"
+      "username": "anhhung2",
+      "dislikes": [
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung4",
+        "anhhung1",
+        "anhhhung2"
+      ]
     },
     {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c6e"
+      },
       "content": "Đọc chương đầu thấy không hay lắm",
       "storyId": "3",
       "id": 6,
-      "username": "anhhung2"
+      "username": "anhhung2",
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
     },
     {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c6f"
+      },
       "content": "hay quá các bác ơi !!!",
       "storyId": "3",
       "username": "anhhung2",
-      "id": 7
+      "id": 7,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
     },
     {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c70"
+      },
       "content": "Có tui bác ơi",
       "replyFor": 2,
       "username": "anhhung4",
-      "id": 8
+      "id": 8,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
     },
     {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c71"
+      },
       "content": "Uk, chuẩn đấy bác",
       "replyFor": 5,
       "username": "anhhung3",
-      "id": 9
+      "id": 9,
+      "dislikes": [
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung4",
+        "anhhung1",
+        "anhhhung2"
+      ]
     },
     {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c72"
+      },
       "content": "Hay mà bác",
       "replyFor": 6,
       "username": "anhhung4",
-      "id": 10
+      "id": 10,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c73"
+      },
+      "content": "Truyện chán bỏ mẹ",
+      "storyId": "6",
+      "username": "anhhung2",
+      "id": 11,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c74"
+      },
+      "content": "Đã quá trời",
+      "storyId": "4",
+      "username": "anhhung4",
+      "id": 12,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c75"
+      },
+      "content": "Truyện này hay dã man",
+      "storyId": "4",
+      "username": "anhhung4",
+      "id": 13,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c76"
+      },
+      "content": "Cày được 15 chapter rồi",
+      "storyId": "4",
+      "username": "anhhung4",
+      "id": 14,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c77"
+      },
+      "content": "Chuẩn luôn ạ",
+      "replyFor": 7,
+      "username": "anhhung4",
+      "id": 15,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c78"
+      },
+      "content": "Không hiểu sao luôn đấy",
+      "replyFor": 5,
+      "username": "anhhung4",
+      "id": 16,
+      "dislikes": [
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c79"
+      },
+      "content": "Chắc ít người đọc",
+      "replyFor": 5,
+      "username": "anhhung4",
+      "id": 17,
+      "dislikes": [
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung4",
+        "anhhung1",
+        "anhhhung2"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c7a"
+      },
+      "content": "Hay mà",
+      "replyFor": 4,
+      "username": "anhhung4",
+      "id": 18,
+      "dislikes": [
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c7b"
+      },
+      "content": "chán thật",
+      "replyFor": 11,
+      "username": "anhhung4",
+      "id": 19,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c7c"
+      },
+      "content": "Hơi ảo",
+      "storyId": "9",
+      "username": "anhhung4",
+      "id": 20,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c7d"
+      },
+      "content": "thấy không hay lắm",
+      "replyFor": 7,
+      "username": "anhhung3",
+      "id": 21,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c7e"
+      },
+      "content": "Cùng quan điểm",
+      "replyFor": 6,
+      "username": "anhhung3",
+      "id": 22,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c7f"
+      },
+      "content": "Chả hiểu sao mà mấy đứa bảo hay được",
+      "replyFor": 6,
+      "username": "anhhung3",
+      "id": 23,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c80"
+      },
+      "content": "Ông này bị ảo à",
+      "replyFor": 2,
+      "username": "anhhung3",
+      "id": 24,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c81"
+      },
+      "content": "Chuất luôn",
+      "storyId": "1",
+      "username": "anhhung3",
+      "id": 25,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c82"
+      },
+      "content": "Haha cùng cảnh ngộ",
+      "replyFor": 14,
+      "username": "anhhung3",
+      "id": 26,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c83"
+      },
+      "content": "Được của ló đấy",
+      "storyId": "1",
+      "username": "anhhung4",
+      "id": 27,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c84"
+      },
+      "content": "Công nghiệp vãi",
+      "replyFor": 25,
+      "username": "anhhung4",
+      "id": 28,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c85"
+      },
+      "content": "ahihi",
+      "replyFor": 25,
+      "username": "anhhung4",
+      "id": 29,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c86"
+      },
+      "content": "Lên tiếng tẩy chay đi các bác",
+      "storyId": "6",
+      "username": "anhhung4",
+      "id": 30,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c87"
+      },
+      "content": "Nói được làm được",
+      "replyFor": 30,
+      "username": "anhhung4",
+      "id": 31,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c88"
+      },
+      "content": "Mê mà",
+      "replyFor": 14,
+      "username": "anhhung4",
+      "id": 32,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c89"
+      },
+      "content": "hahaah",
+      "replyFor": 14,
+      "username": "anhhung4",
+      "id": 33,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c8a"
+      },
+      "content": "chán thiệc",
+      "replyFor": 14,
+      "username": "anhhung4",
+      "id": 34,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c8b"
+      },
+      "content": "Cày mấy chap liền rồi",
+      "replyFor": 7,
+      "username": "anhhung4",
+      "id": 35,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c8c"
+      },
+      "content": "hehe",
+      "replyFor": 7,
+      "username": "anhhung4",
+      "id": 36,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c8d"
+      },
+      "content": "Woa, được đấy",
+      "storyId": "5",
+      "username": "anhhung4",
+      "id": 37,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c8e"
+      },
+      "content": "lại chả khôg",
+      "replyFor": 37,
+      "username": "anhhung4",
+      "id": 38,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c8f"
+      },
+      "content": "Ác",
+      "storyId": "5",
+      "username": "anhhung4",
+      "id": 39,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
     }
   ],
   "chapter": [
