@@ -4,23 +4,18 @@ import { useState, useEffect } from "react";
 import StoryItem2 from "./../components/storyitem2";
 import { useParams, Link } from "react-router-dom";
 import Comment from "./../components/comment";
+import img1 from "../components/image/1.jpg";
+import { Modal } from "react-bootstrap";
 
 const StoryDetails = () => {
   const [top5Liked, setTop5Liked] = useState([]);
   const [story, setStory] = useState({});
   const { id } = useParams();
-  const [user, setUser] = useState({});
-  const username = sessionStorage.getItem("username");
-  const [justChanged, setChanged] = useState(0);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [showReviewModal, setShowReviewModal] = useState(false);
 
-  //get user information
-  useEffect(() => {
-    fetch('http://localhost:9999/users?username=' + username)
-      .then(response => response.json())
-      .then(json => setUser(json[0]))
-  }, [])
-
-  //get top 5 likes
+  // Lấy danh sách top 5 được yêu thích
   useEffect(() => {
     fetch("http://localhost:9999/story")
       .then((response) => response.json())
@@ -29,163 +24,49 @@ const StoryDetails = () => {
       );
   }, []);
 
-
-  // lay cac thuoc tinh cua story
-  const [follower, setFollower] = useState([]);
-  const [likes, setLikes] = useState([]);
-  const [dislikes, setDislikes] = useState([]);
+  // Lấy chi tiết câu chuyện
   useEffect(() => {
-    fetch(`http://localhost:9999/story/${id}`)
+    fetch('http:localhost:9999/story/${id}')
       .then((response) => response.json())
-      .then((json) => { setStory(json); setFollower(json.follower); setLikes(json.likes); setDislikes(json.dislikes) });
-  }, [justChanged]);
+      .then((json) => setStory(json));
+  }, [id]);
 
-  // Handle View
-  function handleView() {
-    let views = story.views;
-    views++;
-    const newStory = { ...story, views };
-    if (newStory != null) {
-      fetch("http://localhost:9999/story/" + id, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'Application/Json' },
-        body: JSON.stringify(newStory)
-      })
-        // .then(() => { changed++; setChanged(changed) })
-        .catch(err => { console.log(err.message); })
-    }
-  }
+  // Kiểm tra trạng thái đăng nhập
+  useEffect(() => {
+    checkLogin();
+  }, []);
 
-  // handle follow
-  function handleFollow(e, username) {
-    e.preventDefault();
-    setFollower(follower.splice(0, 0, username));
-    const newStory = { ...story, follower };
-    let changed = justChanged
-    if (newStory != null) {
-      fetch("http://localhost:9999/story/" + id, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'Application/Json' },
-        body: JSON.stringify(newStory)
-      })
-        .then(() => { changed++; setChanged(changed) })
-        .catch(err => { console.log(err.message); })
+  // Hàm kiểm tra trạng thái đăng nhập
+  const checkLogin = () => {
+    const username = sessionStorage.getItem("username");
+    if (username) {
+      setIsLoggedIn(true);
     }
-  }
-  // handleUnfollow
-  function handleUnFollow(e, username) {
-    e.preventDefault();
-    const index = follower.indexOf(username);
-    if (index > -1)
-      setFollower(follower.splice(index, 1));
-    const newStory = { ...story, follower };
-    let changed = justChanged
-    if (newStory != null) {
-      fetch("http://localhost:9999/story/" + id, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'Application/Json' },
-        body: JSON.stringify(newStory)
-      })
-        .then(() => { changed++; setChanged(changed) })
-        .catch(err => { console.log(err.message); })
-    }
-  }
+  };
 
-  // Handle like
-  function handleLike(e, username) {
-    e.preventDefault();
-    setLikes(likes.splice(0, 0, username));
-    const index = dislikes.indexOf(username);
-    if (index > -1)
-      setDislikes(dislikes.splice(index, 1));
-    const newStory = { ...story, likes, dislikes };
-    let changed = justChanged
-    if (newStory != null) {
-      fetch("http://localhost:9999/story/" + id, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'Application/Json' },
-        body: JSON.stringify(newStory)
-      })
-        .then(() => { changed++; setChanged(changed) })
-        .catch(err => { console.log(err.message); })
+  // Xử lý sự kiện khi người dùng ấn vào nút Follow
+  const handleFollowClick = () => {
+    if (!isLoggedIn) {
+      setShowModal(true);
+    } else {
+      // Xử lý logic Follow tại đây
+      console.log("Follow clicked");
     }
-  }
+  };
 
-  // Handle Unlike
-  function handleUnlike(e, username) {
-    e.preventDefault();
-    const index = likes.indexOf(username);
-    if (index > -1)
-      setLikes(likes.splice(index, 1));
-    const newStory = { ...story, dislikes };
-    let changed = justChanged
-    if (newStory != null) {
-      fetch("http://localhost:9999/story/" + id, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'Application/Json' },
-        body: JSON.stringify(newStory)
-      })
-        .then(() => { changed++; setChanged(changed) })
-        .catch(err => { console.log(err.message); })
-    }
-  }
+  // Đóng Modal
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
-  // Handle Dislike
-  function handleDislike(e, username) {
-    e.preventDefault();
-    setDislikes(dislikes.splice(0, 0, username));
-    const index = likes.indexOf(username);
-    if (index > -1)
-      setLikes(likes.splice(index, 1));
-    const newStory = { ...story, likes, dislikes };
-    let changed = justChanged
-    if (newStory != null) {
-      fetch("http://localhost:9999/story/" + id, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'Application/Json' },
-        body: JSON.stringify(newStory)
-      })
-        .then(() => { changed++; setChanged(changed) })
-        .catch(err => { console.log(err.message); })
+  const handleReviewClick = () => {
+    if (!isLoggedIn) {
+      setShowModal(true);
+    } else {
+      // Mở Modal Review nếu đã đăng nhập
+      setShowReviewModal(true);
     }
-  }
-
-  // Handle UnDislike
-  function handleUndislike(e, username) {
-    e.preventDefault();
-    const index = dislikes.indexOf(username);
-    if (index > -1)
-      setDislikes(dislikes.splice(index, 1));
-    const newStory = { ...story, dislikes };
-    let changed = justChanged
-    if (newStory != null) {
-      fetch("http://localhost:9999/story/" + id, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'Application/Json' },
-        body: JSON.stringify(newStory)
-      })
-        .then(() => { changed++; setChanged(changed) })
-        .catch(err => { console.log(err.message); })
-    }
-  }
-
-  // Handle comment
-  const [storyId, setStoryId] = useState(id);
-  const [content, setContent] = useState("");
-  function handleSubmit(e) {
-    e.preventDefault();
-    const comment = { content, storyId, username };
-    if (comment != null) {
-      fetch("http://localhost:9999/comment", {
-        method: 'POST',
-        headers: { 'Content-Type': 'Application/Json' },
-        body: JSON.stringify(comment)
-      })
-        .then(() => window.location.reload())
-        .catch(err => { console.log(err.message); })
-    }
-    e.target.reset();
-  }
+  };
 
   return (
     <DefaultLayout>
@@ -196,10 +77,10 @@ const StoryDetails = () => {
               <div className="col-lg-3">
                 <div className="anime__details__pic set-bg">
                   <div className="wrapper_img">
-                    <img src={`../components/image/${story.image}`} alt="" />
+                    <img src={img1} alt="" />
                   </div>
                   <div className="comment">
-                    <i class="bi bi-chat-quote-fill"></i> {likes.length}
+                    <i class="bi bi-chat-quote-fill"></i> {story.likes}
                   </div>
                   <div className="view">
                     <i className="bi bi-eye-fill"></i>
@@ -215,14 +96,16 @@ const StoryDetails = () => {
                   </div>
                   <div className="anime__details__rating">
                     <div className="rating">
-                      {
-                        likes.includes(username) ? (<a href="#"><i class="bi bi-hand-thumbs-up-fill" onClick={e => handleUnlike(e, username)}></i></a>) : (<a href="#"><i class="bi bi-hand-thumbs-up" onClick={e => handleLike(e, username)}></i></a>)
-                      }
-                      {
-                        dislikes.includes(username) ? (<a href="#"><i class="bi bi-hand-thumbs-down-fill" onClick={e => handleUndislike(e, username)}></i></a>) : (<a href="#"><i class="bi bi-hand-thumbs-down" onClick={e => handleDislike(e, username)}></i></a>)
-                      }
+                      <a href="#">
+                        <i class="bi bi-hand-thumbs-up-fill"></i>
+                      </a>
+                      <a href="#">
+                        <i class="bi bi-hand-thumbs-down-fill"></i>
+                      </a>
                     </div>
-                    <span>{likes.length} Likes - {dislikes.length} Dislikes</span>
+                    <span>
+                      {story.likes} Likes - {story.dislikes} Dislikes
+                    </span>
                   </div>
                   <p>{story.discription}</p>
                   <div className="anime__details__widget">
@@ -250,13 +133,25 @@ const StoryDetails = () => {
                     </div>
                   </div>
                   <div className="anime__details__btn">
-                    {
-                      follower.includes(username) ? (<a href="/" className="follow-btn" onClick={e => handleUnFollow(e, username)}><i class="bi bi-heart-fill"></i> Unfollow</a>) : (<a href="/" className="follow-btn" onClick={e => handleFollow(e, username)}><i class="bi bi-heart"></i> Follow</a>)
-                    }
+                    {isLoggedIn ? (
+                      <a
+                        href="/modalbox"
+                        className="follow-btn"
+                        onClick={handleFollowClick}
+                      >
+                        <i className="fa fa-heart-o"></i> Follow
+                      </a>
+                    ) : (
+                      <button
+                        className="follow-btn"
+                        onClick={handleFollowClick}
+                      >
+                        <i className="fa fa-heart-o"></i> Follow
+                      </button>
+                    )}
                     <Link
                       to={`/story/reading/${story.id}`}
                       className="watch-btn"
-                      onClick={handleView}
                     >
                       <span>Read Now</span>
                       <i class="bi bi-chevron-right"></i>
@@ -278,11 +173,11 @@ const StoryDetails = () => {
                 <div className="section-title">
                   <h5>Your Comment</h5>
                 </div>
-                <form onSubmit={(e) => handleSubmit(e)}>
-                  <textarea placeholder="Your Comment" onChange={e => setContent(e.target.value)}></textarea>
-                  <button type="submit">
-                    <i className="fa fa-location-arrow"></i> Review
-                  </button>
+                <form action="#">
+                  <textarea placeholder="Your Comment"></textarea>
+                  <button type="button" onClick={handleReviewClick}>
+      <i className="fa fa-location-arrow"></i> Review
+    </button>
                 </form>
               </div>
             </div>
@@ -299,6 +194,27 @@ const StoryDetails = () => {
           </div>
         </div>
       </section>
+      {/* Modal */}
+      <Modal show={showModal} onHide={handleCloseModal} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Login Required</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Please login to perform this function.</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <button
+            type="button"
+            className="btn btn-secondary"
+            onClick={handleCloseModal}
+          >
+            Close
+          </button>
+          <Link to="/login" className="btn btn-primary">
+            Login
+          </Link>
+        </Modal.Footer>
+      </Modal>
     </DefaultLayout>
   );
 };
