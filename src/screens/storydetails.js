@@ -4,12 +4,21 @@ import { useState, useEffect } from "react";
 import StoryItem2 from "./../components/storyitem2";
 import { useParams, Link } from "react-router-dom";
 import Comment from "./../components/comment";
-import img1 from "../components/image/1.jpg";
 
 const StoryDetails = () => {
   const [top5Liked, setTop5Liked] = useState([]);
   const [story, setStory] = useState({});
   const { id } = useParams();
+  const [user, setUser] = useState({});
+  const username = sessionStorage.getItem("username");
+  const [justChanged, setChanged] = useState(0);
+
+  //get user information
+  useEffect(() => {
+    fetch('http://localhost:9999/users?username=' + username)
+      .then(response => response.json())
+      .then(json => setUser(json[0]))
+  }, [])
 
   //get top 5 likes
   useEffect(() => {
@@ -20,11 +29,163 @@ const StoryDetails = () => {
       );
   }, []);
 
+
+  // lay cac thuoc tinh cua story
+  const [follower, setFollower] = useState([]);
+  const [likes, setLikes] = useState([]);
+  const [dislikes, setDislikes] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:9999/story/${id}`)
       .then((response) => response.json())
-      .then((json) => setStory(json));
-  }, [id]);
+      .then((json) => { setStory(json); setFollower(json.follower); setLikes(json.likes); setDislikes(json.dislikes) });
+  }, [justChanged]);
+
+  // Handle View
+  function handleView() {
+    let views = story.views;
+    views++;
+    const newStory = { ...story, views };
+    if (newStory != null) {
+      fetch("http://localhost:9999/story/" + id, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'Application/Json' },
+        body: JSON.stringify(newStory)
+      })
+        // .then(() => { changed++; setChanged(changed) })
+        .catch(err => { console.log(err.message); })
+    }
+  }
+
+  // handle follow
+  function handleFollow(e, username) {
+    e.preventDefault();
+    setFollower(follower.splice(0, 0, username));
+    const newStory = { ...story, follower };
+    let changed = justChanged
+    if (newStory != null) {
+      fetch("http://localhost:9999/story/" + id, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'Application/Json' },
+        body: JSON.stringify(newStory)
+      })
+        .then(() => { changed++; setChanged(changed) })
+        .catch(err => { console.log(err.message); })
+    }
+  }
+  // handleUnfollow
+  function handleUnFollow(e, username) {
+    e.preventDefault();
+    const index = follower.indexOf(username);
+    if (index > -1)
+      setFollower(follower.splice(index, 1));
+    const newStory = { ...story, follower };
+    let changed = justChanged
+    if (newStory != null) {
+      fetch("http://localhost:9999/story/" + id, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'Application/Json' },
+        body: JSON.stringify(newStory)
+      })
+        .then(() => { changed++; setChanged(changed) })
+        .catch(err => { console.log(err.message); })
+    }
+  }
+
+  // Handle like
+  function handleLike(e, username) {
+    e.preventDefault();
+    setLikes(likes.splice(0, 0, username));
+    const index = dislikes.indexOf(username);
+    if (index > -1)
+      setDislikes(dislikes.splice(index, 1));
+    const newStory = { ...story, likes, dislikes };
+    let changed = justChanged
+    if (newStory != null) {
+      fetch("http://localhost:9999/story/" + id, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'Application/Json' },
+        body: JSON.stringify(newStory)
+      })
+        .then(() => { changed++; setChanged(changed) })
+        .catch(err => { console.log(err.message); })
+    }
+  }
+
+  // Handle Unlike
+  function handleUnlike(e, username) {
+    e.preventDefault();
+    const index = likes.indexOf(username);
+    if (index > -1)
+      setLikes(likes.splice(index, 1));
+    const newStory = { ...story, dislikes };
+    let changed = justChanged
+    if (newStory != null) {
+      fetch("http://localhost:9999/story/" + id, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'Application/Json' },
+        body: JSON.stringify(newStory)
+      })
+        .then(() => { changed++; setChanged(changed) })
+        .catch(err => { console.log(err.message); })
+    }
+  }
+
+  // Handle Dislike
+  function handleDislike(e, username) {
+    e.preventDefault();
+    setDislikes(dislikes.splice(0, 0, username));
+    const index = likes.indexOf(username);
+    if (index > -1)
+      setLikes(likes.splice(index, 1));
+    const newStory = { ...story, likes, dislikes };
+    let changed = justChanged
+    if (newStory != null) {
+      fetch("http://localhost:9999/story/" + id, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'Application/Json' },
+        body: JSON.stringify(newStory)
+      })
+        .then(() => { changed++; setChanged(changed) })
+        .catch(err => { console.log(err.message); })
+    }
+  }
+
+  // Handle UnDislike
+  function handleUndislike(e, username) {
+    e.preventDefault();
+    const index = dislikes.indexOf(username);
+    if (index > -1)
+      setDislikes(dislikes.splice(index, 1));
+    const newStory = { ...story, dislikes };
+    let changed = justChanged
+    if (newStory != null) {
+      fetch("http://localhost:9999/story/" + id, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'Application/Json' },
+        body: JSON.stringify(newStory)
+      })
+        .then(() => { changed++; setChanged(changed) })
+        .catch(err => { console.log(err.message); })
+    }
+  }
+
+  // Handle comment
+  const [storyId, setStoryId] = useState(id);
+  const [content, setContent] = useState("");
+  function handleSubmit(e) {
+    e.preventDefault();
+    const comment = { content, storyId, username };
+    if (comment != null) {
+      fetch("http://localhost:9999/comment", {
+        method: 'POST',
+        headers: { 'Content-Type': 'Application/Json' },
+        body: JSON.stringify(comment)
+      })
+        .then(() => window.location.reload())
+        .catch(err => { console.log(err.message); })
+    }
+    e.target.reset();
+  }
 
   return (
     <DefaultLayout>
@@ -35,10 +196,10 @@ const StoryDetails = () => {
               <div className="col-lg-3">
                 <div className="anime__details__pic set-bg">
                   <div className="wrapper_img">
-                    <img src={img1} alt="" />
+                    <img src={`../components/image/${story.image}`} alt="" />
                   </div>
                   <div className="comment">
-                    <i class="bi bi-chat-quote-fill"></i> {story.likes}
+                    <i class="bi bi-chat-quote-fill"></i> {likes.length}
                   </div>
                   <div className="view">
                     <i className="bi bi-eye-fill"></i>
@@ -54,14 +215,14 @@ const StoryDetails = () => {
                   </div>
                   <div className="anime__details__rating">
                     <div className="rating">
-                      <a href="#">
-                        <i class="bi bi-hand-thumbs-up-fill"></i>
-                      </a>
-                      <a href="#">
-                        <i class="bi bi-hand-thumbs-down-fill"></i>
-                      </a>
+                      {
+                        likes.includes(username) ? (<a href="#"><i class="bi bi-hand-thumbs-up-fill" onClick={e => handleUnlike(e, username)}></i></a>) : (<a href="#"><i class="bi bi-hand-thumbs-up" onClick={e => handleLike(e, username)}></i></a>)
+                      }
+                      {
+                        dislikes.includes(username) ? (<a href="#"><i class="bi bi-hand-thumbs-down-fill" onClick={e => handleUndislike(e, username)}></i></a>) : (<a href="#"><i class="bi bi-hand-thumbs-down" onClick={e => handleDislike(e, username)}></i></a>)
+                      }
                     </div>
-                    <span>69 Likes</span>
+                    <span>{likes.length} Likes - {dislikes.length} Dislikes</span>
                   </div>
                   <p>{story.discription}</p>
                   <div className="anime__details__widget">
@@ -89,12 +250,13 @@ const StoryDetails = () => {
                     </div>
                   </div>
                   <div className="anime__details__btn">
-                    <a href="/" className="follow-btn">
-                      <i className="fa fa-heart-o"></i> Follow
-                    </a>
+                    {
+                      follower.includes(username) ? (<a href="/" className="follow-btn" onClick={e => handleUnFollow(e, username)}><i class="bi bi-heart-fill"></i> Unfollow</a>) : (<a href="/" className="follow-btn" onClick={e => handleFollow(e, username)}><i class="bi bi-heart"></i> Follow</a>)
+                    }
                     <Link
                       to={`/story/reading/${story.id}`}
                       className="watch-btn"
+                      onClick={handleView}
                     >
                       <span>Read Now</span>
                       <i class="bi bi-chevron-right"></i>
@@ -110,14 +272,14 @@ const StoryDetails = () => {
                 <div className="section-title">
                   <h5>Reviews</h5>
                 </div>
-                <Comment />
+                <Comment storyId={id} />
               </div>
               <div className="anime__details__form">
                 <div className="section-title">
                   <h5>Your Comment</h5>
                 </div>
-                <form action="#">
-                  <textarea placeholder="Your Comment"></textarea>
+                <form onSubmit={(e) => handleSubmit(e)}>
+                  <textarea placeholder="Your Comment" onChange={e => setContent(e.target.value)}></textarea>
                   <button type="submit">
                     <i className="fa fa-location-arrow"></i> Review
                   </button>

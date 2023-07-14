@@ -7,8 +7,8 @@ import { useState, useEffect } from "react";
 const StoryReading = () => {
   const { id } = useParams();
   const [story, setStory] = useState({});
-  console.log(id);
-  console.log(typeof id);
+  const [content, setContent] = useState([]);
+
 
   //get story by id
   useEffect(() => {
@@ -18,7 +18,12 @@ const StoryReading = () => {
 
   }, [id]);
 
-  console.log(story);
+  useEffect(() => {
+    fetch('http://localhost:9999/chapter')
+      .then(response => response.json())
+      .then(json => setContent(json))
+  }, [])
+
 
   return (
     <DefaultLayout>
@@ -31,8 +36,15 @@ const StoryReading = () => {
                   <h5>{story.storyName}</h5>
                 </div>
                 {/* <div className="row"> */}
+                <div className="chapter_name">
+                  <h6>Chapter 1</h6>
+                </div>
                 <div className="" style={{ fontSize: "20px" }}>
-                  {story.discription}
+                  <p>{content.map(c => {
+                    if (c.storyId == id && c.chapterName === 'chapter 1') {
+                      return c.content;
+                    }
+                  })}</p>
                 </div>
                 {/* </div> */}
               </div>
@@ -54,21 +66,7 @@ const StoryReading = () => {
                 <div className="section-title">
                   <h5>Reviews</h5>
                 </div>
-                <Comment />
-                <div className="anime__review__item">
-                  <div className="anime__review__item__pic">
-                    <img src="img/anime/review-1.jpg" alt="" />
-                  </div>
-                  <div className="anime__review__item__text">
-                    <h6>
-                      Chris Curry - <span>1 Hour ago</span>
-                    </h6>
-                    <p>
-                      whachikan Just noticed that someone categorized this as
-                      belonging to the genre "demons" LOL
-                    </p>
-                  </div>
-                </div>
+                <Comment storyId={id} />
               </div>
               <div className="anime__details__form">
                 <div className="section-title">

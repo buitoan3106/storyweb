@@ -18,7 +18,8 @@ import ModalAddStory from "./../components/modaladdstory";
 import ModalViewStory from "../components/modalviewstory";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import ModalEditStory from './../components/modaleditstory';
+import ModalEditStory from "./../components/modaleditstory";
+import ModalAddChapter from "../components/modaladdchapter";
 const ViewListStory = () => {
   const [stories, setStories] = useState([]);
   const [authors, setAuthors] = useState([]);
@@ -32,7 +33,6 @@ const ViewListStory = () => {
   let endIndex = startIndex + itemsPerPage;
   let currentStories = stories.slice(startIndex, endIndex);
 
-  const [sort, setSort] = useState("id_asc");
   const [checkBoxValue, setCheckBoxValue] = useState([]);
   const [filteredStories, setFilteredStories] = useState([]);
   const [storiesCopy, setStoriesCopy] = useState([]);
@@ -40,6 +40,7 @@ const ViewListStory = () => {
   const [isShowModalAddStory, setIsShowModalAddStory] = useState(false);
   const [isShowModalViewStory, setIsShowModalViewStory] = useState(false);
   const [isShowModalEditStory, setIsShowModalEditStory] = useState(false);
+  const [isShowModalAddChapter, setIsShowModalAddChapter] = useState(false);
   const [story, setStory] = useState({});
   const addStoryRef = useRef();
   const editStoryRef = useRef();
@@ -48,6 +49,7 @@ const ViewListStory = () => {
     setIsShowModalAddStory(false);
     setIsShowModalViewStory(false);
     setIsShowModalEditStory(false);
+    setIsShowModalAddChapter(false);
   };
 
   addStoryRef.current = (newStory) => {
@@ -55,13 +57,10 @@ const ViewListStory = () => {
   };
 
   editStoryRef.current = (story) => {
-      //
-      let cloneStories = [...stories];
-      let index = stories.findIndex(s => s.id === story.id)
-      cloneStories[index] = story;
-      console.log(typeof cloneStories[index]); 
-      console.log(stories,cloneStories);
-      console.log(index);
+    //
+    let cloneStories = [...stories];
+    let index = stories.findIndex((s) => s.id === story.id);
+    cloneStories[index] = story;
   };
 
   useEffect(() => {
@@ -80,7 +79,6 @@ const ViewListStory = () => {
       .then((res) => res.json())
       .then((data) => {
         setStoriesCopy(data);
-        console.log(data);
       });
     //check story have categoryName is exist in array checkbox
     const isExist = (categoryName) =>
@@ -144,7 +142,7 @@ const ViewListStory = () => {
   const handleShowEditForm = (story) => {
     setIsShowModalEditStory(true);
     setStory(story);
-  }
+  };
 
   const handleDeleteStory = (story) => {
     if (
@@ -163,6 +161,11 @@ const ViewListStory = () => {
           console.error("Error deleting product:", error);
         });
     }
+  };
+
+  const handleShowAddChapter = (story) => {
+    setIsShowModalAddChapter(true);
+    setStory(story);
   };
 
   return (
@@ -190,7 +193,10 @@ const ViewListStory = () => {
                   </Col>
                   <Col md={6}>2</Col>
                 </Row>
-                <Table className="table-story p-2" style={{marginTop: "2rem"}}>
+                <Table
+                  className="table-story p-2"
+                  style={{ marginTop: "2rem" }}
+                >
                   <thead>
                     <tr>
                       <th>ID</th>
@@ -203,10 +209,14 @@ const ViewListStory = () => {
                       <th>Views</th>
                       <th></th>
                       <th className="text-center">
-                        <Button className="btn-success" onClick={() => setIsShowModalAddStory(true)}>
+                        <Button
+                          className="btn-success"
+                          onClick={() => setIsShowModalAddStory(true)}
+                        >
                           <i class="bi bi-plus-circle-fill"></i>
                         </Button>
                       </th>
+                      <th></th>
                       <th></th>
                     </tr>
                   </thead>
@@ -252,6 +262,14 @@ const ViewListStory = () => {
                               onClick={() => handleDeleteStory(story)}
                             >
                               <i class="bi bi-trash3-fill"></i>
+                            </Button>
+                          </td>
+                          <td>
+                            <Button
+                              className="btn btn-success"
+                              onClick={() => handleShowAddChapter(story)}
+                            >
+                              <i class="bi bi-node-plus-fill"></i>
                             </Button>
                           </td>
                         </tr>
@@ -333,6 +351,11 @@ const ViewListStory = () => {
         handleClose={handleClose}
         story={story}
         editStoryRef={editStoryRef}
+      />
+      <ModalAddChapter
+        show={isShowModalAddChapter}
+        handleClose={handleClose}
+        story={story}
       />
     </AdminLayout>
   );

@@ -7,7 +7,8 @@
       "name": "Nam",
       "Age": "18",
       "email": "anhhung1@gmail.com",
-      "isAdmin": 1
+      "isAdmin": 1,
+      "image": "7.jpg"
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "name": "Hung",
       "Age": "18",
       "email": "anhhung2@gmail.com",
-      "isAdmin": 0
+      "isAdmin": 0,
+      "image": "9.jpg"
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "name": "Tuan",
       "Age": "18",
       "email": "anhhung3@gmail.com",
-      "isAdmin": 0
+      "isAdmin": 0,
+      "image": "10.jpg"
     },
     {
       "id": 4,
@@ -34,16 +37,18 @@
       "name": "Linh",
       "Age": "18",
       "email": "anhhung5@gmail.com",
-      "isAdmin": 0
+      "isAdmin": 0,
+      "image": "11.jpg"
     },
     {
       "id": 5,
-      "username": "anhde",
+      "username": "anhhung5",
       "password": "1234",
       "email": "anh@gmail.com",
       "name": "anh",
       "age": "23",
-      "isAdmin": 0
+      "isAdmin": 0,
+      "image": "12.jpg"
     },
     {
       "id": 6,
@@ -52,7 +57,8 @@
       "email": "anhde@gmail.com",
       "name": "anhde",
       "age": "20",
-      "isAdmin": false
+      "isAdmin": false,
+      "image": "14.jpg"
     }
   ],
   "category": [
@@ -90,16 +96,21 @@
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
       "postDate": "1/6/2022",
       "currentChap": 3,
-      "dislikes": [        
-        5
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 1234
+      "views": 365,
+      "follower": [
+        "anhhung1",
+        "anhhung2"
+      ]
     },
     {
       "_id": {
@@ -113,24 +124,22 @@
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
       "postDate": "4/5/2022",
       "currentChap": 3,
-<<<<<<< Updated upstream
-      "dislikes": 5,
-      "likes": 100,
-      "totalChap": 5,
-      "views": 1000
-=======
+
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3,4
+        "anhhung3",
+        "anhhung1",
+        "anhhhung2"
       ],
       "totalChap": 5,
-      "views": 2344
->>>>>>> Stashed changes
+      "views": 504,
+      "follower": [
+        "anhhung3",
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -145,16 +154,19 @@
       "postDate": "3/2/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 3653
+      "views": 367,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -169,16 +181,19 @@
       "postDate": "23/6/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 36523
+      "views": 200,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -193,16 +208,21 @@
       "postDate": "11/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung4",
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 464,
+      "follower": [
+        "anhhung5",
+        "anhhung4",
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -217,16 +237,19 @@
       "postDate": "13/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 366,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -241,16 +264,19 @@
       "postDate": "10/4/2022",
       "currentChap": 3,
       "dislikes": [
-        
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3,4
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 5678
+      "views": 110,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -265,16 +291,19 @@
       "postDate": "11/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 52,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -289,16 +318,19 @@
       "postDate": "11/7/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 43,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -313,16 +345,19 @@
       "postDate": "11/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 345,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -337,16 +372,19 @@
       "postDate": "11/2/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 78,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -361,16 +399,19 @@
       "postDate": "11/4/2022",
       "currentChap": 3,
       "dislikes": [
-        
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3,4
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 36,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -385,16 +426,19 @@
       "postDate": "3/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 170,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -409,23 +453,26 @@
       "postDate": "11/9/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 425,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
         "$oid": "64932eb7e60e47f2ea629f57"
       },
       "id": 15,
-      "image": "8.jpg",
+      "image": "15.jpg",
       "storyName": "Hạnh Phúc Là Khi Gặp Được Em",
       "author": "Hoàng Kim",
       "categoryName": "Ngôn tình",
@@ -433,16 +480,19 @@
       "postDate": "11/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 145,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -457,16 +507,19 @@
       "postDate": "2/4/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 215,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -481,16 +534,19 @@
       "postDate": "4/12/2018",
       "currentChap": 3,
       "dislikes": [
-        
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3,4
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 335,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -505,16 +561,19 @@
       "postDate": "11/4/2019",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 34,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -529,16 +588,19 @@
       "postDate": "3/2/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 35,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -553,16 +615,19 @@
       "postDate": "10/5/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 135,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -577,16 +642,19 @@
       "postDate": "9/4/2020",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 215,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -601,16 +669,19 @@
       "postDate": "21/4/2019",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 315,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -625,16 +696,19 @@
       "postDate": "22/6/2020",
       "currentChap": 3,
       "dislikes": [
-        
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3,4
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 417,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
@@ -646,87 +720,49 @@
       "author": "Quỷ Bút Hoàng Thái",
       "categoryName": "Kinh dị",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
-
-      "postDate": "23/6/2022"
       "postDate": "23/6/2022",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
+      "views": 285,
+      "follower": [
+        "anhhung1"
+      ]
     },
     {
       "_id": {
         "$oid": "64932eb7e60e47f2ea629f61"
       },
       "id": 25,
-      "image": "1.jpg",
+      "image": "25.jpg",
       "storyName": "Âm Nương",
-      "author": "Mộng Linh Kinh",
+      "author": "Mộng Linh Kinh Hỷ",
       "categoryName": "Kinh dị",
       "discription": "Kẻ Phản Bội kể về một hành tinh song song với Trái Đất, gọi là Thiên Tinh. Nữ chính tên là Tinh Ngân, làm việc cho tổ chức thần bí Vô Ảnh Cung. Sau này cô đi theo và làm việc cho Huyền vương, lấy tên là Ly Thanh.",
       "postDate": "1/2/2021",
       "currentChap": 3,
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365
-    },
-    {
-      "image": "10.jpg",
-      "storyName": "sad",
-      "author": "sads",
-      "categoryName": "Ngôn tình",
-      "discription": "sadsa",
-      "postDate": "07-07-2023",
-      "currentChap": 1,
-      "dislikes": 0,
-      "likes": 0,
-      "totalChap": 2,
-      "views": 0,
-      "id": 26
-    },
-    {
-      "image": "5.jpg",
-      "storyName": "212",
-      "author": "ssads",
-      "categoryName": "Hài hước",
-      "discription": "adsa",
-      "postDate": "07-07-2023",
-      "currentChap": 1,
-      "dislikes": 0,
-      "likes": 0,
-      "totalChap": 2,
-      "views": 0,
-      "id": 27
-    },
-    {
-      "image": "6.jpg",
-      "storyName": "dd",
-      "author": "dd",
-      "categoryName": "Ngôn tình",
-      "discription": "afsdfsfdsf",
-      "postDate": "07-07-2023",
-      "currentChap": 1,
-      "dislikes": 0,
-      "likes": 0,
-      "totalChap": 2,
-      "views": 0,
-      "id": 28
+      "views": 65,
+      "follower": [
+        "anhhung1"
+      ]
     }
   ],
   "author": [
@@ -914,15 +950,15 @@
       "id": 1,
       "content": "Đọc chương đầu thôi đã thấy cuốn rồi",
       "storyId": 1,
-      "userId": 1,
+      "username": "anhhung1",
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "timeCreated": "2023/07/10"
     },
@@ -933,15 +969,15 @@
       "id": 2,
       "content": "Có ai mê nữ chính như tôi không ??!!",
       "storyId": 1,
-      "userId": 2,
+      "username": "anhhung2",
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "timeCreated": "2023/07/10"
     },
@@ -952,17 +988,657 @@
       "id": 3,
       "content": "Chuẩn luôn đấy bác ơi !!",
       "replyFor": 1,
-      "userId": 3,
+      "username": "anhhung3",
       "likes": [
-        1,
-        2,
-        3
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
       ],
       "dislikes": [
-        4,
-        5
+        "anhhung4",
+        "anhhung5"
       ],
       "timeCreated": "2023/07/10"
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c6c"
+      },
+      "content": "Truyện này đọc cuốn dã man\n",
+      "storyId": "2",
+      "id": 4,
+      "username": "anhhung2",
+      "dislikes": [
+        "anhhung5"
+      ],
+      "likes": [
+        null,
+        "anhhung1",
+        "anhhhung2"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c6d"
+      },
+      "content": "Truyện hay thế mà ít like thật",
+      "storyId": "2",
+      "id": 5,
+      "username": "anhhung2",
+      "dislikes": [
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung4",
+        "anhhung1",
+        "anhhhung2"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c6e"
+      },
+      "content": "Đọc chương đầu thấy không hay lắm",
+      "storyId": "3",
+      "id": 6,
+      "username": "anhhung2",
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c6f"
+      },
+      "content": "hay quá các bác ơi !!!",
+      "storyId": "3",
+      "username": "anhhung2",
+      "id": 7,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c70"
+      },
+      "content": "Có tui bác ơi",
+      "replyFor": 2,
+      "username": "anhhung4",
+      "id": 8,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c71"
+      },
+      "content": "Uk, chuẩn đấy bác",
+      "replyFor": 5,
+      "username": "anhhung3",
+      "id": 9,
+      "dislikes": [
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung4",
+        "anhhung1",
+        "anhhhung2"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c72"
+      },
+      "content": "Hay mà bác",
+      "replyFor": 6,
+      "username": "anhhung4",
+      "id": 10,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c73"
+      },
+      "content": "Truyện chán bỏ mẹ",
+      "storyId": "6",
+      "username": "anhhung2",
+      "id": 11,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c74"
+      },
+      "content": "Đã quá trời",
+      "storyId": "4",
+      "username": "anhhung4",
+      "id": 12,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c75"
+      },
+      "content": "Truyện này hay dã man",
+      "storyId": "4",
+      "username": "anhhung4",
+      "id": 13,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c76"
+      },
+      "content": "Cày được 15 chapter rồi",
+      "storyId": "4",
+      "username": "anhhung4",
+      "id": 14,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c77"
+      },
+      "content": "Chuẩn luôn ạ",
+      "replyFor": 7,
+      "username": "anhhung4",
+      "id": 15,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c78"
+      },
+      "content": "Không hiểu sao luôn đấy",
+      "replyFor": 5,
+      "username": "anhhung4",
+      "id": 16,
+      "dislikes": [
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c79"
+      },
+      "content": "Chắc ít người đọc",
+      "replyFor": 5,
+      "username": "anhhung4",
+      "id": 17,
+      "dislikes": [
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung4",
+        "anhhung1",
+        "anhhhung2"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c7a"
+      },
+      "content": "Hay mà",
+      "replyFor": 4,
+      "username": "anhhung4",
+      "id": 18,
+      "dislikes": [
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c7b"
+      },
+      "content": "chán thật",
+      "replyFor": 11,
+      "username": "anhhung4",
+      "id": 19,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c7c"
+      },
+      "content": "Hơi ảo",
+      "storyId": "9",
+      "username": "anhhung4",
+      "id": 20,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c7d"
+      },
+      "content": "thấy không hay lắm",
+      "replyFor": 7,
+      "username": "anhhung3",
+      "id": 21,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c7e"
+      },
+      "content": "Cùng quan điểm",
+      "replyFor": 6,
+      "username": "anhhung3",
+      "id": 22,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c7f"
+      },
+      "content": "Chả hiểu sao mà mấy đứa bảo hay được",
+      "replyFor": 6,
+      "username": "anhhung3",
+      "id": 23,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c80"
+      },
+      "content": "Ông này bị ảo à",
+      "replyFor": 2,
+      "username": "anhhung3",
+      "id": 24,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c81"
+      },
+      "content": "Chuất luôn",
+      "storyId": "1",
+      "username": "anhhung3",
+      "id": 25,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c82"
+      },
+      "content": "Haha cùng cảnh ngộ",
+      "replyFor": 14,
+      "username": "anhhung3",
+      "id": 26,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c83"
+      },
+      "content": "Được của ló đấy",
+      "storyId": "1",
+      "username": "anhhung4",
+      "id": 27,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c84"
+      },
+      "content": "Công nghiệp vãi",
+      "replyFor": 25,
+      "username": "anhhung4",
+      "id": 28,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c85"
+      },
+      "content": "ahihi",
+      "replyFor": 25,
+      "username": "anhhung4",
+      "id": 29,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c86"
+      },
+      "content": "Lên tiếng tẩy chay đi các bác",
+      "storyId": "6",
+      "username": "anhhung4",
+      "id": 30,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c87"
+      },
+      "content": "Nói được làm được",
+      "replyFor": 30,
+      "username": "anhhung4",
+      "id": 31,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c88"
+      },
+      "content": "Mê mà",
+      "replyFor": 14,
+      "username": "anhhung4",
+      "id": 32,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c89"
+      },
+      "content": "hahaah",
+      "replyFor": 14,
+      "username": "anhhung4",
+      "id": 33,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c8a"
+      },
+      "content": "chán thiệc",
+      "replyFor": 14,
+      "username": "anhhung4",
+      "id": 34,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c8b"
+      },
+      "content": "Cày mấy chap liền rồi",
+      "replyFor": 7,
+      "username": "anhhung4",
+      "id": 35,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c8c"
+      },
+      "content": "hehe",
+      "replyFor": 7,
+      "username": "anhhung4",
+      "id": 36,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c8d"
+      },
+      "content": "Woa, được đấy",
+      "storyId": "5",
+      "username": "anhhung4",
+      "id": 37,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c8e"
+      },
+      "content": "lại chả khôg",
+      "replyFor": 37,
+      "username": "anhhung4",
+      "id": 38,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "64af80f8ca5b72e463531c8f"
+      },
+      "content": "Ác",
+      "storyId": "5",
+      "username": "anhhung4",
+      "id": 39,
+      "dislikes": [
+        "anhhung4",
+        "anhhung5"
+      ],
+      "likes": [
+        "anhhung1",
+        "anhhhung2",
+        "anhhung3"
+      ]
     }
   ],
   "chapter": [
@@ -1253,6 +1929,215 @@
       "storyId": 16,
       "chapterName": "chapter 3",
       "content": "Sở Hiểu Đồng chẳng hề cảm thấy lời này có gì không ổn. Bởi vì từ sau khi Tần Tranh vào nhà cô, cô cũng thường nói những lời như vậy với Tần Tranh. Ngay khi những lời kia vừa thốt ra, tiếng cười chế giễu của người xung quanh càng lớn hơn. \"Một tên ăn của vợ, xài của vợ, vậy mà lại dõng dạc nói mình biết chữa bệnh? Thật nực cười.\" Người xung quanh lắc đầu cười nhạo. Mà lúc này, người phụ nữ nổi đầy mụn nhọt trên mặt cũng bực bội không thôi: “Tôi mặc kệ chuyện riêng của các người, dù sao hôm nay nếu các người không chữa khỏi mụn nhọt trên mặt tôi, thì phải bồi thường cho tôi 100 triệu!\" \"Bằng không, chỉ cần một câu của tôi, cả nhà các người đều cút hết ra khỏi Dương Thành cho tôi!\" Câu này của người phụ nữ khiến sắc mặt của đám người Sở Hiểu Đồng và Hàn Anh lập tức trắng bệch. Cút khỏi Dương Thành? Bọn họ vất vả lắm mới kiếm được mấy chục triệu ở Dương Thành, nếu ra khỏi Dương Thành, chẳng phải là phải làm lại từ đầu sao? \"Hiểu Đồng.\" Tần Tranh lên tiếng lần nữa: \"Ở đây không ai có thể chữa khỏi, trong nhà cũng không bỏ ra nổi 100 triệu, sao không để cho tôi thử một lần, cho dù như thế nào, cũng sẽ không tệ như hiện tại.\" Tần Tranh chắc chắn mình có thể chữa khỏi, năm đó khi anh học được những gì ông lão đã học cả đời, chỉ cần một tay y thuật liền xuất thần nhập hóa. Anh dám cam đoan, chỉ cần một vài loại thảo mộc, trộn lẫn và nghiền nát với nhau rồi đắp lên mặt người phụ nữ này, chưa đầy mười phút, nhất định có thể làm cho người phụ nữ này khôi phục như lúc ban đầu! Trong lòng của Sở Hiểu Đồng hơi dao động. Quả thực lời của Tần Tranh nói rất đúng, thế nhưng... \"Không được! Cậu căn bản không phải là bác sĩ, càng không có giấy phép hành nghề y, lỡ như cậu chữa chết người, nhà họ Sở của tôi chẳng phải sẽ chôn cùng cậu sao!\" Hàn Anh tiến lên một bước, cau mày quát lớn. \"Tần Tranh, dù cậu không muốn sống, thì cũng đừng kéo Hiểu Đồng theo! Nếu như cậu thật sự muốn chữa, vậy cậu thề với trời đi, lỡ cậu thất bại thì không liên quan gì đến nhà họ Sở cả, tất cả rủi ro sẽ do một mình cậu gánh chịu!\" Lưu Minh Hạo lạnh lùng mắng. Nghe được lời này, ánh mắt Tần Tranh bỗng chốc lạnh đi."
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 2",
+      "content": "sadsadw",
+      "id": 49
+    },
+    {
+      "storyId": 2,
+      "chapterName": "chapter 2",
+      "content": "safsfddfdsd",
+      "id": 50
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "sadsads",
+      "id": 51
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 4",
+      "content": "asdasda",
+      "id": 52
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "adsas",
+      "id": 53
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "sfdsdsfefdsfd",
+      "id": 54
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "sadsads",
+      "id": 55
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "sadsads",
+      "id": 56
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "asdsads",
+      "id": 57
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "sadsads",
+      "id": 58
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "dsasda",
+      "id": 59
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "sadsads",
+      "id": 60
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "sadsa",
+      "id": 61
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "sadsads",
+      "id": 62
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "sadsas",
+      "id": 63
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "sadsads",
+      "id": 64
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "sadsad",
+      "id": 65
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 3",
+      "content": "sdsfefds",
+      "id": 66
+    },
+    {
+      "storyId": 1,
+      "chapterName": "chapter 5",
+      "content": "sadsdsads",
+      "id": 67
+    },
+    {
+      "storyId": 3,
+      "chapterName": "chapter 4",
+      "content": "dsfds",
+      "id": 68
+    }
+  ],
+  "notification": [
+    {
+      "id": 1,
+      "userIds": [
+        "anhhung1",
+        "anhhung2"
+      ],
+      "content": "Truyện mà bạn đang quan tâm Mịch Tiên Kiếm Đạo đã ra mắt chương mới, cùng đọc ngay thôi nào !!!",
+      "storyId": 3,
+      "timeCreated": "2023-07-03",
+      "isRead": 1
+    },
+    {
+      "userIds": [
+        "anhhung1",
+        "anhhung2"
+      ],
+      "content": "Truyện mà bạn đang quan tâm Kẻ Phản Bội đã ra mắt chương mới, cùng đọc ngay thôi nào !!!",
+      "storyId": 1,
+      "timeCreated": "13-07-2023",
+      "isRead": 1,
+      "id": 2
+    },
+    {
+      "userIds": [
+        "anhhung1",
+        "anhhung2"
+      ],
+      "content": "Truyện mà bạn đang quan tâm Kẻ Phản Bội đã ra mắt chương mới, cùng đọc ngay thôi nào !!!",
+      "storyId": 1,
+      "timeCreated": "13-07-2023",
+      "isRead": 1,
+      "id": 3
+    },
+    {
+      "userIds": [
+        "anhhung1",
+        "anhhung2"
+      ],
+      "content": "Truyện mà bạn đang quan tâm Kẻ Phản Bội đã ra mắt chương mới, cùng đọc ngay thôi nào !!!",
+      "storyId": 1,
+      "timeCreated": "13-07-2023",
+      "isRead": 1,
+      "id": 4
+    },
+    {
+      "userIds": [
+        "anhhung1",
+        "anhhung2"
+      ],
+      "content": "Truyện mà bạn đang quan tâm Kẻ Phản Bội đã ra mắt chương mới, cùng đọc ngay thôi nào !!!",
+      "storyId": 1,
+      "timeCreated": "13-07-2023",
+      "isRead": 1,
+      "id": 5
+    },
+    {
+      "userIds": [
+        "anhhung1",
+        "anhhung2"
+      ],
+      "content": "Truyện mà bạn đang quan tâm Kẻ Phản Bội đã ra mắt chương mới, cùng đọc ngay thôi nào !!!",
+      "storyId": 1,
+      "timeCreated": "13-07-2023",
+      "isRead": 1,
+      "id": 6
+    },
+    {
+      "userIds": [
+        "anhhung1",
+        "anhhung2"
+      ],
+      "content": "Cuoi quan tâm Kẻ Phản Bội đã ra mắt chương mới, cùng đọc ngay thôi nào !!!",
+      "storyId": 1,
+      "timeCreated": "13-07-2023",
+      "isRead": 1,
+      "id": 7
+    },
+    {
+      "userIds": [
+        "anhhung1"
+      ],
+      "content": "Truyện mà bạn đang quan tâm Mịch Tiên Kiếm Đạo đã ra mắt chương mới, cùng đọc ngay thôi nào !!!",
+      "storyId": 3,
+      "timeCreated": "14-07-2023",
+      "isRead": 1,
+      "id": 8
     }
   ]
 }
