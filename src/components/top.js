@@ -103,7 +103,7 @@ export default function Top() {
                   Về chúng tôi
                 </NavLink>
               </li>
-              <li><NavLink to={'/findingresult'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>Search</NavLink></li>
+              <li><NavLink to={'/findingresult'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>Tìm Kiếm</NavLink></li>
               {user && isAdmin == 1 ? (
                 <li>
                   <NavLink
