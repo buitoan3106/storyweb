@@ -15,8 +15,7 @@ function ModalAddStory(props) {
   const [discription, setDiscription] = useState("");
   const [image, setImage] = useState("");
 
-  let { show, handleClose, addStoryRef } = props;
-  console.log(typeof addStoryRef);
+  let { show, handleClose, addStoryRef } = props; 
 
   useEffect(() => {
     fetch("http://localhost:9999/category")
@@ -36,10 +35,7 @@ function ModalAddStory(props) {
   const handleLoadImage = (e) => {
     const file = e.target.files[0];
     file.preview = URL.createObjectURL(file);
-
     setImage(file);
-    console.log(image);
-    console.log(file);
   };
 
   const validate = () => {
@@ -56,7 +52,7 @@ function ModalAddStory(props) {
       isValid = false;
     } else if (totalChap < 1 || totalChap > 30) {
       isValid = false;
-    }
+    } 
     return isValid;
   };
 
@@ -77,8 +73,6 @@ function ModalAddStory(props) {
   const handleAdd = (e) => {
     const valid = validate();
     if (valid) {
-      console.log("ssssssssssss");
-      
       const currentDate = new Date();
     const day = currentDate.getDate().toString().padStart(2, '0');
     const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
@@ -98,7 +92,6 @@ function ModalAddStory(props) {
         totalChap: totalChap,
         views: 0
       }
-      console.log(storyObj);
       addStory(storyObj);
       addStoryRef.current(storyObj);
       handleClose();
