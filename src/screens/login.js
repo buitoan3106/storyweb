@@ -1,6 +1,6 @@
 import DefaultLayout from "../layouts/defaultlayout";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 export default function Login() {
@@ -53,7 +53,7 @@ export default function Login() {
     return (
         <DefaultLayout >
             <ToastContainer />
-            <form onSubmit={ProceedLogin}>
+            <form onSubmit={ProceedLogin} style={{marginLeft:'-100px'}}>
                 <div className="row">
                     <div className="col-lg-6">
                         <h3>Login</h3>
@@ -61,19 +61,19 @@ export default function Login() {
                         <br />
                         <label>User Name <span style={{ color: 'red' }}>*</span></label>
                         <br />
-                        <input type="text" value={username} onChange={e => usernameupdate(e.target.value)} ></input>
+                        <input type="text" value={username} onChange={e => usernameupdate(e.target.value)} placeholder="Tên Đăng Nhập" style={{width:'90%'}}></input>
                         <br />
                         <br />
                         <label>Password <span style={{ color: 'red' }}>*</span></label>
                         <br />
-                        <input type="password" value={password} onChange={e => passwordupdate(e.target.value)} ></input>
+                        <input type="password" value={password} onChange={e => passwordupdate(e.target.value)} placeholder="Mật khẩu" style={{width:'90%'}}></input>
                         <br></br>
                         <div className="row">
                             <div className="col-lg-6" style={{ paddingLeft: '50px' }}>
-                                <button type="submit">Login Now</button>
+                                <button type="submit">Đăng Nhập</button>
                             </div>
                             <div className="col-lg-6" style={{ marginTop: '25px' }}>
-                                <a href="/">Forgot Your Password?</a>
+                                <a href="/">Quên Mật Khẩu?</a>
                             </div>
                         </div>
                         <br />
@@ -81,10 +81,12 @@ export default function Login() {
 
                     </div>
 
-                    <div className="col-lg-6" style={{ borderLeft: '1px solid white' }}>
+                    <div className="col-lg-6" style={{ borderLeft: '1px solid white'}}>
                         <div style={{ marginLeft: '30px' }}>
-                            <h3>Dont’t Have An Account?</h3>
-                            <button type="submit">Rigister Now</button>
+                            <h3>Chưa có tài khoản</h3>
+                            <button type="submit">
+                                <Link to={'/register'} style={{color:'white'}}>Đăng ký ngay</Link>
+                            </button>
                         </div>
                     </div>
                 </div>
