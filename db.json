@@ -1648,6 +1648,24 @@
         "anhhhung2",
         "anhhung3"
       ]
+    },
+    {
+      "content": "oke rồi hú hồn\n",
+      "storyId": "3",
+      "username": null,
+      "id": 40
+    },
+    {
+      "content": "ok",
+      "replyFor": 4,
+      "username": null,
+      "id": 41
+    },
+    {
+      "content": "ok",
+      "storyId": "1",
+      "username": null,
+      "id": 42
     }
   ],
   "chapter": [
