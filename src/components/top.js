@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import Dropdown from "react-bootstrap/Dropdown";
 import Notification from "./notification";
 export default function Top() {
   const [cate, setCate] = useState([]);

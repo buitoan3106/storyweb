@@ -11,7 +11,6 @@ import Categories from "./screens/categories";
 import Category from "./screens/category";
 import ViewListStory from './screens/managestory';
 import ViewListUser from './screens/manageuser';
-
 import FindingResult from "./screens/findingresult";
 
 
