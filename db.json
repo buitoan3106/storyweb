@@ -59,16 +59,8 @@
       "age": "20",
       "isAdmin": false,
       "image": "14.jpg"
-    },
-    {
-      "id": 7,
-      "username": "",
-      "password": "",
-      "email": "",
-      "name": "",
-      "age": "",
-      "isAdmin": 0
     }
+    
   ],
   "category": [
     {

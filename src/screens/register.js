@@ -11,24 +11,35 @@ export default function Register() {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const user = { username, password, email, name, age };
     if (!validateInputs(user)) {
       return;
     }
-    fetch("http://localhost:9999/users", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(user),
-    })
-      .then(() => {
-        alert("Add new success.");
-        navigate("/");
-      })
-      .catch((err) => {
-        console.log(err.message);
+
+    try {
+      // Check if username already exists
+      const response = await fetch(`http://localhost:9999/users?username=${username}`);
+      const data = await response.json();
+
+      if (data.length > 0) {
+        alert("Username already exists. Please choose a different username.");
+        return;
+      }
+
+      // Create new user if username is available
+      await fetch("http://localhost:9999/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(user),
       });
+
+      alert("Registration successful.");
+      navigate("/");
+    } catch (err) {
+      console.log(err.message);
+    }
   };
 
   const validateInputs = (user) => {
@@ -49,7 +60,7 @@ export default function Register() {
             <h3>Sign Up</h3>
             <br />
             <br />
-            <form onSubmit={handleSubmit} style={{borderRight:'1px solid white', marginLeft:'-10%'}}>
+            <form onSubmit={handleSubmit} style={{ borderRight: "1px solid white", marginLeft: "-10%" }}>
               <div className="form-group">
                 <label>
                   Username <span style={{ color: "red" }}>*</span>
@@ -122,19 +133,12 @@ export default function Register() {
             <br />
             <br />
             <p>
-              Bạn đã có tài khoản?{" "}
-              <a href="/login">
-                Đăng nhập
-              </a>
+              Bạn đã có tài khoản? <a href="/login">Đăng nhập</a>
             </p>
           </div>
 
           <div className="col-md-6">
-            <img
-              src={require("../components/image/11.jpg")}
-              style={{ width: "70%", marginLeft:'10%'}}
-              alt="Image"
-            />
+            <img src={require("../components/image/11.jpg")} style={{ width: "70%", marginLeft: "10%" }} alt="Image" />
           </div>
         </div>
       </div>

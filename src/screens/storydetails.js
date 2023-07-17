@@ -197,10 +197,10 @@ const StoryDetails = () => {
       {/* Modal */}
       <Modal show={showModal} onHide={handleCloseModal} centered>
         <Modal.Header closeButton>
-          <Modal.Title>Login Required</Modal.Title>
+          <Modal.Title>Chưa đăng nhập</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>Please login to perform this function.</p>
+          <p>Bạn cần đăng nhập để sử dụng chức năng năy.</p>
         </Modal.Body>
         <Modal.Footer>
           <button
@@ -208,10 +208,10 @@ const StoryDetails = () => {
             className="btn btn-secondary"
             onClick={handleCloseModal}
           >
-            Close
+            Đóng
           </button>
           <Link to="/login" className="btn btn-primary">
-            Login
+            Đăng nhập
           </Link>
         </Modal.Footer>
       </Modal>

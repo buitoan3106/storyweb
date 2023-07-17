@@ -105,7 +105,7 @@ export default function Categories() {
                                 </div>
                                 <div className="like">
                                   <i class="bi bi-hand-thumbs-up-fill"></i>{" "}
-                                  {s.likes}
+                                  {s.like}
                                 </div>
                                 <div className="view">
                                   <i class="bi bi-eye-fill"></i> {s.views}
