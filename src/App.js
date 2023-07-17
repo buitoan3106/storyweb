@@ -9,12 +9,11 @@ import StoryDetails from "./screens/storydetails";
 import StoryReading from "./screens/story-reading";
 import Categories from "./screens/categories";
 import Category from "./screens/category";
-<<<<<<< Updated upstream
 import ViewListStory from './screens/managestory';
 import ViewListUser from './screens/manageuser';
-=======
+
 import FindingResult from "./screens/findingresult";
->>>>>>> Stashed changes
+
 
 function App() {
   return (

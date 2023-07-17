@@ -8,7 +8,7 @@ export default function Top() {
   const [isAdmin, setIsAdmin] = useState(0);
   const [notifications, setNotifications] = useState([]);
   const [isShowNotifications, setIsShowNotifications] = useState(false);
-  const [statusReadAll, setStatusReadAll] = useState(true); 
+  const [statusReadAll, setStatusReadAll] = useState(true);
 
   useEffect(() => {
     setUser(sessionStorage.getItem("username"));
@@ -28,12 +28,12 @@ export default function Top() {
         const filterNoti = json.filter((noti) => {
           return noti.userIds.filter((u) => u.id === user);
         });
-        setNotifications(filterNoti.sort((a,b) => b.id - a.id));
+        setNotifications(filterNoti.sort((a, b) => b.id - a.id));
 
         const checkRead = json.filter((noti) => noti.isRead === 0);
         if (checkRead.length > 0) {
           setStatusReadAll(false);
-        }else{
+        } else {
           setStatusReadAll(true);
         }
       });
@@ -103,7 +103,7 @@ export default function Top() {
                   Về chúng tôi
                 </NavLink>
               </li>
-              <li><NavLink to={'/findingresult'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>Search</NavLink></li>
+              <li><NavLink to={'/findingresult'} className={({ isActive }) => isActive ? 'link-active' : 'link'}>Tìm kiếm</NavLink></li>
               {user && isAdmin == 1 ? (
                 <li>
                   <NavLink
@@ -129,9 +129,9 @@ export default function Top() {
                     {
                       !statusReadAll && (<span className="text-danger">*</span>)
                     }
-                    </i>
+                  </i>
                   {showCategories && (
-                    <Notification notifications={notifications}/>
+                    <Notification notifications={notifications} />
                   )}
                 </li>
                 <li>

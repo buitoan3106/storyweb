@@ -21,7 +21,7 @@ export default function Home() {
       );
   }, []);
 
-  
+
   return (
     <DefaultLayout>
       <Content></Content>
@@ -44,60 +44,26 @@ export default function Home() {
                 </div>
               </div>
               <div class="row">
-                {story.map((s) => {
-                  if (s.id <= 6) {
-                    return (
-                      <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                          <div
-                            class="product__item__pic"
-                            style={{
-                              backgroundImage: `url(${require("../components/image/" +
-                                s.image)})`,
-                              backgroundPosition: "center",
-                              backgroundSize: "cover",
-                              backgroundRepeat: "no-repeat",
-                            }}
-                          >
-                            <div class="ep">
-                              {s.currentChap} / {s.totalChap}
+                {
+                  story.map(s => {
+                    if (s.id <= 6) {
+                      return (
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                          <div class="product__item">
+                            <div class="product__item__pic" style={{ backgroundImage: `url(${require("../components/image/" + s.image)})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+                              <div class="ep">{s.currentChap} / {s.totalChap}</div>
+                              <div class="like"><i class="bi bi-hand-thumbs-up-fill"></i> {s.likes.length}</div>
+                              <div class="view"><i class="bi bi-eye-fill"></i> {s.views}</div>
                             </div>
-                            <div class="row">
-                                {
-                                    story.map(s => {
-                                        if (s.id <= 6) {
-                                            return (
-                                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                                    <div class="product__item">
-                                                        <div class="product__item__pic" style={{ backgroundImage: `url(${require("../components/image/" + s.image)})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
-                                                            <div class="ep">{s.currentChap} / {s.totalChap}</div>
-                                                            <div class="like"><i class="bi bi-hand-thumbs-up-fill"></i> {s.likes.length}</div>
-                                                            <div class="view"><i class="bi bi-eye-fill"></i> {s.views}</div>
-                                                        </div>
-                                                        <div class="product__item__text">
-                                                            <h5><Link to={`/story/${s.id}`}>{s.storyName}</Link></h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            );
-                                        }
-                                    })
-                                }
+                            <div class="product__item__text">
+                              <h5><Link to={`/story/${s.id}`}>{s.storyName}</Link></h5>
                             </div>
-                            <div class="view">
-                              <i class="bi bi-eye-fill"></i> {s.views}
-                            </div>
-                          </div>
-                          <div class="product__item__text">
-                            <h5>
-                              <Link to={`/story/${s.id}`}>{s.storyName}</Link>
-                            </h5>
                           </div>
                         </div>
-                      </div>
-                    );
-                  }
-                })}
+                      );
+                    }
+                  })
+                }
               </div>
             </div>
             <div class="popular__product">
@@ -116,61 +82,26 @@ export default function Home() {
                 </div>
               </div>
               <div class="row">
-                {story.map((s) => {
-                  if (s.id > 6 && s.id <= 12) {
-                    return (
-                      <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                          <div
-                            class="product__item__pic"
-                            style={{
-                              backgroundImage: `url(${require("../components/image/" +
-                                s.image)})`,
-                              backgroundPosition: "center",
-                              backgroundSize: "cover",
-                              backgroundRepeat: "no-repeat",
-                            }}
-                          >
-                            <div class="ep">
-                              {s.currentChap} / {s.totalChap}
+                {
+                  story.map(s => {
+                    if (s.id > 6 && s.id <= 12) {
+                      return (
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                          <div class="product__item">
+                            <div class="product__item__pic" style={{ backgroundImage: `url(${require("../components/image/" + s.image)})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+                              <div class="ep">{s.currentChap} / {s.totalChap}</div>
+                              <div class="like"><i class="bi bi-hand-thumbs-up-fill"></i> {s.likes.length}</div>
+                              <div class="view"><i class="bi bi-eye-fill"></i> {s.views}</div>
                             </div>
-                            <div class="like">
-                              <i class="bi bi-hand-thumbs-up-fill"></i>{" "}
-                              {s.likes}
+                            <div class="product__item__text">
+                              <h5><Link to={`/story/${s.id}`}>{s.storyName}</Link></h5>
                             </div>
-                            <div class="row">
-                                {
-                                    story.map(s => {
-                                        if (s.id > 6 && s.id <= 12) {
-                                            return (
-                                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                                    <div class="product__item">
-                                                        <div class="product__item__pic" style={{ backgroundImage: `url(${require("../components/image/" + s.image)})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
-                                                            <div class="ep">{s.currentChap} / {s.totalChap}</div>
-                                                            <div class="like"><i class="bi bi-hand-thumbs-up-fill"></i> {s.likes.length}</div>
-                                                            <div class="view"><i class="bi bi-eye-fill"></i> {s.views}</div>
-                                                        </div>
-                                                        <div class="product__item__text">
-                                                            <h5><Link to={`/story/${s.id}`}>{s.storyName}</Link></h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            );
-                                        }
-                                    })
-                                }
-                            </div>
-                          </div>
-                          <div class="product__item__text">
-                            <h5>
-                              <Link to={`/story/${s.id}`}>{s.storyName}</Link>
-                            </h5>
                           </div>
                         </div>
-                      </div>
-                    );
-                  }
-                })}
+                      );
+                    }
+                  })
+                }
               </div>
             </div>
             <div class="recent__product">
@@ -189,60 +120,26 @@ export default function Home() {
                 </div>
               </div>
               <div class="row">
-                {story.map((s) => {
-                  if (s.id >= 13 && s.id <= 18) {
-                    return (
-                      <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                          <div
-                            class="product__item__pic"
-                            style={{
-                              backgroundImage: `url(${require("../components/image/" +
-                                s.image)})`,
-                              backgroundPosition: "center",
-                              backgroundSize: "cover",
-                              backgroundRepeat: "no-repeat",
-                            }}
-                          >
-                            <div class="ep">
-                              {s.currentChap} / {s.totalChap}
+                {
+                  story.map(s => {
+                    if (s.id >= 13 && s.id <= 18) {
+                      return (
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                          <div class="product__item">
+                            <div class="product__item__pic" style={{ backgroundImage: `url(${require("../components/image/" + s.image)})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+                              <div class="ep">{s.currentChap} / {s.totalChap}</div>
+                              <div class="like"><i class="bi bi-hand-thumbs-up-fill"></i> {s.likes.length}</div>
+                              <div class="view"><i class="bi bi-eye-fill"></i> {s.views}</div>
                             </div>
-                            <div class="row">
-                                {
-                                    story.map(s => {
-                                        if (s.id >= 13 && s.id <= 18) {
-                                            return (
-                                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                                    <div class="product__item">
-                                                        <div class="product__item__pic" style={{ backgroundImage: `url(${require("../components/image/" + s.image)})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
-                                                            <div class="ep">{s.currentChap} / {s.totalChap}</div>
-                                                            <div class="like"><i class="bi bi-hand-thumbs-up-fill"></i> {s.likes.length}</div>
-                                                            <div class="view"><i class="bi bi-eye-fill"></i> {s.views}</div>
-                                                        </div>
-                                                        <div class="product__item__text">
-                                                            <h5><Link to={`/story/${s.id}`}>{s.storyName}</Link></h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            );
-                                        }
-                                    })
-                                }
+                            <div class="product__item__text">
+                              <h5><Link to={`/story/${s.id}`}>{s.storyName}</Link></h5>
                             </div>
-                            <div class="view">
-                              <i class="bi bi-eye-fill"></i> {s.views}
-                            </div>
-                          </div>
-                          <div class="product__item__text">
-                            <h5>
-                              <Link to={`/story/${s.id}`}>{s.storyName}</Link>
-                            </h5>
                           </div>
                         </div>
-                      </div>
-                    );
-                  }
-                })}
+                      );
+                    }
+                  })
+                }
               </div>
             </div>
           </div>
