@@ -8,21 +8,37 @@ const StoryReading = () => {
   const { id } = useParams();
   const [story, setStory] = useState({});
   const [content, setContent] = useState([]);
-
+  const [chapters, setChapters] = useState([]);
+  const [chapter, setChapter] = useState({});
 
   //get story by id
   useEffect(() => {
     fetch(`http://localhost:9999/story/${id}`)
       .then((response) => response.json())
       .then((json) => setStory(json));
-
   }, [id]);
 
   useEffect(() => {
-    fetch('http://localhost:9999/chapter')
-      .then(response => response.json())
-      .then(json => setContent(json))
-  }, [])
+    fetch("http://localhost:9999/chapter")
+      .then((response) => response.json())
+      .then((json) => setContent(json));
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:9999/chapter")
+      .then((response) => response.json())
+      .then((json) => {
+        const chapterByStory = json.filter(
+          (chapter) => chapter.storyId === parseInt(id)
+        );
+        setChapters(
+          chapterByStory.sort((a, b) =>
+            a.chapterName > b.chapterName ? 1 : -1
+          )
+        );
+        setChapter(chapterByStory[0]);
+      });
+  }, []);
 
 
   return (
@@ -30,21 +46,25 @@ const StoryReading = () => {
       <section className="anime-details spad">
         <div className="container">
           <div className="row">
-            <div className="col-lg-12" style={{ height: "70vh" }}>
-              <div className="content-story h-75 mb-3">
-                <div className="section-title">
+          <div className="section-title">
                   <h5>{story.storyName}</h5>
                 </div>
-                {/* <div className="row"> */}
+            <div className="col-lg-12" style={{ height: "70vh" }}>
+              <div className="content-story h-75 mb-3">
                 <div className="chapter_name">
-                  <h6>Chapter 1</h6>
+                  <h3>{chapter.chapterName}</h3>
                 </div>
-                <div className="" style={{ fontSize: "20px" }}>
-                  <p>{content.map(c => {
-                    if (c.storyId == id && c.chapterName === 'chapter 1') {
-                      return c.content;
+                <div className="content-story" style={{ fontSize: "3rem" }}>
+                  <p style={{ fontSize: "3rem" }}>
+                    {/* {content.map((c) => {
+                      if (c.storyId == id && c.chapterName === "chapter 1") {
+                        return c.content;
+                      }
+                    })} */}
+                    {
+                      chapter.content
                     }
-                  })}</p>
+                  </p>
                 </div>
                 {/* </div> */}
               </div>
@@ -52,11 +72,9 @@ const StoryReading = () => {
                 <div className="section-title">
                   <h5>List Chapter</h5>
                 </div>
-                {Array.from({ length: story.totalChap }, (_, index) => (
-                  <Link key={index} href="#">
-                    Chapter {index + 1}
-                  </Link>
-                ))}
+                {chapters.length > 0 &&
+                  chapters.map((c) => <Link onClick={()=>setChapter(c)} className={c.id === chapter.id ? "current-chap" : ""}>{c.chapterName}</Link>)
+                  }
               </div>
             </div>
           </div>

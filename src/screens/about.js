@@ -1,5 +1,11 @@
 import DefaultLayout from "../layouts/defaultlayout";
 import img1 from "../assets/images/1.jpg";
+import img2 from "../assets/images/2.jpg";
+import img3 from "../assets/images/3.jpg";
+import img4 from "../assets/images/4.jpg";
+import img5 from "../assets/images/5.jpg";
+import img6 from "../assets/images/6.jpg";
+import img7 from "../assets/images/7.jpg";
 import "./../styles/about.css";
 
 export default function AboutUs() {
@@ -51,34 +57,34 @@ export default function AboutUs() {
           <div className="row h-50">
             <div className="col-md-6 h-100">
               <div className="wrapper_img_about">
-                <img src={img1} alt="" />
+                <img src={img2} alt="" />
               </div>
             </div>
             <div className="col-md-3 h-100">
               <div className="wrapper_img_about">
-                <img src={img1} alt="" />
+                <img src={img3} alt="" />
               </div>
             </div>
             <div className="col-md-3 h-100">
               <div className="wrapper_img_about">
-                <img src={img1} alt="" />
+                <img src={img4} alt="" />
               </div>
             </div>
           </div>
           <div className="row h-50">
             <div className="col-md-3 h-100">
               <div className="wrapper_img_about">
-                <img src={img1} alt="" />
+                <img src={img5} alt="" />
               </div>
             </div>
             <div className="col-md-3 h-100">
               <div className="wrapper_img_about">
-                <img src={img1} alt="" />
+                <img src={img6} alt="" />
               </div>
             </div>
             <div className="col-md-6 h-100">
               <div className="wrapper_img_about">
-                <img src={img1} alt="" />
+                <img src={img7} alt="" />
               </div>
             </div>
           </div>
