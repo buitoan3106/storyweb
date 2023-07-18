@@ -46,16 +46,16 @@ const StoryReading = () => {
       <section className="anime-details spad">
         <div className="container">
           <div className="row">
-          <div className="section-title">
-                  <h5>{story.storyName}</h5>
-                </div>
+            <div className="section-title">
+              <h5>{story.storyName}</h5>
+            </div>
             <div className="col-lg-12" style={{ height: "70vh" }}>
               <div className="content-story h-75 mb-3">
-                <div className="chapter_name">
+                <div className="chapter_name" style={{ marginBottom: "10px" }}>
                   <h3>{chapter.chapterName}</h3>
                 </div>
                 <div className="content-story" style={{ fontSize: "3rem" }}>
-                  <p style={{ fontSize: "3rem" }}>
+                  <p style={{ fontSize: "3rem", textAlign: "justify", paddingRight: "8px" }}>
                     {/* {content.map((c) => {
                       if (c.storyId == id && c.chapterName === "chapter 1") {
                         return c.content;
@@ -73,8 +73,8 @@ const StoryReading = () => {
                   <h5>List Chapter</h5>
                 </div>
                 {chapters.length > 0 &&
-                  chapters.map((c) => <Link onClick={()=>setChapter(c)} className={c.id === chapter.id ? "current-chap" : ""}>{c.chapterName}</Link>)
-                  }
+                  chapters.map((c) => <Link onClick={() => setChapter(c)} className={c.id === chapter.id ? "current-chap" : ""}>{c.chapterName}</Link>)
+                }
               </div>
             </div>
           </div>

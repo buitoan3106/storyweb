@@ -1,8 +1,10 @@
 import "./../styles/storyitem2.css";
+import { Link } from "react-router-dom";
+
 const StoryItem2 = ({ story }) => {
   return (
     <div
-      className="product__sidebar__view__item view set-bg mix day years anime__details__pic mb-2"
+      className="product__sidebar__view__item view"
       // data-setbg="img/sidebar/tv-1.jpg"
       style={{
         backgroundImage: `url(${require("../components/image/" +
@@ -12,19 +14,10 @@ const StoryItem2 = ({ story }) => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* <div className="wrapper_img">
-        <img src={img1} alt="" />
-        <img src="../components/image/" alt="" />
-      </div> */}
-      <div className="ep"> {story.likes}</div>
-      <div className="view">
-      <i class="bi bi-eye-fill"></i>
-        {story.views}
-      </div>
+      <div className="ep"> {story.currentChap} / {story.totalChap}</div>
+      <div className="view"><i class="bi bi-eye-fill"></i>{story.views}</div>
       <h5>
-        <a href="/" className="text-dark">
-          {story.storyName}
-        </a>
+        <Link to={`/story/${story.id}`}>{story.storyName}</Link>
       </h5>
     </div>
   );

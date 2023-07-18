@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import DefaultLayout from "../layouts/defaultlayout";
 import { useEffect, useState } from "react";
+import StoryItem2 from "../components/storyitem2";
 
 export default function Category() {
   const { cateName } = useParams();
@@ -9,6 +10,16 @@ export default function Category() {
     fetch("http://localhost:9999/story")
       .then((response) => response.json())
       .then((json) => setStory(json));
+  }, []);
+
+  //get top 5 views
+  const [top5Views, setTop5Views] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:9999/story")
+      .then((response) => response.json())
+      .then((json) =>
+        setTop5Views(json.sort((a, b) => b.views - a.views).slice(0, 4))
+      );
   }, []);
 
   const handleOrderChange = (e) => {
@@ -65,8 +76,8 @@ export default function Category() {
                 </div>
                 <div className="col-lg-4 col-md-4 col-sm-6">
                   <div className="product__page__filter">
-                    <p>Order by:</p>
-                    <select onChange={handleOrderChange}>
+                    Order by:
+                    <select onChange={handleOrderChange} style={{ marginLeft: "5px" }}>
                       <option value="sortname">A-Z</option>
                       <option value="likes">Likes</option>
                       <option value="views">Views</option>
@@ -120,79 +131,10 @@ export default function Category() {
               <div class="section-title">
                 <h5>Top Views</h5>
               </div>
-              <ul class="filter__controls">
-                <li class="active" data-filter="*">
-                  Day
-                </li>
-                <li data-filter=".week">Week</li>
-                <li data-filter=".month">Month</li>
-                <li data-filter=".years">Years</li>
-              </ul>
               <div class="filter__gallery">
-                <div
-                  class="product__sidebar__view__item set-bg mix day years"
-                  data-setbg="img/sidebar/tv-1.jpg"
-                >
-                  <div class="ep">18 / ?</div>
-                  <div class="view">
-                    <i class="fa fa-eye"></i> 9141
-                  </div>
-                  <h5>
-                    <a href="#">Boruto: Naruto next generations</a>
-                  </h5>
-                </div>
-                <div
-                  class="product__sidebar__view__item set-bg mix month week"
-                  data-setbg="img/sidebar/tv-2.jpg"
-                >
-                  <div class="ep">18 / ?</div>
-                  <div class="view">
-                    <i class="fa fa-eye"></i> 9141
-                  </div>
-                  <h5>
-                    <a href="#">The Seven Deadly Sins: Wrath of the Gods</a>
-                  </h5>
-                </div>
-                <div
-                  class="product__sidebar__view__item set-bg mix week years"
-                  data-setbg="img/sidebar/tv-3.jpg"
-                >
-                  <div class="ep">18 / ?</div>
-                  <div class="view">
-                    <i class="fa fa-eye"></i> 9141
-                  </div>
-                  <h5>
-                    <a href="#">
-                      Sword art online alicization war of underworld
-                    </a>
-                  </h5>
-                </div>
-                <div
-                  class="product__sidebar__view__item set-bg mix years month"
-                  data-setbg="img/sidebar/tv-4.jpg"
-                >
-                  <div class="ep">18 / ?</div>
-                  <div class="view">
-                    <i class="fa fa-eye"></i> 9141
-                  </div>
-                  <h5>
-                    <a href="#">
-                      Fate/stay night: Heaven's Feel I. presage flower
-                    </a>
-                  </h5>
-                </div>
-                <div
-                  class="product__sidebar__view__item set-bg mix day"
-                  data-setbg="img/sidebar/tv-5.jpg"
-                >
-                  <div class="ep">18 / ?</div>
-                  <div class="view">
-                    <i class="fa fa-eye"></i> 9141
-                  </div>
-                  <h5>
-                    <a href="#">Fate stay night unlimited blade works</a>
-                  </h5>
-                </div>
+                {top5Views.map((story) => (
+                  <StoryItem2 story={story} key={story.id} />
+                ))}
               </div>
             </div>
           </div>

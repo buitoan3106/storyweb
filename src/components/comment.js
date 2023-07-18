@@ -177,7 +177,7 @@ const Comment = (storyId) => {
                 </div>
                 <div className="anime__review__item__text">
                   <h6>
-                    {cmt.username} - <span>1 Hour ago</span>
+                    {cmt.username}
                   </h6>
                   <p>
                     {cmt.content}
@@ -202,7 +202,7 @@ const Comment = (storyId) => {
                           </div>
                           <div className="anime__review__item__text">
                             <h6>
-                              {cmt2.username} - <span>1 Hour ago</span>
+                              {cmt2.username}
                             </h6>
                             <p>
                               {cmt2.content}

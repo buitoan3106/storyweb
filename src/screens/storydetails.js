@@ -7,7 +7,7 @@ import Comment from "./../components/comment";
 import { Modal } from "react-bootstrap";
 
 const StoryDetails = () => {
-  const [top5Liked, setTop5Liked] = useState([]);
+  const [top5Views, setTop5Views] = useState([]);
   const [story, setStory] = useState({});
   const { id } = useParams();
   const [user, setUser] = useState({});
@@ -15,7 +15,6 @@ const StoryDetails = () => {
   const [justChanged, setChanged] = useState(0);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [showReviewModal, setShowReviewModal] = useState(false);
 
   //get user information
   useEffect(() => {
@@ -24,12 +23,12 @@ const StoryDetails = () => {
       .then(json => setUser(json[0]))
   }, [])
 
-  //get top 5 likes
+  //get top 5 views
   useEffect(() => {
     fetch("http://localhost:9999/story")
       .then((response) => response.json())
       .then((json) =>
-        setTop5Liked(json.sort((a, b) => b.likes - a.likes).slice(0, 4))
+        setTop5Views(json.sort((a, b) => b.views - a.views).slice(0, 4))
       );
   }, []);
 
@@ -339,7 +338,7 @@ const StoryDetails = () => {
                 <div className="section-title">
                   <h5>you might like...</h5>
                 </div>
-                {top5Liked.map((story) => (
+                {top5Views.map((story) => (
                   <StoryItem2 story={story} key={story.id} />
                 ))}
               </div>
