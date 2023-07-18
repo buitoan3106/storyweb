@@ -28,18 +28,14 @@ const StoryReading = () => {
     fetch("http://localhost:9999/chapter")
       .then((response) => response.json())
       .then((json) => {
-        console.log(id);
-        console.log(typeof id);
         const chapterByStory = json.filter(
           (chapter) => chapter.storyId === parseInt(id)
         );
-        console.log(chapterByStory);
         setChapters(
           chapterByStory.sort((a, b) =>
             a.chapterName > b.chapterName ? 1 : -1
           )
         );
-        console.log(chapters[0]);
         setChapter(chapterByStory[0]);
       });
   }, []);
