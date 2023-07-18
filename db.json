@@ -106,16 +106,16 @@
       "postDate": "1/6/2022",
       "currentChap": 3,
       "dislikes": [
+        "anhhung1",
         "anhhung4",
         "anhhung5"
       ],
       "likes": [
-        "anhhung1",
         "anhhhung2",
         "anhhung3"
       ],
       "totalChap": 5,
-      "views": 365,
+      "views": 366,
       "follower": [
         "anhhung1",
         "anhhung2"
@@ -1650,22 +1650,20 @@
       ]
     },
     {
-      "content": "oke rồi hú hồn\n",
-      "storyId": "3",
-      "username": null,
+      "content": "ghee",
+      "storyId": "1",
+      "username": "anhhung1",
+      "likes": [],
+      "dislikes": [],
       "id": 40
     },
     {
-      "content": "ok",
-      "replyFor": 4,
-      "username": null,
+      "content": "phee",
+      "replyFor": 40,
+      "username": "anhhung1",
+      "likes": [],
+      "dislikes": [],
       "id": 41
-    },
-    {
-      "content": "ok",
-      "storyId": "1",
-      "username": null,
-      "id": 42
     }
   ],
   "chapter": [

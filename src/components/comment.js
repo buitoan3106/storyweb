@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
 import "../styles/storydetails.css"
+import { Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 const Comment = (storyId) => {
   const [comment, setComment] = useState([]);
   const [user, setUser] = useState([]);
   const [justChanged, setChanged] = useState(0);
   let countComment = 0;
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
 
   useEffect(() => {
     fetch('http://localhost:9999/comment')
@@ -18,22 +24,13 @@ const Comment = (storyId) => {
       .then(json => setUser(json))
   }, [])
 
-
-  function reply(e, id) {
-    e.preventDefault();
-    const form = document.getElementById("reply_form_" + id);
-    if (form.style.display === "block") {
-      form.style.display = "none";
-    } else {
-      form.style.display = "block";
-    }
-  }
-
   const [content, setContent] = useState('');
   const username = sessionStorage.getItem("username");
   function handleSubmit(e, replyFor) {
     e.preventDefault();
-    const replyComment = { content, replyFor, username };
+    const likes = [];
+    const dislikes = [];
+    const replyComment = { content, replyFor, username, likes, dislikes };
     const form = document.getElementById("reply_form_" + replyFor);
     let changed = justChanged
     if (replyComment != null) {
@@ -49,22 +46,62 @@ const Comment = (storyId) => {
     e.target.reset();
   }
 
+  // Kiểm tra trạng thái đăng nhập
+  useEffect(() => {
+    checkLogin();
+  }, []);
+
+  // Hàm kiểm tra trạng thái đăng nhập
+  const checkLogin = () => {
+    if (username) {
+      setIsLoggedIn(true);
+    }
+  };
+
+  // Đóng Modal
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  // Mở Modal
+  const handleOpenModal = () => {
+    setShowModal(true);
+  }
+
+  function reply(e, id) {
+    e.preventDefault();
+    if (!isLoggedIn) {
+      setShowModal(true);
+    } else {
+      const form = document.getElementById("reply_form_" + id);
+      if (form.style.display === "block") {
+        form.style.display = "none";
+      } else {
+        form.style.display = "block";
+      }
+    }
+  }
+
   // Handle like
   function handleLike(e, username, comment) {
     e.preventDefault();
-    comment.likes.splice(0, 0, username);
-    const index = comment.dislikes.indexOf(username);
-    if (index > -1)
-      comment.dislikes.splice(index, 1);
-    let changed = justChanged
-    if (comment != null) {
-      fetch("http://localhost:9999/comment/" + comment.id, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'Application/Json' },
-        body: JSON.stringify(comment)
-      })
-        .then(() => { changed++; setChanged(changed) })
-        .catch(err => { console.log(err.message); })
+    if (!isLoggedIn) {
+      setShowModal(true);
+    } else {
+      comment.likes.splice(0, 0, username);
+      const index = comment.dislikes.indexOf(username);
+      if (index > -1)
+        comment.dislikes.splice(index, 1);
+      let changed = justChanged
+      if (comment != null) {
+        fetch("http://localhost:9999/comment/" + comment.id, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'Application/Json' },
+          body: JSON.stringify(comment)
+        })
+          .then(() => { changed++; setChanged(changed) })
+          .catch(err => { console.log(err.message); })
+      }
     }
   }
 
@@ -89,19 +126,23 @@ const Comment = (storyId) => {
   // Handle Dislike
   function handleDislike(e, username, comment) {
     e.preventDefault();
-    comment.dislikes.splice(0, 0, username);
-    const index = comment.likes.indexOf(username);
-    if (index > -1)
-      comment.likes.splice(index, 1);
-    let changed = justChanged
-    if (comment != null) {
-      fetch("http://localhost:9999/comment/" + comment.id, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'Application/Json' },
-        body: JSON.stringify(comment)
-      })
-        .then(() => { changed++; setChanged(changed) })
-        .catch(err => { console.log(err.message); })
+    if (!isLoggedIn) {
+      setShowModal(true);
+    } else {
+      comment.dislikes.splice(0, 0, username);
+      const index = comment.likes.indexOf(username);
+      if (index > -1)
+        comment.likes.splice(index, 1);
+      let changed = justChanged
+      if (comment != null) {
+        fetch("http://localhost:9999/comment/" + comment.id, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'Application/Json' },
+          body: JSON.stringify(comment)
+        })
+          .then(() => { changed++; setChanged(changed) })
+          .catch(err => { console.log(err.message); })
+      }
     }
   }
 
@@ -194,6 +235,27 @@ const Comment = (storyId) => {
         })
       }
       {countComment == 0 ? (<h6>Hiện chưa có bình luận nào Hãy là người bình luận đầu tiên</h6>) : ""}
+      {/* Modal */}
+      <Modal show={showModal} onHide={handleCloseModal} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Chưa đăng nhập</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Bạn cần đăng nhập để sử dụng chức năng năy.</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <button
+            type="button"
+            className="btn btn-secondary"
+            onClick={handleCloseModal}
+          >
+            Đóng
+          </button>
+          <Link to="/login" className="btn btn-primary">
+            Đăng nhập
+          </Link>
+        </Modal.Footer>
+      </Modal>
     </div>
   )
 
