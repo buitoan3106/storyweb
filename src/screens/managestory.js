@@ -238,7 +238,7 @@ const ViewListStory = () => {
                           <td>{story.author}</td>
                           <td>{story.categoryName}</td>
                           <td>{story.postDate}</td>
-                          <td>{story.likes}</td>
+                          <td>{story.likes.length}</td>
                           <td>{story.views}</td>
                           <td>
                             <Button
