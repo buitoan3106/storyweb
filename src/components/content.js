@@ -11,9 +11,10 @@ export default function Content() {
                         width={900}
                         height={570}
                     />
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <Carousel.Caption style={{ textAlign: "left", color: "red !important" }}>
+                        <h1>Sắp ra mắt:</h1>
+                        <h3>Hành tẩu giang hồ</h3>
+                        <p>Một buổi tối trời đông một hiệp khách xuất hiện tại quán trọ Giang Sơn ...</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -25,9 +26,10 @@ export default function Content() {
                         height={570}
                     />
 
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <Carousel.Caption style={{ textAlign: "left" }}>
+                        <h1>Sắp ra mắt</h1>
+                        <h3>Thiên hạ đệ nhất kiếm</h3>
+                        <p>Một kiếm xuyên tim. Kiếm khí tung hoành ba vạn dặm.Ánh kiếm lạnh buốt khắp mười chín châu...</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -39,11 +41,10 @@ export default function Content() {
                         height={570}
                     />
 
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </p>
+                    <Carousel.Caption style={{ textAlign: "left" }}>
+                        <h1>Sắp ra mắt:</h1>
+                        <h3>Thật gần thật xa</h3>
+                        <p>Nếu một ngày em rời xa anh, em sẽ không để lại cho anh một lời nào...</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

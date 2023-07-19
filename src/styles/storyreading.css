@@ -1,26 +1,31 @@
 .content-story {
-    /* border: 1px solid white; */
-    
+	/* border: 1px solid white; */
+
 }
 
 .content-story p {
-    color: rgb(164, 157, 157) !important;
-    /* color: rgb(170, 32, 32) !important; */
-    font-size: 1.2rem !important;
-    
+	color: rgb(164, 157, 157) !important;
+	/* color: rgb(170, 32, 32) !important; */
+	font-size: 1.2rem !important;
+
 }
 
 
 .content-story {
-    overflow-y: auto;
+	overflow-y: auto;
+}
+
+.content-story p {
+	color: whitesmoke !important;
+	font-size: large;
 }
 
 .story-name {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .content-story .chapter_name {
-    text-align: center;
+	text-align: center;
 }
 
 .anime__details__episodes a {
@@ -38,7 +43,7 @@
 }
 
 .current-chap {
-    background: #e53637 !important;
+	background: #e53637 !important;
 }
 
 .anime__details__episodes a:hover {
