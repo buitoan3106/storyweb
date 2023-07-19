@@ -35,12 +35,16 @@ function ModalViewStory(props) {
                   <li className="list-group-item my-3">
                   <i class="bi bi-suit-heart-fill text-warning"></i>
                     <span className="text-dark mx-1">Likes:</span> 
-                    <span className="text-dark">{story.likes}</span>
+                    {
+                      story.likes && (<span className="text-dark">{story.likes.length}</span>)
+                    }
                   </li>
                   <li className="list-group-item my-3">
                   <i class="bi bi-heartbreak text-warning"></i>
                     <span className="text-dark mx-1">Dislikes:</span> 
-                    <span className="text-dark">{story.dislikes}</span>
+                    {
+                      story.dislikes && (<span className="text-dark">{story.dislikes.length}</span>)
+                    }
                   </li>
                   <li className="list-group-item my-3">
                   <i class="bi bi-eye-fill text-warning"></i>
