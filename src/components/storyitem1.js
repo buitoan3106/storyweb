@@ -20,7 +20,7 @@ const StoryItem1 = (props) => {
             {s.currentChap} / {s.totalChap}
           </div>
           <div class="like">
-            <i class="bi bi-hand-thumbs-up-fill"></i> {s.likes}
+            <i class="bi bi-hand-thumbs-up-fill"></i> {s.likes.length}
           </div>
           <div class="view">
             <i class="bi bi-eye-fill"></i> {s.views}

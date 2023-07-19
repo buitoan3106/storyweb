@@ -15,13 +15,14 @@ const StoryDetails = () => {
   const [justChanged, setChanged] = useState(0);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [image, setImage] = useState("");
 
   //get user information
   useEffect(() => {
-    fetch('http://localhost:9999/users?username=' + username)
-      .then(response => response.json())
-      .then(json => setUser(json[0]))
-  }, [])
+    fetch("http://localhost:9999/users?username=" + username)
+      .then((response) => response.json())
+      .then((json) => setUser(json[0]));
+  }, []);
 
   //get top 5 views
   useEffect(() => {
@@ -32,6 +33,14 @@ const StoryDetails = () => {
       );
   }, []);
 
+  useEffect(() => {
+    fetch("http://localhost:9999/story/" + id)
+      .then((response) => response.json())
+      .then((data) => {
+        setStory(data);
+        setImage(data.image);
+      });
+  }, []);
 
   // lay cac thuoc tinh cua story
   const [follower, setFollower] = useState([]);
@@ -40,7 +49,12 @@ const StoryDetails = () => {
   useEffect(() => {
     fetch("http://localhost:9999/story/" + id)
       .then((response) => response.json())
-      .then((data) => { setStory(data); setFollower(data.follower); setLikes(data.likes); setDislikes(data.dislikes) });
+      .then((data) => {
+        setStory(data);
+        setFollower(data.follower);
+        setLikes(data.likes);
+        setDislikes(data.dislikes);
+      });
   }, [justChanged]);
 
   // Kiểm tra trạng thái đăng nhập
@@ -63,7 +77,7 @@ const StoryDetails = () => {
   // Mở Modal
   const handleOpenModal = () => {
     setShowModal(true);
-  }
+  };
 
   // Handle View
   function handleView(e) {
@@ -76,12 +90,14 @@ const StoryDetails = () => {
       const newStory = { ...story, views };
       if (newStory != null) {
         fetch("http://localhost:9999/story/" + id, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'Application/Json' },
-          body: JSON.stringify(newStory)
+          method: "PUT",
+          headers: { "Content-Type": "Application/Json" },
+          body: JSON.stringify(newStory),
         })
           // .then(() => { changed++; setChanged(changed) })
-          .catch(err => { console.log(err.message); })
+          .catch((err) => {
+            console.log(err.message);
+          });
       }
     }
   }
@@ -94,15 +110,20 @@ const StoryDetails = () => {
     } else {
       setFollower(follower.splice(0, 0, username));
       const newStory = { ...story, follower };
-      let changed = justChanged
+      let changed = justChanged;
       if (newStory != null) {
         fetch("http://localhost:9999/story/" + id, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'Application/Json' },
-          body: JSON.stringify(newStory)
+          method: "PUT",
+          headers: { "Content-Type": "Application/Json" },
+          body: JSON.stringify(newStory),
         })
-          .then(() => { changed++; setChanged(changed) })
-          .catch(err => { console.log(err.message); })
+          .then(() => {
+            changed++;
+            setChanged(changed);
+          })
+          .catch((err) => {
+            console.log(err.message);
+          });
       }
     }
   }
@@ -110,18 +131,22 @@ const StoryDetails = () => {
   function handleUnFollow(e, username) {
     e.preventDefault();
     const index = follower.indexOf(username);
-    if (index > -1)
-      setFollower(follower.splice(index, 1));
+    if (index > -1) setFollower(follower.splice(index, 1));
     const newStory = { ...story, follower };
-    let changed = justChanged
+    let changed = justChanged;
     if (newStory != null) {
       fetch("http://localhost:9999/story/" + id, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'Application/Json' },
-        body: JSON.stringify(newStory)
+        method: "PUT",
+        headers: { "Content-Type": "Application/Json" },
+        body: JSON.stringify(newStory),
       })
-        .then(() => { changed++; setChanged(changed) })
-        .catch(err => { console.log(err.message); })
+        .then(() => {
+          changed++;
+          setChanged(changed);
+        })
+        .catch((err) => {
+          console.log(err.message);
+        });
     }
   }
 
@@ -133,18 +158,22 @@ const StoryDetails = () => {
     } else {
       setLikes(likes.splice(0, 0, username));
       const index = dislikes.indexOf(username);
-      if (index > -1)
-        setDislikes(dislikes.splice(index, 1));
+      if (index > -1) setDislikes(dislikes.splice(index, 1));
       const newStory = { ...story, likes, dislikes };
-      let changed = justChanged
+      let changed = justChanged;
       if (newStory != null) {
         fetch("http://localhost:9999/story/" + id, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'Application/Json' },
-          body: JSON.stringify(newStory)
+          method: "PUT",
+          headers: { "Content-Type": "Application/Json" },
+          body: JSON.stringify(newStory),
         })
-          .then(() => { changed++; setChanged(changed) })
-          .catch(err => { console.log(err.message); })
+          .then(() => {
+            changed++;
+            setChanged(changed);
+          })
+          .catch((err) => {
+            console.log(err.message);
+          });
       }
     }
   }
@@ -153,18 +182,22 @@ const StoryDetails = () => {
   function handleUnlike(e, username) {
     e.preventDefault();
     const index = likes.indexOf(username);
-    if (index > -1)
-      setLikes(likes.splice(index, 1));
+    if (index > -1) setLikes(likes.splice(index, 1));
     const newStory = { ...story, dislikes };
-    let changed = justChanged
+    let changed = justChanged;
     if (newStory != null) {
       fetch("http://localhost:9999/story/" + id, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'Application/Json' },
-        body: JSON.stringify(newStory)
+        method: "PUT",
+        headers: { "Content-Type": "Application/Json" },
+        body: JSON.stringify(newStory),
       })
-        .then(() => { changed++; setChanged(changed) })
-        .catch(err => { console.log(err.message); })
+        .then(() => {
+          changed++;
+          setChanged(changed);
+        })
+        .catch((err) => {
+          console.log(err.message);
+        });
     }
   }
 
@@ -176,18 +209,22 @@ const StoryDetails = () => {
     } else {
       setDislikes(dislikes.splice(0, 0, username));
       const index = likes.indexOf(username);
-      if (index > -1)
-        setLikes(likes.splice(index, 1));
+      if (index > -1) setLikes(likes.splice(index, 1));
       const newStory = { ...story, likes, dislikes };
-      let changed = justChanged
+      let changed = justChanged;
       if (newStory != null) {
         fetch("http://localhost:9999/story/" + id, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'Application/Json' },
-          body: JSON.stringify(newStory)
+          method: "PUT",
+          headers: { "Content-Type": "Application/Json" },
+          body: JSON.stringify(newStory),
         })
-          .then(() => { changed++; setChanged(changed) })
-          .catch(err => { console.log(err.message); })
+          .then(() => {
+            changed++;
+            setChanged(changed);
+          })
+          .catch((err) => {
+            console.log(err.message);
+          });
       }
     }
   }
@@ -196,18 +233,22 @@ const StoryDetails = () => {
   function handleUndislike(e, username) {
     e.preventDefault();
     const index = dislikes.indexOf(username);
-    if (index > -1)
-      setDislikes(dislikes.splice(index, 1));
+    if (index > -1) setDislikes(dislikes.splice(index, 1));
     const newStory = { ...story, dislikes };
-    let changed = justChanged
+    let changed = justChanged;
     if (newStory != null) {
       fetch("http://localhost:9999/story/" + id, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'Application/Json' },
-        body: JSON.stringify(newStory)
+        method: "PUT",
+        headers: { "Content-Type": "Application/Json" },
+        body: JSON.stringify(newStory),
       })
-        .then(() => { changed++; setChanged(changed) })
-        .catch(err => { console.log(err.message); })
+        .then(() => {
+          changed++;
+          setChanged(changed);
+        })
+        .catch((err) => {
+          console.log(err.message);
+        });
     }
   }
 
@@ -224,12 +265,14 @@ const StoryDetails = () => {
       const comment = { content, storyId, username, likes, dislikes };
       if (comment != null) {
         fetch("http://localhost:9999/comment", {
-          method: 'POST',
-          headers: { 'Content-Type': 'Application/Json' },
-          body: JSON.stringify(comment)
+          method: "POST",
+          headers: { "Content-Type": "Application/Json" },
+          body: JSON.stringify(comment),
         })
           .then(() => window.location.reload())
-          .catch(err => { console.log(err.message); })
+          .catch((err) => {
+            console.log(err.message);
+          });
       }
       e.target.reset();
     }
@@ -242,16 +285,17 @@ const StoryDetails = () => {
             <div className="row">
               <div className="col-lg-3">
                 <div className="anime__details__pic set-bg">
-                  <div className="wrapper_img">
-                    <img src={`../components/image/${story.image}`} alt="" />
-                  </div>
-                  <div className="comment">
-                    <i class="bi bi-chat-quote-fill"></i> {likes.length}
-                  </div>
-                  <div className="view">
-                    <i className="bi bi-eye-fill"></i>
-                    {story.views}
-                  </div>
+                  {
+                    image.length > 0 && (
+                      <div class="product__item">
+                      <div class="product__item__pic" style={{ backgroundImage: `url(${require("../components/image/" + image)})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+                        <div class="ep">{story.currentChap} / {story.totalChap}</div>
+                        <div class="like"><i class="bi bi-hand-thumbs-up-fill"></i> {story.likes.length}</div>
+                        <div class="view"><i class="bi bi-eye-fill"></i> {story.views}</div>
+                      </div>
+                    </div>
+                    )
+                  }
                 </div>
               </div>
               <div className="col-lg-9">
@@ -262,14 +306,40 @@ const StoryDetails = () => {
                   </div>
                   <div className="anime__details__rating">
                     <div className="rating">
-                      {
-                        likes.includes(username) ? (<a href="/"><i class="bi bi-hand-thumbs-up-fill" onClick={e => handleUnlike(e, username)}></i></a>) : (<a href="#"><i class="bi bi-hand-thumbs-up" onClick={e => handleLike(e, username)}></i></a>)
-                      }
-                      {
-                        dislikes.includes(username) ? (<a href="/"><i class="bi bi-hand-thumbs-down-fill" onClick={e => handleUndislike(e, username)}></i></a>) : (<a href="#"><i class="bi bi-hand-thumbs-down" onClick={e => handleDislike(e, username)}></i></a>)
-                      }
+                      {likes.includes(username) ? (
+                        <a href="/">
+                          <i
+                            class="bi bi-hand-thumbs-up-fill"
+                            onClick={(e) => handleUnlike(e, username)}
+                          ></i>
+                        </a>
+                      ) : (
+                        <a href="#">
+                          <i
+                            class="bi bi-hand-thumbs-up"
+                            onClick={(e) => handleLike(e, username)}
+                          ></i>
+                        </a>
+                      )}
+                      {dislikes.includes(username) ? (
+                        <a href="/">
+                          <i
+                            class="bi bi-hand-thumbs-down-fill"
+                            onClick={(e) => handleUndislike(e, username)}
+                          ></i>
+                        </a>
+                      ) : (
+                        <a href="#">
+                          <i
+                            class="bi bi-hand-thumbs-down"
+                            onClick={(e) => handleDislike(e, username)}
+                          ></i>
+                        </a>
+                      )}
                     </div>
-                    <span>{likes.length} Likes - {dislikes.length} Dislikes</span>
+                    <span>
+                      {likes.length} Likes - {dislikes.length} Dislikes
+                    </span>
                   </div>
                   <p>{story.discription}</p>
                   <div className="anime__details__widget">
@@ -284,26 +354,30 @@ const StoryDetails = () => {
                           </li>
                         </ul>
                       </div>
-                      <div className="col-lg-6 col-md-6">
-                        <ul>
-                          <li>
-                            <span>Scores:</span> 7.31 / 1,515
-                          </li>
-                          <li>
-                            <span>Rating:</span> 8.5 / 161 times
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                   </div>
                   <div className="anime__details__btn">
-                    {
-                      follower.includes(username) ? (<a href="/" className="follow-btn" onClick={e => handleUnFollow(e, username)}><i class="bi bi-heart-fill"></i> Unfollow</a>) : (<a href="/" className="follow-btn" onClick={e => handleFollow(e, username)}><i class="bi bi-heart"></i> Follow</a>)
-                    }
+                    {follower.includes(username) ? (
+                      <a
+                        href="/"
+                        className="follow-btn"
+                        onClick={(e) => handleUnFollow(e, username)}
+                      >
+                        <i class="bi bi-heart-fill"></i> Unfollow
+                      </a>
+                    ) : (
+                      <a
+                        href="/"
+                        className="follow-btn"
+                        onClick={(e) => handleFollow(e, username)}
+                      >
+                        <i class="bi bi-heart"></i> Follow
+                      </a>
+                    )}
                     <Link
                       to={`/story/reading/${story.id}`}
                       className="watch-btn"
-                      onClick={e => handleView(e)}
+                      onClick={(e) => handleView(e)}
                     >
                       <span>Read Now</span>
                       <i class="bi bi-chevron-right"></i>
@@ -326,7 +400,10 @@ const StoryDetails = () => {
                   <h5>Your Comment</h5>
                 </div>
                 <form onSubmit={(e) => handleSubmit(e)}>
-                  <textarea placeholder="Your Comment" onChange={e => setContent(e.target.value)}></textarea>
+                  <textarea
+                    placeholder="Your Comment"
+                    onChange={(e) => setContent(e.target.value)}
+                  ></textarea>
                   <button type="submit">
                     <i className="fa fa-location-arrow"></i> Review
                   </button>

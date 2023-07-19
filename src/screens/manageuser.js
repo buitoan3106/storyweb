@@ -22,7 +22,7 @@ const ViewListUser = () => {
   const [totalStories, setTotalStories] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 2;
+  const itemsPerPage = 5;
   let startIndex = currentPage * itemsPerPage;
   let endIndex = startIndex + itemsPerPage;
   let currentUsers = users.slice(startIndex, endIndex);
@@ -35,7 +35,6 @@ const ViewListUser = () => {
   const handleClose = () => {
     setIsShowModalViewUser(false);
   };
-
   
 
   //get alll user
